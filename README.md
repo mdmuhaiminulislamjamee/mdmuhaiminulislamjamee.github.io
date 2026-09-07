@@ -1,101 +1,129 @@
-# Academic Pages
-**Academic Pages is a GitHub Pages template for personal and professional portfolio-oriented websites.**
+# Md. Muhaiminul Islam — Academic Portfolio
 
-![Academic Pages template example](images/themes/homepage-light.png "Academic Pages template example")
+A lightweight static academic website for PhD applications, built for GitHub Pages.
 
-# Getting Started
+## Pages
 
-1. Register a GitHub account if you don't have one and confirm your e-mail (required!)
-1. Click the "Use this template" button in the top right.
-1. On the "New repository" page, enter your public repository name as "[your GitHub username].github.io", which will also be your website's URL.
-1. Edit site-wide configuration in `_config.yml` and double check that the `url` is the one that you just selected in the previous step and that `repository` reflects the correct path for your repository.
-1. Add your site content, upload any files (like PDFs, .zip files, etc.) to the `files/` directory. They will appear at https://[your GitHub username].github.io/files/example.pdf.
-1. Check status by going to the repository settings, in the "GitHub pages" section
-1. (Optional) Use the Jupyter notebooks or python scripts in the `markdown_generator` folder to generate markdown files for publications and talks from a TSV file.
+- Home: research interests, academic biography, skills, coursework, languages, hobbies, and news.
+- Research & Publications: chronological IEEE publication list and research focus.
+- Education & Experience: education, RUET research experience, work experience, and volunteering.
+- Awards & Achievements.
+- Projects.
+- Learning & Certifications.
+- Gallery with captions.
+- Blog, plus a reusable long-form article template at `blog/post-template.html`.
+- Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
 
-See more info at https://academicpages.github.io/
+## Add images
 
-### Additional Tutorials
+The current placeholders disappear automatically when the matching files are uploaded:
 
-Additional tutorials for working with the Academic Pages template can be found at the following sites:
-- https://jayrobwilliams.com/posts/2020/06/academic-website/
+- `images/profile.jpg` — main portrait, preferably 4:5.
+- `images/avatar.jpg` — square header portrait.
+- `images/projects/project-01.jpg` through `project-07.jpg`.
+- `images/certificates/certificate-01.jpg` through `certificate-12.jpg`.
+- `images/gallery/gallery-01.jpg` through `gallery-09.jpg`.
 
-## Running locally
+See `images/README.md` for the same upload map.
 
-When you are initially working on your website, it is very useful to be able to preview the changes locally before pushing them to GitHub. To work locally you will need to:
+## Final personal detail to update
 
-1. Clone the repository and made updates as detailed above.
+The CV did not include an ORCID identifier. Replace the ORCID home-page URL in `index.html` with the full personal ORCID URL when available.
 
-### Using a different IDE
-1. Make sure you have ruby-dev, bundler, and nodejs installed
-    
-    On most Linux distributions and [Windows Subsystem Linux](https://learn.microsoft.com/en-us/windows/wsl/about) the command is:
-    ```bash
-    sudo apt install ruby-dev ruby-bundler nodejs
-    ```
-    If you see error `Unable to locate package ruby-bundler`, `Unable to locate package nodejs `, run the following:
-    ```bash
-    sudo apt update && sudo apt upgrade -y
-    ```
-    then try running `sudo apt install ruby-dev ruby-bundler nodejs` again.
+## Open, commit, and push with VS Code
 
-    On MacOS the commands are:
-    ```bash
-    brew install ruby
-    brew install node
-    gem install bundler
-    ```
-1. Run `bundle install` to install ruby dependencies. If you get errors, delete Gemfile.lock and try again.
+The repository is already cloned, connected to GitHub, and currently uses the `master` branch.
 
-    If you see file permission error like `Fetching bundler-2.6.3.gem ERROR:  While executing gem (Gem::FilePermissionError) You don't have write permissions for the /var/lib/gems/3.2.0 directory.` or `Bundler::PermissionError: There was an error while trying to write to /usr/local/bin.`
-    Install Gems Locally (Recommended):
-    ```bash
-    bundle config set --local path 'vendor/bundle'
-    ```
-    then try run `bundle install` again. If succeeded, you should see a folder called `vendor` and `.bundle`.
+1. Open **Visual Studio Code**.
+2. Select **File → Open Folder**.
+3. Open this exact folder:
 
-1. Run `jekyll serve -l -H localhost` to generate the HTML and serve it from `localhost:4000` the local server will automatically rebuild and refresh the pages on change to Markdown (*.md) and HTML files, while changes to the core template and configuration (i.e., `_config.yml`) will require stopping and restarting Jekyll.
-    You may also try `bundle exec jekyll serve -l -H localhost` to ensure jekyll to use specific dependencies on your own local machine.
+   `C:\Users\Admin\Documents\ChatGPT\MINN\website`
 
-If you are running on Linux it may be necessary to install some additional dependencies prior to being able to run locally: `sudo apt install build-essential gcc make`
+4. If VS Code asks whether you trust the authors of the folder, confirm only after checking that the selected path is the one above.
+5. Open **Source Control** from the left activity bar, or press `Ctrl+Shift+G`.
+6. Review the files listed under **Changes**. Select a file to see its differences.
+7. Select the `+` beside **Changes** to stage all website files.
+8. Enter `Build academic portfolio website` in the commit-message box.
+9. Click **Commit**.
+10. Open the `…` menu in Source Control and select **Push**. You can also click **Sync Changes** if it is shown.
+11. Complete the GitHub browser sign-in if VS Code requests authentication.
 
-## Using Docker
+When the push finishes, open:
 
-Working from a different OS, or just want to avoid installing dependencies? You can use the provided `Dockerfile` to build a container that will run the site for you if you have [Docker](https://www.docker.com/) installed.
+`https://github.com/mdmuhaiminulislamjamee/mdmuhaiminulislamjamee.github.io`
 
-You can build and execute the container by running the following command in the repository:
+Then follow the **Turn on GitHub Pages** section below.
 
-```bash
-chmod -R 777 .
-docker compose up
+### VS Code terminal alternative
+
+In VS Code, select **Terminal → New Terminal**, then run:
+
+```powershell
+git status
+git add --all
+git commit -m "Build academic portfolio website"
+git push origin master
 ```
 
-You should now be able to access the website from `localhost:4000`.
+Because VS Code was opened directly in the `website` folder, no `cd` command should be needed.
 
-### Using the DevContainer in VS Code
+## Open the project in GitHub Desktop
 
-If you are using [Visual Studio Code](https://code.visualstudio.com/) you can use the [Dev Container](https://code.visualstudio.com/docs/devcontainers/containers) that comes with this Repository. Normally VS Code detects that a development container configuration is available and asks you if you want to use the container. If this doesn't happen you can manually start the container by **F1->DevContainer: Reopen in Container**. This restarts your VS Code in the container and automatically hosts your academic page locally on http://localhost:4000. All changes will be updated live to that page after a few seconds.
+The repository is already cloned and connected to:
 
-# Maintenance
+`https://github.com/mdmuhaiminulislamjamee/mdmuhaiminulislamjamee.github.io`
 
-Bug reports and feature requests to the template should be [submitted via GitHub](https://github.com/academicpages/academicpages.github.io/issues/new/choose). For questions concerning how to style the template, please feel free to start a [new discussion on GitHub](https://github.com/academicpages/academicpages.github.io/discussions).
+1. Open **GitHub Desktop**.
+2. Select **File → Add local repository**.
+3. Choose this folder:
 
-This repository was forked (then detached) by [Stuart Geiger](https://github.com/staeiou) from the [Minimal Mistakes Jekyll Theme](https://mmistakes.github.io/minimal-mistakes/), which is © 2016 Michael Rose and released under the MIT License (see LICENSE.md). It is currently being maintained by [Robert Zupko](https://github.com/rjzupkoii), and additional maintainers would be welcome.
+   `C:\Users\Admin\Documents\ChatGPT\MINN\website`
 
-## Bugfixes and enhancements
+4. Click **Add repository**.
+5. Review the changed files in the left panel.
+6. Enter a commit summary such as `Build academic portfolio website`.
+7. Click **Commit to master**.
+8. Click **Push origin** to upload the commit to GitHub.
 
-If you have bugfixes and enhancements that you would like to submit as a pull request, you will need to [fork](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/fork-a-repo) this repository as opposed to using it as a template. This will also allow you to [synchronize your copy](https://docs.github.com/en/pull-requests/collaborating-with-pull-requests/working-with-forks/syncing-a-fork) of the template to your fork as well.
+After pushing, open the repository in your browser:
 
-Unfortunately, one logistical issue with a template theme like Academic Pages that makes it a little tricky to get bug fixes and updates to the core theme. If you use this template and customize it, you will probably get merge conflicts if you attempt to synchronize, although [rebasing](https://git-scm.com/docs/git-rebase) the changes from this template will work along with manually [cherry picking](https://git-scm.com/docs/git-cherry-pick) the relevant commits. If you are not comfortable with the Git command line, you can save your various `.yml` configuration files and Markdown files, delete the repository, and fork it again. 
+`https://github.com/mdmuhaiminulislamjamee/mdmuhaiminulislamjamee.github.io`
 
----
-<div align="center">
-    
-![pages-build-deployment](https://github.com/academicpages/academicpages.github.io/actions/workflows/pages/pages-build-deployment/badge.svg)
-[![GitHub contributors](https://img.shields.io/github/contributors/academicpages/academicpages.github.io.svg)](https://github.com/academicpages/academicpages.github.io/graphs/contributors)
-[![GitHub release](https://img.shields.io/github/v/release/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/releases/latest)
-[![GitHub license](https://img.shields.io/github/license/academicpages/academicpages.github.io?color=blue)](https://github.com/academicpages/academicpages.github.io/blob/master/LICENSE)
+## Upload with a terminal instead
 
-[![GitHub stars](https://img.shields.io/github/stars/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io)
-[![GitHub forks](https://img.shields.io/github/forks/academicpages/academicpages.github.io)](https://github.com/academicpages/academicpages.github.io/fork)
-</div>
+Open PowerShell in the website folder and run:
+
+```powershell
+cd "C:\Users\Admin\Documents\ChatGPT\MINN\website"
+git status
+git add --all
+git commit -m "Build academic portfolio website"
+git push origin master
+```
+
+If GitHub asks you to sign in, complete the authentication prompt and run the final `git push origin master` command again.
+
+## Turn on GitHub Pages
+
+This is a static site and includes `.nojekyll`, so it can be served directly without a build command.
+
+1. Open the repository on GitHub.
+2. Select **Settings**.
+3. In the sidebar, select **Pages** under **Code and automation**.
+4. Under **Build and deployment**, set **Source** to **Deploy from a branch**.
+5. Select the `master` branch and the `/(root)` folder.
+6. Click **Save**.
+7. Wait for the Pages deployment to finish, then visit:
+
+   `https://mdmuhaiminulislamjamee.github.io`
+
+Future updates only require another commit and push. GitHub Pages will redeploy the changed site automatically.
+
+## Add images later through GitHub
+
+You can add an image in GitHub by opening its destination folder, selecting **Add file → Upload files**, uploading the correctly named image, and committing the change. The exact filenames are listed above and in `images/README.md`.
+
+## Privacy check before publishing
+
+The downloadable CV currently contains contact information, including a telephone number and street address. Remove or replace those details in `files/Md-Muhaiminul-Islam-CV.pdf` first if you do not want them publicly accessible.
