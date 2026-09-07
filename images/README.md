@@ -7,5 +7,11 @@ The site hides missing images and shows clean placeholders. Upload images using 
 - `images/projects/project-01.jpg` through `project-07.jpg` — featured project images.
 - `images/certificates/certificate-01.jpg` through `certificate-12.jpg` — learning and certification images.
 - `images/gallery/gallery-01.jpg` through `gallery-09.jpg` — gallery images.
+- `images/experience/education-01.jpg` through `education-03.jpg` — education images.
+- `images/experience/research-01.jpg` — RUET research-experience image.
+- `images/experience/work-01.jpg` through `work-08.jpg` — work-experience images.
+- `images/experience/volunteering-01.jpg` through `volunteering-03.jpg` — volunteering images.
+- `images/awards/award-01.jpg` through `award-22.jpg` — awards and achievement images.
+- `images/blog/autonomous-waste-robot.jpg` — blog listing thumbnail and article cover.
 
-JPG, PNG, and WebP all work, but if the extension changes, update the matching `src` in the relevant HTML page.
+JPG, PNG, and WebP all work, but if an extension changes, update the matching path in the relevant HTML file or in `assets/js/site.js`.

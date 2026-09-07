@@ -4,15 +4,16 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 
 ## Pages
 
-- Home: research interests, academic biography, skills, coursework, languages, hobbies, and news.
-- Research & Publications: chronological IEEE publication list and research focus.
+- Home: research interests, academic biography, contact links, technical skills, coursework, languages, and news.
+- Research & Publications: chronological IEEE publication list with direct DOI links.
 - Education & Experience: education, RUET research experience, work experience, and volunteering.
 - Awards & Achievements.
 - Projects.
 - Learning & Certifications.
 - Gallery with captions.
-- Blog, plus a reusable long-form article template at `blog/post-template.html`.
+- Blog, including the long-form project note at `blog/autonomous-waste-robot.html`.
 - Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
+- Persistent light/dark mode from the moon or sun button in the header.
 
 ## Add images
 
@@ -23,12 +24,14 @@ The current placeholders disappear automatically when the matching files are upl
 - `images/projects/project-01.jpg` through `project-07.jpg`.
 - `images/certificates/certificate-01.jpg` through `certificate-12.jpg`.
 - `images/gallery/gallery-01.jpg` through `gallery-09.jpg`.
+- `images/experience/education-01.jpg` through `education-03.jpg`.
+- `images/experience/research-01.jpg`.
+- `images/experience/work-01.jpg` through `work-08.jpg`.
+- `images/experience/volunteering-01.jpg` through `volunteering-03.jpg`.
+- `images/awards/award-01.jpg` through `award-22.jpg`.
+- `images/blog/autonomous-waste-robot.jpg`.
 
 See `images/README.md` for the same upload map.
-
-## Final personal detail to update
-
-The CV did not include an ORCID identifier. Replace the ORCID home-page URL in `index.html` with the full personal ORCID URL when available.
 
 ## Open, commit, and push with VS Code
 

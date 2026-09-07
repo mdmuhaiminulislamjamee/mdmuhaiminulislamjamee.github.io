@@ -1,0 +1,53 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <title>From Detection to Collection | Md. Muhaiminul Islam</title>
+  <meta name="description" content="A project note by Md. Muhaiminul Islam on an autonomous waste-management robot combining CNN detection, SLAM, path planning, sensing, and embedded control.">
+  <link rel="stylesheet" href="../assets/css/site.css">
+</head>
+<body class="blog-page" data-base="../">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html" aria-label="Md. Muhaiminul Islam, home"><span class="brand-photo"><span>MI</span><img src="../images/avatar.jpg" alt=""></span><span>Md. Muhaiminul Islam</span></a><div class="nav-shell"><nav class="site-nav" data-navigation aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../research.html">Research &amp; Publications</a><a href="../experience.html">Education &amp; Experience</a><a href="../awards.html">Awards</a><a href="../projects.html">Projects</a><a href="../learning.html">Learning</a><a href="../gallery.html">Gallery</a><a href="../blog.html" aria-current="page">Blog</a></nav><button class="icon-button" type="button" data-search-open aria-label="Search this site"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div></div></header>
+
+  <main id="main-content" class="page-shell">
+    <article class="article-main">
+      <header>
+        <h1>From Detection to Collection: Building an Autonomous Waste-Management Robot</h1>
+        <time class="article-date" datetime="2026-09-07">7 September 2026</time>
+      </header>
+
+      <div class="article-hero media-frame" data-placeholder="Add images/blog/autonomous-waste-robot.jpg">
+        <img src="../images/blog/autonomous-waste-robot.jpg" alt="Autonomous waste-management robot platform">
+      </div>
+
+      <p>An autonomous waste-collection robot has to do more than recognize an object in a camera frame. It must understand where that object is, determine whether the route is safe, reach it without collision, and coordinate a physical collection mechanism. The central challenge is therefore integration: perception, localization, planning, and control must operate as one continuous system.</p>
+
+      <h2>System architecture</h2>
+      <p>The prototype combines a Raspberry Pi and Pi Camera for visual processing with an Arduino Mega for motion and collection control. Fast R-CNN and YOLO-based models provide object detection, while LiDAR and sonar sensors support mapping and obstacle awareness. The processing and control layers communicate through I²C so that high-level decisions can be translated into precise motor and servo actions.</p>
+
+      <h3>Perception</h3>
+      <p>The perception stage captures images of the surrounding environment and identifies waste objects. Using deep-learning detectors makes it possible to distinguish target objects from background clutter and provide the location information required by the navigation system.</p>
+
+      <h3>Localization and mapping</h3>
+      <p>Sensor observations are combined with SLAM to build a representation of the environment while estimating the robot’s position within it. A Kalman filter helps reduce uncertainty in the localization process, particularly when individual sensor readings are noisy or incomplete.</p>
+
+      <h3>Path planning and control</h3>
+      <p>Once a target is detected and localized, the A* algorithm searches for a safe and efficient path. The planned motion is executed through the embedded controller, which coordinates the drive system and servo-based collection mechanism. Sonar and LiDAR observations continue to support obstacle detection during movement.</p>
+
+      <h2>From a model to a complete robot</h2>
+      <p>The project reinforced an important engineering lesson: a strong detection model is only one component of an autonomous platform. Reliable behavior depends on the interfaces between components—camera timing, sensor calibration, coordinate transformations, communication latency, motor response, and recovery when the environment does not match the plan.</p>
+
+      <p>This work formed part of the research published as <em>“Smart Waste Management Robot: Integrating IoT, Artificial Intelligence, SLAM, and CNN-Based Advanced Image Processing for Real-Time Trash Collection and Categorization”</em> at the 2024 27th International Conference on Computer and Information Technology.</p>
+
+      <p><a href="https://doi.org/10.1109/ICCIT64611.2024.11022551">DOI: 10.1109/ICCIT64611.2024.11022551</a></p>
+      <a class="back-link" href="../blog.html">← All posts</a>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>© <span data-current-year>2026</span> Md. Muhaiminul Islam · <a href="mailto:jamee.islam2018@gmail.com">jamee.islam2018@gmail.com</a></p></footer>
+  <div class="search-dialog" data-search-dialog aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title"><div class="search-panel"><div class="search-topline"><h2 id="search-title">Search this site</h2><button class="search-close" type="button" data-search-close aria-label="Close search">×</button></div><label for="site-search" class="skip-link">Search</label><input id="site-search" class="search-input" type="search" placeholder="Search research, projects, skills…" autocomplete="off" data-search-input><ul class="search-results" data-search-results aria-live="polite"><li class="search-hint">Start typing to search the portfolio.</li></ul></div></div>
+  <script src="../assets/js/site.js"></script>
+</body>
+</html>
