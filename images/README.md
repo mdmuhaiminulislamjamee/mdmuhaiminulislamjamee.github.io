@@ -2,6 +2,24 @@
 
 The site hides missing images and shows clean placeholders. Upload images using these exact paths to make them appear automatically:
 
+## Upload directly with GitHub
+
+1. Open the required folder below.
+2. Select **Add file → Upload files**.
+3. Upload the correctly renamed `.jpg` image.
+4. Select **Commit changes** and commit to `master`.
+
+Each folder contains its own filename-to-content map:
+
+- [Project images](projects/)
+- [Certificate images](certificates/)
+- [Gallery images](gallery/)
+- [Education and experience images](experience/)
+- [Award images](awards/)
+- [Blog images](blog/)
+
+Upload `profile.jpg` and `avatar.jpg` in this `images` folder.
+
 - `images/profile.jpg` — main portrait, ideally a 4:5 vertical image.
 - `images/avatar.jpg` — small square header portrait.
 - `images/projects/project-01.jpg` through `project-07.jpg` — featured project images.

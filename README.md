@@ -125,7 +125,15 @@ Future updates only require another commit and push. GitHub Pages will redeploy 
 
 ## Add images later through GitHub
 
-You can add an image in GitHub by opening its destination folder, selecting **Add file → Upload files**, uploading the correctly named image, and committing the change. The exact filenames are listed above and in `images/README.md`.
+The repository includes visible upload folders, so images can be added without VS Code or code editing:
+
+1. Open the [`images`](images/) folder on GitHub.
+2. Open the appropriate folder: [`projects`](images/projects/), [`certificates`](images/certificates/), [`gallery`](images/gallery/), [`experience`](images/experience/), [`awards`](images/awards/), or [`blog`](images/blog/).
+3. Select **Add file → Upload files**.
+4. Drag in the image with the exact `.jpg` filename listed in that folder's README.
+5. Select **Commit changes** and commit directly to `master`.
+
+Upload `profile.jpg` and `avatar.jpg` directly inside [`images`](images/). GitHub Pages will publish committed images automatically, normally within a few minutes. Reusing an existing filename replaces that website image on the next deployment.
 
 ## Privacy check before publishing
 
