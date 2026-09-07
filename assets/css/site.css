@@ -383,6 +383,10 @@ input {
   grid-column: 1 / -1;
 }
 
+.full-grid-section {
+  grid-column: 1 / -1;
+}
+
 .skills-summary {
   margin: 0;
   padding: 0.75rem 0 0 1.35rem;
@@ -556,6 +560,10 @@ input {
 
 .section-intro p {
   margin: 0;
+}
+
+.data-record-note {
+  padding: 0 0 4rem;
 }
 
 .timeline {

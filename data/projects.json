@@ -1,0 +1,65 @@
+{
+  "browserTitle": "Projects | Md. Muhaiminul Islam",
+  "description": "Selected projects by Md. Muhaiminul Islam in embedded systems, autonomous robots, SLAM, IoT, computer vision, and AI.",
+  "heading": "Projects",
+  "intro": "Seven featured projects from a portfolio of more than 25 completed systems, including seven competition-winning projects.",
+  "projects": [
+    {
+      "number": "Project 01",
+      "title": "Four-Storey Elevator Control System",
+      "description": "A dual-Arduino elevator controller using an I²C master–slave architecture and the SCAN scheduling algorithm. The system coordinates motors, displays, request handling, door control, obstacle detection, overload protection, and manual safety overrides.",
+      "tags": ["Arduino", "I²C", "Control", "Embedded C", "Safety Systems"],
+      "image": "images/projects/project-01.jpg",
+      "imageAlt": "Four-storey elevator control system"
+    },
+    {
+      "number": "Project 02",
+      "title": "Autonomous Garbage Detection & Collection Robot",
+      "description": "An autonomous robot that combines deep-learning detection with SLAM, LiDAR and sonar sensing, Kalman filtering, and A* path planning to locate, approach, collect, and store waste in real time.",
+      "tags": ["SLAM", "YOLO", "Fast R-CNN", "Raspberry Pi", "A*"],
+      "image": "images/projects/project-02.jpg",
+      "imageAlt": "Autonomous garbage detection and collection robot"
+    },
+    {
+      "number": "Project 03",
+      "title": "Land Mine & Human Detection Robot",
+      "description": "An IoT-enabled safety robot combining GPS, GSM, environmental and metal sensors, image processing, and live video to detect hazards, identify human presence, and transmit alerts with coordinates.",
+      "tags": ["IoT", "GPS/GSM", "ESP32-CAM", "Image Processing", "Telemetry"],
+      "image": "images/projects/project-03.jpg",
+      "imageAlt": "Land mine and human detection robot"
+    },
+    {
+      "number": "Project 04",
+      "title": "Autonomous Self-Driving Car with Text Translation",
+      "description": "A ROS and computer-vision vehicle that performs lane and object detection, localization, route planning, and English–Bangla road-text translation using a Raspberry Pi camera platform.",
+      "tags": ["ROS", "Computer Vision", "YOLO", "Kalman Filter", "Dijkstra"],
+      "image": "images/projects/project-04.jpg",
+      "imageAlt": "Autonomous self-driving car with text translation"
+    },
+    {
+      "number": "Project 05",
+      "title": "PID-Controlled Fast Line-Following Robot",
+      "description": "A high-speed robot built around a six-sensor infrared array, Arduino Nano, custom PCB, and L298N motor driver. Dynamic PID correction minimizes path deviation while preserving speed and stability.",
+      "tags": ["PID", "Arduino Nano", "Custom PCB", "IR Sensors", "Motor Control"],
+      "image": "images/projects/project-05.jpg",
+      "imageAlt": "PID-controlled fast line-following robot"
+    },
+    {
+      "number": "Project 06",
+      "title": "Human-Rescue & Fire-Fighting Robot",
+      "description": "An emergency-response robot using IoT, environmental and infrared sensing, and image processing to navigate hazardous spaces, detect fire and trapped people, and transmit live situational data to operators.",
+      "tags": ["IoT", "Thermal Sensing", "Computer Vision", "Remote Monitoring", "Robotics"],
+      "image": "images/projects/project-06.jpg",
+      "imageAlt": "Human-rescue and fire-fighting robot"
+    },
+    {
+      "id": "smart-notice-board",
+      "number": "Project 07",
+      "title": "AI-Based Smart Notice Board",
+      "description": "A personalized notice-delivery platform that recognizes users with facial recognition, retrieves relevant information through a server and database, and displays tailored updates through a web interface.",
+      "tags": ["Facial Recognition", "Python", "Node.js", "MySQL", "WebSockets"],
+      "image": "images/projects/project-07.jpg",
+      "imageAlt": "AI-based smart notice board"
+    }
+  ]
+}

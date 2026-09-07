@@ -1,0 +1,17 @@
+{
+  "browserTitle": "Gallery | Md. Muhaiminul Islam",
+  "description": "Gallery of research, engineering projects, competitions, awards, and outreach activities by Md. Muhaiminul Islam.",
+  "heading": "Gallery",
+  "intro": "Research, engineering, competitions, outreach, and the communities that shaped my work.",
+  "items": [
+    { "title": "International Robot Olympiad", "caption": "Technical Award in the Creative Category, 2020.", "image": "images/gallery/gallery-01.jpg", "imageAlt": "International Robot Olympiad award moment" },
+    { "title": "Bangladesh Robot Olympiad", "caption": "Bronze Medal in the Creative Category, 2020.", "image": "images/gallery/gallery-02.jpg", "imageAlt": "Bangladesh Robot Olympiad award moment" },
+    { "title": "CISCO IoT Hackathon", "caption": "National Champion, 2018.", "image": "images/gallery/gallery-03.jpg", "imageAlt": "CISCO IoT Hackathon team" },
+    { "title": "Research at RUET", "caption": "Undergraduate research and prototype development.", "image": "images/gallery/gallery-04.jpg", "imageAlt": "Research and project work at RUET" },
+    { "title": "Science Outreach", "caption": "Astronomy and Science Society of RUET.", "image": "images/gallery/gallery-05.jpg", "imageAlt": "Astronomy and Science Society of RUET event" },
+    { "title": "MOS Bangladesh Championship", "caption": "Divisional Winner and Finalist, 2025.", "image": "images/gallery/gallery-06.jpg", "imageAlt": "Microsoft Office Specialist Bangladesh Championship" },
+    { "title": "Autonomous Waste Robot", "caption": "SLAM, deep learning, and embedded control in one platform.", "image": "images/gallery/gallery-07.jpg", "imageAlt": "Autonomous waste collection robot" },
+    { "title": "AI Smart Notice Board", "caption": "Personalized notices through face recognition and connected software.", "image": "images/gallery/gallery-08.jpg", "imageAlt": "AI smart notice board project" },
+    { "title": "Robotics Mentoring", "caption": "Workshops, academic support, and competition preparation.", "image": "images/gallery/gallery-09.jpg", "imageAlt": "Robotics workshop and mentoring" }
+  ]
+}

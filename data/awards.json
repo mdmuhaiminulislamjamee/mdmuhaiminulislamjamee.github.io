@@ -1,0 +1,142 @@
+{
+  "browserTitle": "Awards & Achievements | Md. Muhaiminul Islam",
+  "description": "Awards and achievements of Md. Muhaiminul Islam in robotics, programming, science, mathematics, innovation, and engineering.",
+  "heading": "Awards & Achievements",
+  "intro": "Selected national and international recognition across engineering, robotics, programming, science, mathematics, and innovation.",
+  "sectionTitle": "Selected Honors",
+  "sectionId": "awards-2025",
+  "awards": [
+    {
+      "year": "2025",
+      "title": "Divisional Winner & Finalist, Microsoft Office Specialist Bangladesh Championship",
+      "organization": "Organized by Microsoft, VTutor, and the Ministry of Youth & Sports.",
+      "image": "images/awards/award-01.jpg"
+    },
+    {
+      "year": "2023",
+      "title": "Top 5, Smart Rajshahi Innovation Challenge",
+      "organization": "Startup Rajshahi and Rajshahi City Corporation.",
+      "image": "images/awards/award-02.jpg"
+    },
+    {
+      "year": "2021–2024",
+      "title": "Technical Scholarship, University Grants Commission of Bangladesh",
+      "organization": "Awarded through the Department of Electronics and Telecommunication Engineering, RUET.",
+      "image": "images/awards/award-03.jpg"
+    },
+    {
+      "year": "2022",
+      "title": "Top 5 Best Project, ETE 2200: Electronic Project Design & Development",
+      "organization": "Department of Electronics and Telecommunication Engineering, RUET.",
+      "image": "images/awards/award-04.jpg"
+    },
+    {
+      "year": "2022",
+      "title": "Preliminary Round Qualifier, International Astronomy and Astrophysics Competition",
+      "organization": "International Astronomy and Astrophysics Competition (IAAC).",
+      "image": "images/awards/award-05.jpg"
+    },
+    {
+      "year": "2022",
+      "title": "Finalist, BUET CSE Fest Hackathon",
+      "organization": "Department of Computer Science and Engineering, Bangladesh University of Engineering and Technology.",
+      "image": "images/awards/award-06.jpg"
+    },
+    {
+      "year": "2022",
+      "title": "Finalist, Bangladesh Blockchain Olympiad",
+      "organization": "ICT Division, International Blockchain Olympiad, and Bangladesh Computer Council.",
+      "image": "images/awards/award-07.jpg"
+    },
+    {
+      "year": "2020",
+      "title": "Technical Award Winner, Creative Category, International Robot Olympiad",
+      "organization": "Recognized in a competition representing more than 30 countries.",
+      "image": "images/awards/award-08.jpg"
+    },
+    {
+      "year": "2020",
+      "title": "Bronze Medalist, Creative Category, Bangladesh Robot Olympiad",
+      "organization": "Selected among more than 1,200 students.",
+      "image": "images/awards/award-09.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "National Champion, CISCO IoT Hackathon",
+      "organization": "Won among participants from more than 30 colleges and universities.",
+      "image": "images/awards/award-10.jpg"
+    },
+    {
+      "year": "2015, 2016, 2018",
+      "title": "Divisional Champion & Best Meritorious Student Award in Mathematics",
+      "organization": "Creative Talent Hunt Competition, Government of Bangladesh.",
+      "image": "images/awards/award-11.jpg"
+    },
+    {
+      "year": "2014, 2016–2018",
+      "title": "National Winner, Bangladesh Mathematical Olympiad",
+      "organization": "Bangladesh Mathematical Olympiad Committee.",
+      "image": "images/awards/award-12.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "First Runner-up, UIU–Venturas First Robotic Competition for Colleges",
+      "organization": "United International University and Venturas.",
+      "image": "images/awards/award-13.jpg"
+    },
+    {
+      "year": "2018",
+      "title": "National Winner, SUST National Science Fest",
+      "organization": "Shahjalal University of Science and Technology.",
+      "image": "images/awards/award-14.jpg"
+    },
+    {
+      "year": "2015, 2017",
+      "title": "National Champion, National High School Programming Contest",
+      "organization": "ICT Division and the National High School Programming Contest Committee, Bangladesh.",
+      "image": "images/awards/award-15.jpg"
+    },
+    {
+      "year": "2014, 2017",
+      "title": "Regional Winner, Bangladesh Physics Olympiad",
+      "organization": "Bangladesh Physics Olympiad Committee.",
+      "image": "images/awards/award-16.jpg"
+    },
+    {
+      "year": "2017",
+      "title": "Divisional Champion, Bangladesh Junior Science Olympiad",
+      "organization": "Bangladesh Junior Science Olympiad Committee.",
+      "image": "images/awards/award-17.jpg"
+    },
+    {
+      "year": "2016",
+      "title": "Divisional Winner, 6th Bangladesh Science Olympiad",
+      "organization": "Bangladesh Science Olympiad Committee.",
+      "image": "images/awards/award-18.jpg"
+    },
+    {
+      "year": "2015, 2016",
+      "title": "Divisional Champion, 36th & 37th Bangladesh National Science Fair",
+      "organization": "Ministry of Science and Technology, Bangladesh.",
+      "image": "images/awards/award-19.jpg"
+    },
+    {
+      "year": "2016",
+      "title": "Team Leader & National Winner, Digital Innovation Fair Bangladesh",
+      "organization": "ICT Division, Bangladesh.",
+      "image": "images/awards/award-20.jpg"
+    },
+    {
+      "year": "2015, 2016",
+      "title": "Divisional Champion, National Science Carnival",
+      "organization": "Ministry of Science and Technology, Bangladesh.",
+      "image": "images/awards/award-21.jpg"
+    },
+    {
+      "year": "2014",
+      "title": "Talent Pool Scholarship, Junior School Certificate Examination",
+      "organization": "Tenth place, Bangladesh Education Board (Jessore).",
+      "image": "images/awards/award-22.jpg"
+    }
+  ]
+}

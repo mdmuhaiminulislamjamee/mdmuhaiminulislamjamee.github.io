@@ -1,0 +1,20 @@
+{
+  "browserTitle": "Learning & Certifications | Md. Muhaiminul Islam",
+  "description": "Courses, specializations, workshops, bootcamps, and certifications completed or in progress by Md. Muhaiminul Islam.",
+  "heading": "Learning",
+  "intro": "Ongoing specializations and completed courses in AI, robotics, programming, embedded systems, IoT, and engineering design.",
+  "items": [
+    { "title": "AI Engineering Bootcamp", "provider": "Ostad", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-01.jpg", "imageAlt": "AI Engineering Bootcamp certificate" },
+    { "title": "Master the Coding Interview: Data Structures + Algorithms", "provider": "Udemy", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-02.jpg", "imageAlt": "Data Structures and Algorithms course certificate" },
+    { "title": "Modern Robotics: Mechanics, Planning, and Control", "provider": "Coursera", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-03.jpg", "imageAlt": "Modern Robotics specialization certificate" },
+    { "title": "Self-Driving Cars Specialization", "provider": "Coursera", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-04.jpg", "imageAlt": "Self-Driving Cars specialization certificate" },
+    { "title": "Deep Learning Specialization", "provider": "Coursera", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-05.jpg", "imageAlt": "Deep Learning specialization certificate" },
+    { "title": "Machine Learning Specialization", "provider": "Coursera", "year": "2025", "status": "Ongoing", "image": "images/certificates/certificate-06.jpg", "imageAlt": "Machine Learning specialization certificate" },
+    { "title": "A Deep Introduction to Programming", "provider": "YouKnowWho Academy", "year": "2023", "status": "Completed", "image": "images/certificates/certificate-07.jpg", "imageAlt": "Programming course certificate" },
+    { "title": "Machine Learning & Data Science Bootcamp", "provider": "Code Studio Academy", "year": "2023", "status": "Completed", "image": "images/certificates/certificate-08.jpg", "imageAlt": "Machine Learning and Data Science bootcamp certificate" },
+    { "title": "PCB Design & Fabrication Workshop", "provider": "Department of ETE, RUET", "year": "2022", "status": "Completed", "image": "images/certificates/certificate-09.jpg", "imageAlt": "PCB Design and Fabrication workshop certificate" },
+    { "title": "Fundamentals of Internet of Things Workshop", "provider": "RUET IoT Club", "year": "2022", "status": "Completed", "image": "images/certificates/certificate-10.jpg", "imageAlt": "Internet of Things workshop certificate" },
+    { "title": "Basic Line Following Robot", "provider": "Robo Adda", "year": "2022", "status": "Completed", "image": "images/certificates/certificate-11.jpg", "imageAlt": "Line Following Robot workshop certificate" },
+    { "title": "Basic Arduino Programming Course", "provider": "Think-Robo", "year": "2020", "status": "Completed", "image": "images/certificates/certificate-12.jpg", "imageAlt": "Arduino programming course certificate" }
+  ]
+}

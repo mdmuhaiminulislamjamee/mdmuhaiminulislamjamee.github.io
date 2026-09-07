@@ -1,0 +1,168 @@
+{
+  "browserTitle": "Education & Experience | Md. Muhaiminul Islam",
+  "description": "Education, research experience, professional work, and volunteering by Md. Muhaiminul Islam.",
+  "heading": "Education & Experience",
+  "intro": "Academic training, research practice, embedded engineering, AI work, teaching, mentoring, and service.",
+  "sections": [
+    {
+      "id": "education",
+      "title": "Education",
+      "entries": [
+        {
+          "date": "2020–2025",
+          "location": "Rajshahi, Bangladesh",
+          "title": "Rajshahi University of Engineering & Technology (RUET)",
+          "role": "B.Sc. in Electronics and Telecommunication Engineering",
+          "summary": "CGPA: 3.28/4.00 (First Class). Final-semester SGPA: 3.90, ranked third in the department.",
+          "image": "images/experience/education-01.jpg"
+        },
+        {
+          "date": "2017–2019",
+          "location": "Dhaka, Bangladesh",
+          "title": "Dhaka Residential Model College",
+          "role": "Higher Secondary Certificate",
+          "summary": "GPA: 5.00/5.00.",
+          "image": "images/experience/education-02.jpg"
+        },
+        {
+          "date": "2015–2017",
+          "location": "Khulna, Bangladesh",
+          "title": "Khulna Zilla School",
+          "role": "Secondary School Certificate",
+          "summary": "GPA: 5.00/5.00.",
+          "image": "images/experience/education-03.jpg"
+        }
+      ]
+    },
+    {
+      "id": "research-experience",
+      "title": "Research Experience",
+      "entries": [
+        {
+          "date": "2023–2025",
+          "location": "Rajshahi, Bangladesh",
+          "title": "Department of Electronics & Telecommunication Engineering, RUET",
+          "role": "Undergraduate Research Assistant",
+          "bullets": [
+            "Conducted experiments, simulations, and data analysis for real-world problems in electronics, embedded systems, communication, robotics, machine learning, and deep learning.",
+            "Prepared research papers, literature reviews, technical reports, and proposals for conference and journal submission.",
+            "Worked with research teams to develop prototypes and present findings in academic settings."
+          ],
+          "image": "images/experience/research-01.jpg"
+        }
+      ]
+    },
+    {
+      "id": "work-experience",
+      "title": "Work Experience",
+      "entries": [
+        {
+          "date": "2026–Present",
+          "location": "Nilphamari, Bangladesh",
+          "title": "THT-Space Electrical Company Ltd.",
+          "role": "Assistant Embedded System Engineer",
+          "bullets": [
+            "Develop embedded C/C++ firmware for printer systems, biometric IoT devices, and AI-enabled applications.",
+            "Design mixed-signal circuits, schematics, and multilayer PCBs in Altium Designer and KiCad.",
+            "Integrate sensors, actuators, wireless modules, peripherals, and TinyML/edge-AI workflows while supporting validation and manufacturing."
+          ],
+          "image": "images/experience/work-01.jpg"
+        },
+        {
+          "date": "2025–2026",
+          "location": "Remote",
+          "title": "ZeroxaDT",
+          "role": "Embedded System Engineer & Chief Operating Officer",
+          "bullets": [
+            "Directed operations and cross-functional delivery for AI and embedded-systems projects.",
+            "Developed and debugged embedded prototypes, PCB designs, and RF circuit simulations.",
+            "Managed project planning, execution, quality, and stakeholder coordination."
+          ],
+          "image": "images/experience/work-02.jpg"
+        },
+        {
+          "date": "2025–2026",
+          "location": "Remote",
+          "title": "TanAinent Global UK Ltd.",
+          "role": "Robotics Engineer & Chief Technical Officer",
+          "bullets": [
+            "Built machine-learning and ROS workflows using TensorFlow, Scikit-learn, PyTorch, Gazebo, and MicroPython.",
+            "Developed robotic systems using NodeMCU, ESP32-CAM, Arduino, and Raspberry Pi.",
+            "Led a cross-functional technical team from project concept through delivery."
+          ],
+          "image": "images/experience/work-03.jpg"
+        },
+        {
+          "date": "2026–Present",
+          "location": "Remote",
+          "title": "Outlier AI",
+          "role": "AI Model Trainer",
+          "summary": "Design and evaluate multi-turn, tool-aware model interactions; diagnose reasoning gaps and hallucinations; and support text, image, and video training-data quality.",
+          "image": "images/experience/work-04.jpg"
+        },
+        {
+          "date": "2025–Present",
+          "location": "Remote",
+          "title": "Priyo",
+          "role": "AI Data Annotator & Mathematics Problem Setter",
+          "summary": "Create mathematical reasoning datasets, structured prompts, LaTeX and JSON responses, adversarial examples, and error analyses for large language models.",
+          "image": "images/experience/work-05.jpg"
+        },
+        {
+          "date": "2025–Present",
+          "location": "Remote",
+          "title": "Mindrift",
+          "role": "AI Quality Analyst",
+          "summary": "Curate multi-turn conversational datasets and evaluate multimodal AI outputs for accuracy, coherence, reasoning quality, hallucinations, and edge cases.",
+          "image": "images/experience/work-06.jpg"
+        },
+        {
+          "date": "2022–2023",
+          "location": "Remote",
+          "title": "Tech Topia",
+          "role": "Intern & Tech Envoy",
+          "summary": "Developed technical courses and video content in robotics, IoT, electronics, programming, and communication; also designed circuits and implemented I²C, MQTT, and LoRa systems.",
+          "image": "images/experience/work-07.jpg"
+        },
+        {
+          "date": "2020–2022",
+          "location": "Remote",
+          "title": "Robo Adda",
+          "role": "Intern & Contributor, Robotics and Technical Team",
+          "summary": "Supported robotic-system prototyping, circuit and PCB development, hardware-software integration, wireless communication, technical courses, and competitions.",
+          "image": "images/experience/work-08.jpg"
+        }
+      ]
+    },
+    {
+      "id": "volunteering",
+      "title": "Volunteering Experience",
+      "entries": [
+        {
+          "date": "2023–2024",
+          "location": "Rajshahi, Bangladesh",
+          "title": "Astronomy and Science Society of RUET",
+          "role": "Research and Planning Secretary",
+          "summary": "Led research and planning activities; organized workshops and technical courses in astronomy, robotics, IoT, and STEM; and coordinated budgets, campaigns, competitions, science festivals, and olympiads.",
+          "image": "images/experience/volunteering-01.jpg"
+        },
+        {
+          "date": "2021–2024",
+          "location": "Dhaka, Bangladesh",
+          "title": "Bangladesh Robot Olympiad",
+          "role": "Academic Team Member, R&D Team",
+          "summary": "Mentored robotics participants, designed problems and competition tracks, supported live events, helped update the official website, and led robotics workshops and video content.",
+          "image": "images/experience/volunteering-02.jpg"
+        },
+        {
+          "date": "2021–2024",
+          "location": "Dhaka, Bangladesh",
+          "title": "Bangladesh Mathematical Olympiad",
+          "role": "Academic Team Member, R&D Team",
+          "summary": "Created advanced problem sets for regional and national competitions and delivered training in algebra, number theory, geometry, and structured problem-solving.",
+          "image": "images/experience/volunteering-03.jpg"
+        }
+      ]
+    }
+  ]
+}

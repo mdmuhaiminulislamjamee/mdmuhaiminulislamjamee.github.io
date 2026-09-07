@@ -32,4 +32,4 @@ Upload `profile.jpg` and `avatar.jpg` in this `images` folder.
 - `images/awards/award-01.jpg` through `award-22.jpg` — awards and achievement images.
 - `images/blog/autonomous-waste-robot.jpg` — blog listing thumbnail and article cover.
 
-JPG, PNG, and WebP all work, but if an extension changes, update the matching path in the relevant HTML file or in `assets/js/site.js`.
+JPG, PNG, and WebP all work, but if an extension changes, update the matching image path in the relevant JSON file inside [`data`](../data/).

@@ -15,6 +15,12 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 - Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
 - Persistent light/dark mode from the moon or sun button in the header.
 
+## Update website information without editing HTML
+
+All portfolio content is available as straightforward JSON files in the [`data`](data/) folder. Open [`data/README.md`](data/README.md) for the file map, GitHub editing steps, local VS Code preview instructions, and JSON formatting rules.
+
+Changes committed to `master` are loaded automatically by the published website. The existing HTML content remains as a fallback if a JSON file is temporarily unavailable or contains an error.
+
 ## Add images
 
 The current placeholders disappear automatically when the matching files are uploaded:

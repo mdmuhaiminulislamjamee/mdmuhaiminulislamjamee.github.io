@@ -1,0 +1,35 @@
+{
+  "browserTitle": "Blog | Md. Muhaiminul Islam",
+  "description": "Research notes and practical writing by Md. Muhaiminul Islam on embedded AI, robotics, computer vision, and autonomous systems.",
+  "heading": "Blog",
+  "intro": "Research practice, embedded intelligence, autonomous systems, and notes from what I am learning and building.",
+  "posts": [
+    {
+      "slug": "autonomous-waste-robot",
+      "title": "From Detection to Collection: Building an Autonomous Waste-Management Robot",
+      "shortTitle": "From Detection to Collection",
+      "url": "blog/autonomous-waste-robot.html",
+      "date": "2026-09-07",
+      "displayDate": "7 September 2026",
+      "summary": "A project note on connecting CNN-based perception, SLAM, path planning, sensing, and embedded actuation in a single autonomous collection system.",
+      "description": "A project note by Md. Muhaiminul Islam on an autonomous waste-management robot combining CNN detection, SLAM, path planning, sensing, and embedded control.",
+      "image": "images/blog/autonomous-waste-robot.jpg",
+      "imageAlt": "Autonomous waste-management robot platform",
+      "blocks": [
+        { "type": "paragraph", "text": "An autonomous waste-collection robot has to do more than recognize an object in a camera frame. It must understand where that object is, determine whether the route is safe, reach it without collision, and coordinate a physical collection mechanism. The central challenge is therefore integration: perception, localization, planning, and control must operate as one continuous system." },
+        { "type": "heading2", "text": "System architecture" },
+        { "type": "paragraph", "text": "The prototype combines a Raspberry Pi and Pi Camera for visual processing with an Arduino Mega for motion and collection control. Fast R-CNN and YOLO-based models provide object detection, while LiDAR and sonar sensors support mapping and obstacle awareness. The processing and control layers communicate through I²C so that high-level decisions can be translated into precise motor and servo actions." },
+        { "type": "heading3", "text": "Perception" },
+        { "type": "paragraph", "text": "The perception stage captures images of the surrounding environment and identifies waste objects. Using deep-learning detectors makes it possible to distinguish target objects from background clutter and provide the location information required by the navigation system." },
+        { "type": "heading3", "text": "Localization and mapping" },
+        { "type": "paragraph", "text": "Sensor observations are combined with SLAM to build a representation of the environment while estimating the robot’s position within it. A Kalman filter helps reduce uncertainty in the localization process, particularly when individual sensor readings are noisy or incomplete." },
+        { "type": "heading3", "text": "Path planning and control" },
+        { "type": "paragraph", "text": "Once a target is detected and localized, the A* algorithm searches for a safe and efficient path. The planned motion is executed through the embedded controller, which coordinates the drive system and servo-based collection mechanism. Sonar and LiDAR observations continue to support obstacle detection during movement." },
+        { "type": "heading2", "text": "From a model to a complete robot" },
+        { "type": "paragraph", "text": "The project reinforced an important engineering lesson: a strong detection model is only one component of an autonomous platform. Reliable behavior depends on the interfaces between components—camera timing, sensor calibration, coordinate transformations, communication latency, motor response, and recovery when the environment does not match the plan." },
+        { "type": "paragraph", "text": "This work formed part of the research published as “Smart Waste Management Robot: Integrating IoT, Artificial Intelligence, SLAM, and CNN-Based Advanced Image Processing for Real-Time Trash Collection and Categorization” at the 2024 27th International Conference on Computer and Information Technology." }
+      ],
+      "doi": "10.1109/ICCIT64611.2024.11022551"
+    }
+  ]
+}

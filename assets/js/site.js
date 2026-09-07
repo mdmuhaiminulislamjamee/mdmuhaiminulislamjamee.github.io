@@ -1,5 +1,9 @@
-(function () {
+(async function () {
   "use strict";
+
+  if (window.portfolioContentReady) {
+    await window.portfolioContentReady;
+  }
 
   const menuButton = document.querySelector("[data-menu-button]");
   const navigation = document.querySelector("[data-navigation]");
@@ -41,6 +45,7 @@
     { selector: "#volunteering .timeline-item", prefix: "volunteering" }
   ].forEach(function (group) {
     document.querySelectorAll(group.selector).forEach(function (item, index) {
+      if (item.querySelector(".timeline-visual")) return;
       const number = String(index + 1).padStart(2, "0");
       const title = item.querySelector("h3");
       addPlaceholderImage(item, "images/experience/" + group.prefix + "-" + number + ".jpg", "timeline-visual", title ? title.textContent : "Experience image");
@@ -48,6 +53,7 @@
   });
 
   document.querySelectorAll(".award-item").forEach(function (item, index) {
+    if (item.querySelector(".award-media")) return;
     const number = String(index + 1).padStart(2, "0");
     const title = item.querySelector("h2");
     addPlaceholderImage(item, "images/awards/award-" + number + ".jpg", "award-media", title ? title.textContent : "Award image");
@@ -98,7 +104,7 @@
     });
   }
 
-  const searchIndex = [
+  const fallbackSearchIndex = [
     { title: "Home", url: "index.html", detail: "Biography, research interests, technical skills, coursework, languages, and news" },
     { title: "Research & Publications", url: "research.html", detail: "Published work in robotics, IoT, computer vision, intelligent systems, and communication engineering" },
     { title: "Education & Experience", url: "experience.html", detail: "Education, RUET research experience, professional work, and volunteering" },
@@ -115,6 +121,18 @@
     { title: "Technical Skills", url: "index.html#technical-skills", detail: "Programming, frameworks, electronics software, hardware, protocols, platforms, and engineering tools" },
     { title: "Relevant Coursework", url: "index.html#coursework", detail: "Electronics, communication, signal processing, control, networks, VLSI, and programming" }
   ];
+  const searchIndex = Array.isArray(window.portfolioSearchIndex) && window.portfolioSearchIndex.length
+    ? window.portfolioSearchIndex
+    : fallbackSearchIndex;
+
+  function escapeSearchHtml(value) {
+    return String(value == null ? "" : value)
+      .replace(/&/g, "&amp;")
+      .replace(/</g, "&lt;")
+      .replace(/>/g, "&gt;")
+      .replace(/"/g, "&quot;")
+      .replace(/'/g, "&#039;");
+  }
 
   function renderResults(query) {
     if (!searchResults) return;
@@ -134,7 +152,7 @@
     }
 
     searchResults.innerHTML = results.map(function (item) {
-      return '<li><a href="' + basePath + item.url + '">' + item.title + '</a><p>' + item.detail + '</p></li>';
+      return '<li><a href="' + escapeSearchHtml(basePath + item.url) + '">' + escapeSearchHtml(item.title) + '</a><p>' + escapeSearchHtml(item.detail) + '</p></li>';
     }).join("");
   }
 
