@@ -285,7 +285,7 @@
         renderMedia(post.image, post.imageAlt || post.title) + '</a><div><h2><a href="' + escapeHtml(postUrl) + '">' + escapeHtml(post.title) + '</a></h2>' +
         '<time datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.displayDate) + '</time><p>' + escapeHtml(post.summary) + '</p></div></li>';
     }).join("");
-    return '<section class="blog-main" aria-labelledby="blog-title"><h1 id="blog-title">' + escapeHtml(data.heading) + '</h1><p class="blog-lead">' + escapeHtml(data.intro) + '</p><ul class="blog-list">' + posts + '</ul></section>';
+    return '<section class="blog-main" aria-labelledby="blog-title"><header class="blog-header"><h1 id="blog-title">' + escapeHtml(data.heading) + '</h1><p class="blog-lead">' + escapeHtml(data.intro) + '</p></header><ul class="blog-list">' + posts + '</ul></section>';
   }
 
   function renderArticleBlock(block) {
