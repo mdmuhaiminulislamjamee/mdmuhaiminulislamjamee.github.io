@@ -89,6 +89,14 @@
     return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
+  function renderContentPreviewMedia(image, alt, caption, extraClass) {
+    if (!image) return "";
+    const safeAlt = alt || "Preview image";
+    const safeCaption = caption || safeAlt;
+    const className = "media-frame content-preview-trigger" + (extraClass ? " " + extraClass : "");
+    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+  }
+
   function setMetadata(data, site, titleOverride, descriptionOverride) {
     const title = titleOverride || data.browserTitle;
     const description = descriptionOverride || data.description;
@@ -227,8 +235,9 @@
         const role = entry.role
           ? '<p class="timeline-role">' + escapeHtml(entry.role) + '</p>'
           : "";
+        const previewCaption = [entry.title, entry.role].filter(Boolean).join(" — ");
         return '<article class="timeline-item">' +
-          renderMedia(entry.image, entry.title, "timeline-visual") +
+          renderContentPreviewMedia(entry.image, entry.title, previewCaption, "timeline-visual") +
           '<div class="timeline-meta"><strong>' + escapeHtml(entry.date) + '</strong><span>' + escapeHtml(entry.location) + '</span></div>' +
           '<div class="timeline-content"><h3>' + escapeHtml(entry.title) + '</h3>' + role + summary + bullets +
           '</div></article>';
@@ -241,7 +250,8 @@
 
   function renderAwards(data) {
     const awards = (data.awards || []).map(function (award) {
-      return '<article class="award-item">' + renderMedia(award.image, award.title, "award-media") +
+      const previewCaption = [award.title, award.organization].filter(Boolean).join(" — ");
+      return '<article class="award-item">' + renderContentPreviewMedia(award.image, award.title, previewCaption, "award-media") +
         '<div class="award-year">' + escapeHtml(award.year) + '</div><div><h2>' + escapeHtml(award.title) + '</h2><p>' + escapeHtml(award.organization) + '</p></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<h2 class="band-heading" id="' + escapeHtml(data.sectionId) + '">' + escapeHtml(data.sectionTitle) + '</h2><div class="award-list">' + awards + '</div>';
@@ -268,7 +278,8 @@
         const certificateLink = item.certificateUrl
           ? '<a class="certificate-link" href="' + escapeHtml(rootUrl(item.certificateUrl)) + '" target="_blank" rel="noopener noreferrer">' + certificateLabel + '</a>'
           : '<span class="certificate-link is-pending" title="Add the Google Drive link in data/learning.json">' + certificateLabel + '</span>';
-        return '<article class="learning-card">' + renderMedia(item.image, item.imageAlt || item.title) +
+        const previewCaption = [item.title, [item.provider, item.year].filter(Boolean).join(" · ")].filter(Boolean).join(" — ");
+        return '<article class="learning-card">' + renderContentPreviewMedia(item.image, item.imageAlt || item.title, previewCaption, "learning-media") +
           '<div class="learning-copy"><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.provider) + ' · ' + escapeHtml(item.year) + '</p><div class="learning-actions"><span class="learning-status">' + escapeHtml(item.status) + '</span>' + certificateLink + '</div></div></article>';
       }).join("");
       const titleId = (section.id || "certificates") + "-title";

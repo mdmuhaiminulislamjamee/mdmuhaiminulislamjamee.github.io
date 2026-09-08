@@ -901,14 +901,16 @@ a.external-link:hover {
 }
 
 .project-preview-trigger,
-.gallery-preview-trigger {
+.gallery-preview-trigger,
+.content-preview-trigger {
   padding: 0;
   font: inherit;
   cursor: zoom-in;
 }
 
 .project-preview-trigger:disabled,
-.gallery-preview-trigger:disabled {
+.gallery-preview-trigger:disabled,
+.content-preview-trigger:disabled {
   cursor: default;
 }
 
@@ -931,12 +933,15 @@ a.external-link:hover {
 .project-preview-trigger.has-image:hover .preview-hint,
 .project-preview-trigger.has-image:focus-visible .preview-hint,
 .gallery-preview-trigger.has-image:hover .preview-hint,
-.gallery-preview-trigger.has-image:focus-visible .preview-hint {
+.gallery-preview-trigger.has-image:focus-visible .preview-hint,
+.content-preview-trigger.has-image:hover .preview-hint,
+.content-preview-trigger.has-image:focus-visible .preview-hint {
   opacity: 1;
   transform: translateY(0);
 }
 
-.gallery-preview-trigger {
+.gallery-preview-trigger,
+.content-preview-trigger {
   display: block;
   width: 100%;
   text-align: left;

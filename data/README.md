@@ -38,8 +38,9 @@ The files in this folder are the editable content source for the published websi
 - Duplicate an existing entry when adding a publication, job, award, project, certificate, or gallery item; then edit its values.
 - In `home.json`, edit or replace entries inside `references`; email and phone values automatically become clickable links, and `scholarUrl` controls the external Google Scholar icon beside each name.
 - In `research.json`, replace the 2025 and 2026 placeholder publication data. Leaving `doi` empty hides the DOI link until a real DOI is available.
+- Images listed in `experience.json` and `awards.json` open in a full-size preview when clicked.
 - In `projects.json`, paste each project Google Drive URL into its `projectUrl` field. Clicking an uploaded project image opens its full preview.
-- In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`.
+- In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`; uploaded certificate images open in a full-size preview.
 - In `gallery.json`, clicking an uploaded gallery image opens a full-size preview; `title` and `caption` provide the preview caption.
 - The existing blog article and blog listing are fully editable in `blog.json`. Adding another local article page also requires a corresponding HTML article URL.
 

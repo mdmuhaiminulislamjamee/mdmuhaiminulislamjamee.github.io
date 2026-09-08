@@ -60,6 +60,7 @@
     { selector: "#education .timeline-item", prefix: "education" },
     { selector: "#research-experience .timeline-item", prefix: "research" },
     { selector: "#work-experience .timeline-item", prefix: "work" },
+    { selector: "#freelancing-experience .timeline-item", prefix: "freelancing" },
     { selector: "#volunteering .timeline-item", prefix: "volunteering" }
   ].forEach(function (group) {
     document.querySelectorAll(group.selector).forEach(function (item, index) {
@@ -76,6 +77,40 @@
     const title = item.querySelector("h2");
     addPlaceholderImage(item, "images/awards/award-" + number + ".jpg", "award-media", title ? title.textContent : "Award image");
   });
+
+  function previewCaptionForFrame(frame) {
+    const item = frame.closest(".timeline-item, .award-item, .learning-card");
+    if (!item) return "";
+    const title = item.querySelector("h2, h3");
+    let detail = null;
+    if (item.matches(".timeline-item")) detail = item.querySelector(".timeline-role");
+    if (item.matches(".award-item")) detail = item.querySelector("p");
+    if (item.matches(".learning-card")) detail = item.querySelector(".learning-copy > p");
+    return [title && title.textContent, detail && detail.textContent].filter(Boolean).join(" — ");
+  }
+
+  function makeFramePreviewable(frame) {
+    if (frame.matches("[data-image-preview]")) return;
+    const image = frame.querySelector("img");
+    if (!image) return;
+    const button = document.createElement("button");
+    button.type = "button";
+    button.className = frame.className + " content-preview-trigger";
+    button.dataset.imagePreview = image.getAttribute("src") || "";
+    button.dataset.previewAlt = image.alt || "Preview image";
+    button.dataset.previewCaption = previewCaptionForFrame(frame) || button.dataset.previewAlt;
+    button.dataset.placeholder = frame.dataset.placeholder || "";
+    button.setAttribute("aria-label", "Preview " + button.dataset.previewAlt);
+    while (frame.firstChild) button.appendChild(frame.firstChild);
+    const hint = document.createElement("span");
+    hint.className = "preview-hint";
+    hint.textContent = "Preview image";
+    button.appendChild(hint);
+    frame.replaceWith(button);
+    setImageState(image, image.complete && image.naturalWidth > 0);
+  }
+
+  document.querySelectorAll(".timeline-visual, .award-media, .learning-card > .media-frame").forEach(makeFramePreviewable);
 
   const previewTriggers = document.querySelectorAll("[data-image-preview]");
   let imagePreview = null;
