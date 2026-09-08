@@ -7,6 +7,30 @@
   "scholarUrl": "https://scholar.google.com/citations?user=bYHFsFcAAAAJ&hl=en",
   "years": [
     {
+      "year": "2026",
+      "publications": [
+        {
+          "title": "2026 Publication Placeholder",
+          "authors": "M. M. Islam, Co-author One, and Co-author Two",
+          "venue": "Journal or Conference Name",
+          "details": "Publication details to be updated.",
+          "doi": ""
+        }
+      ]
+    },
+    {
+      "year": "2025",
+      "publications": [
+        {
+          "title": "2025 Publication Placeholder",
+          "authors": "M. M. Islam, Co-author One, and Co-author Two",
+          "venue": "Journal or Conference Name",
+          "details": "Publication details to be updated.",
+          "doi": ""
+        }
+      ]
+    },
+    {
       "year": "2024",
       "publications": [
         {

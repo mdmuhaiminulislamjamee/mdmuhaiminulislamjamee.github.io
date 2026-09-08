@@ -148,6 +148,15 @@
     const professionalTagline = Array.isArray(data.professionalTagline) && data.professionalTagline.length
       ? '<p class="professional-tagline">• ' + data.professionalTagline.map(escapeHtml).join(' <span aria-hidden="true">•</span> ') + '</p>'
       : "";
+    const references = (data.references || []).map(function (reference, index) {
+      return '<article class="reference-card"><h3><span>' + escapeHtml(index + 1) + '.</span> ' + escapeHtml(reference.name) + '</h3>' +
+        '<p>' + escapeHtml(reference.role) + '</p><p>' + escapeHtml(reference.affiliation) + '</p>' +
+        '<p><strong>Email:</strong> <a href="mailto:' + escapeHtml(reference.email) + '">' + escapeHtml(reference.email) + '</a></p>' +
+        '<p><strong>Phone:</strong> <a href="tel:' + escapeHtml(reference.phoneLink || reference.phoneDisplay) + '">' + escapeHtml(reference.phoneDisplay) + '</a></p></article>';
+    }).join("");
+    const referencesMarkup = references
+      ? '<section class="home-references" id="references" aria-labelledby="references-title"><h2 id="references-title">' + escapeHtml(data.referencesTitle || "References") + '</h2><div class="reference-grid">' + references + '</div></section>'
+      : "";
 
     return '<div class="home-wrap">' +
       '<section class="home-intro" aria-labelledby="home-title">' +
@@ -168,7 +177,7 @@
         '<div class="home-section" id="coursework"><h2>Relevant Coursework</h2><ul class="plain-list home-detail-list">' + coursework + '</ul></div>' +
         '<div class="home-section"><h2>Language Skills</h2><ul class="plain-list home-detail-list">' + languages + '</ul></div>' +
         '<div class="home-section full-grid-section"><h2>News</h2><ul class="news-list">' + news + '</ul></div>' +
-      '</section>' +
+      '</section>' + referencesMarkup +
     '</div>';
   }
 
@@ -334,6 +343,9 @@
 
     index.push({ title: "Technical Skills", url: "index.html#technical-skills", detail: (home.technicalSkills || []).map(function (item) { return item.label + " " + item.value; }).join(" ") });
     index.push({ title: "Relevant Coursework", url: "index.html#coursework", detail: (home.coursework || []).join(" ") });
+    (home.references || []).forEach(function (reference) {
+      index.push({ title: reference.name, url: "index.html#references", detail: [reference.role, reference.affiliation, reference.email].filter(Boolean).join(" ") });
+    });
     (research.years || []).forEach(function (yearGroup) {
       (yearGroup.publications || []).forEach(function (publication) {
         index.push({ title: publication.title, url: "research.html" + (publication.id ? "#" + publication.id : ""), detail: [publication.authors, publication.venue, publication.doi].filter(Boolean).join(" ") });

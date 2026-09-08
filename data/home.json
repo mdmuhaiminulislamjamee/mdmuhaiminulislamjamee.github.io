@@ -46,5 +46,32 @@
     { "year": "2025", "text": "Completed the B.Sc. in Electronics and Telecommunication Engineering at RUET, earning a 3.90 SGPA and ranking third in the final semester." },
     { "year": "2025", "text": "Became Divisional Winner and a Finalist in the Microsoft Office Specialist Bangladesh Championship." },
     { "year": "2024", "text": "Published four IEEE conference papers across ICCIT, ICAEEE, ICCECE, and PEEIACON." }
+  ],
+  "referencesTitle": "References",
+  "references": [
+    {
+      "name": "Md. Rakib Hossain",
+      "role": "Assistant Professor",
+      "affiliation": "Dept. of ETE, RUET",
+      "email": "rakib.hossain@ete.ruet.ac.bd",
+      "phoneDisplay": "+8801701012796",
+      "phoneLink": "+8801701012796"
+    },
+    {
+      "name": "Md. Omer Faruque",
+      "role": "Lab Mentor and Supervisor",
+      "affiliation": "Researchbuddy AI (Quantum Cyber Intelligence & AI in Power Systems Lab)",
+      "email": "omerfaruque1501111@gmail.com",
+      "phoneDisplay": "+8801303975653",
+      "phoneLink": "+8801303975653"
+    },
+    {
+      "name": "Farzana Akter",
+      "role": "Assistant Professor",
+      "affiliation": "Dept. of ETE, RUET",
+      "email": "farzanaeteruet@gmail.com",
+      "phoneDisplay": "+8801791282222",
+      "phoneLink": "+8801791282222"
+    }
   ]
 }

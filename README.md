@@ -4,7 +4,7 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 
 ## Pages
 
-- Home: research interests, academic biography, contact links, technical skills, coursework, languages, and news.
+- Home: professional tagline, research interests, academic biography, contact links, technical skills, coursework, languages, news, and references.
 - Research & Publications: chronological IEEE publication list with direct DOI links.
 - Education & Experience: education, RUET research experience, work experience, freelancing, and volunteering.
 - Awards & Achievements.
