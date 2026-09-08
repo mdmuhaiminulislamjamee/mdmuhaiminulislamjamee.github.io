@@ -17,6 +17,7 @@
   function closeNavigation() {
     if (navigation) navigation.classList.remove("is-open");
     if (menuButton) menuButton.setAttribute("aria-expanded", "false");
+    document.documentElement.classList.remove("menu-open");
     document.body.classList.remove("menu-open");
   }
 
@@ -97,6 +98,7 @@
     menuButton.addEventListener("click", function () {
       const open = navigation.classList.toggle("is-open");
       menuButton.setAttribute("aria-expanded", String(open));
+      document.documentElement.classList.toggle("menu-open", open);
       document.body.classList.toggle("menu-open", open);
     });
 
@@ -172,6 +174,7 @@
     closeNavigation();
     searchDialog.classList.add("is-open");
     searchDialog.setAttribute("aria-hidden", "false");
+    document.documentElement.classList.add("search-open");
     document.body.classList.add("search-open");
     renderResults("");
     window.setTimeout(function () { searchInput && searchInput.focus(); }, 30);
@@ -181,6 +184,7 @@
     if (!searchDialog) return;
     searchDialog.classList.remove("is-open");
     searchDialog.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("search-open");
     document.body.classList.remove("search-open");
   }
 
