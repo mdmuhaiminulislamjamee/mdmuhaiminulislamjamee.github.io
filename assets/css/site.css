@@ -763,17 +763,6 @@ input {
   font-style: italic;
 }
 
-.timeline-role-row {
-  display: flex;
-  margin-bottom: 0.6rem;
-  align-items: center;
-  gap: 0.5rem;
-}
-
-.timeline-role-row .timeline-role {
-  margin: 0;
-}
-
 .external-link {
   display: inline-grid;
   width: 1.15rem;

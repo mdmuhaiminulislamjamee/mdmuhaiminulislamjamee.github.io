@@ -7,7 +7,7 @@ The files in this folder are the editable content source for the published websi
 | [`site.json`](site.json) | Name, email, phone, profile links, CV path, avatar, and navigation |
 | [`home.json`](home.json) | Professional tagline, research interests, biography, technical skills, coursework, languages, news, and references |
 | [`research.json`](research.json) | Publications, authors, venues, DOI links, years, and research record |
-| [`experience.json`](experience.json) | Education, academic-document Drive links, research experience, work experience, freelancing, and volunteering |
+| [`experience.json`](experience.json) | Education, research experience, work experience, freelancing, and volunteering |
 | [`awards.json`](awards.json) | Awards, years, organizations, and award-image paths |
 | [`projects.json`](projects.json) | Project titles, descriptions, skills, Drive links, and preview-image paths |
 | [`learning.json`](learning.json) | Four certificate categories, providers, years, status, Drive links, and certificate-image paths |
@@ -38,7 +38,6 @@ The files in this folder are the editable content source for the published websi
 - Duplicate an existing entry when adding a publication, job, award, project, certificate, or gallery item; then edit its values.
 - In `home.json`, edit or replace entries inside `references`; email and phone values automatically become clickable links.
 - In `research.json`, replace the 2025 and 2026 placeholder publication data. Leaving `doi` empty hides the DOI link until a real DOI is available.
-- In `experience.json`, paste each academic Google Drive URL into the corresponding `documentUrl` field.
 - In `projects.json`, paste each project Google Drive URL into its `projectUrl` field. Clicking an uploaded project image opens its full preview.
 - In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`.
 - The existing blog article and blog listing are fully editable in `blog.json`. Adding another local article page also requires a corresponding HTML article URL.

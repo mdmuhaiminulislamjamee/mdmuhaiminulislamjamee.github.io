@@ -13,8 +13,6 @@
           "location": "Rajshahi, Bangladesh",
           "title": "Rajshahi University of Engineering & Technology (RUET)",
           "role": "B.Sc. (Engg.) in Electronics and Telecommunication Engineering",
-          "documentUrl": "",
-          "documentLabel": "Open degree certificate",
           "summary": "CGPA: 3.28/4.00 (First Class). Final-semester SGPA: 3.90, ranked third in the department.",
           "image": "images/experience/education-01.jpg"
         },
@@ -23,8 +21,6 @@
           "location": "Dhaka, Bangladesh",
           "title": "Dhaka Residential Model College",
           "role": "Higher Secondary Certificate",
-          "documentUrl": "",
-          "documentLabel": "Open certificate",
           "summary": "GPA: 5.00/5.00.",
           "image": "images/experience/education-02.jpg"
         },
@@ -33,8 +29,6 @@
           "location": "Khulna, Bangladesh",
           "title": "Khulna Zilla School",
           "role": "Secondary School Certificate",
-          "documentUrl": "",
-          "documentLabel": "Open certificate",
           "summary": "GPA: 5.00/5.00.",
           "image": "images/experience/education-03.jpg"
         }

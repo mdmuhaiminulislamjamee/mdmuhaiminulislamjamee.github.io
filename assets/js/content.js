@@ -216,12 +216,9 @@
         const bullets = Array.isArray(entry.bullets) && entry.bullets.length
           ? '<ul class="compact-points">' + entry.bullets.map(function (bullet) { return '<li>' + escapeHtml(bullet) + '</li>'; }).join("") + '</ul>'
           : "";
-        const documentLink = section.id === "education"
-          ? renderExternalLink(entry.documentUrl, entry.documentLabel || "Open academic document", "education-document-link")
-          : "";
         const role = entry.role
-          ? '<div class="timeline-role-row"><p class="timeline-role">' + escapeHtml(entry.role) + '</p>' + documentLink + '</div>'
-          : documentLink;
+          ? '<p class="timeline-role">' + escapeHtml(entry.role) + '</p>'
+          : "";
         return '<article class="timeline-item">' +
           renderMedia(entry.image, entry.title, "timeline-visual") +
           '<div class="timeline-meta"><strong>' + escapeHtml(entry.date) + '</strong><span>' + escapeHtml(entry.location) + '</span></div>' +
