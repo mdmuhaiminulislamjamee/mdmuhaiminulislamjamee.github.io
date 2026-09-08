@@ -18,9 +18,9 @@ Each folder contains its own filename-to-content map:
 - [Award images](awards/)
 - [Blog images](blog/)
 
-Upload `profile.jpg` and `avatar.jpg` in this `images` folder.
+Upload `profile.png` and `avatar.jpg` in this `images` folder.
 
-- `images/profile.jpg` — main portrait, ideally a 4:5 vertical image.
+- `images/profile.png` — main portrait, ideally a 4:5 vertical image.
 - `images/avatar.jpg` — small square header portrait.
 - `images/projects/project-01.jpg` through `project-07.jpg` — featured project images.
 - `images/certificates/certificate-01.jpg` through `certificate-12.jpg` — learning and certification images.

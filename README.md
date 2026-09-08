@@ -25,7 +25,7 @@ Changes committed to `master` are loaded automatically by the published website.
 
 The current placeholders disappear automatically when the matching files are uploaded:
 
-- `images/profile.jpg` — main portrait, preferably 4:5.
+- `images/profile.png` — main portrait, preferably 4:5.
 - `images/avatar.jpg` — square header portrait.
 - `images/projects/project-01.jpg` through `project-07.jpg`.
 - `images/certificates/certificate-01.jpg` through `certificate-12.jpg`.
@@ -139,7 +139,7 @@ The repository includes visible upload folders, so images can be added without V
 4. Drag in the image with the exact `.jpg` filename listed in that folder's README.
 5. Select **Commit changes** and commit directly to `master`.
 
-Upload `profile.jpg` and `avatar.jpg` directly inside [`images`](images/). GitHub Pages will publish committed images automatically, normally within a few minutes. Reusing an existing filename replaces that website image on the next deployment.
+Upload `profile.png` and `avatar.jpg` directly inside [`images`](images/). GitHub Pages will publish committed images automatically, normally within a few minutes. Reusing an existing filename replaces that website image on the next deployment.
 
 ## Privacy check before publishing
 
