@@ -70,8 +70,7 @@
 
     let savedTheme = "";
     try { savedTheme = window.localStorage.getItem("portfolio-theme") || ""; } catch (error) { savedTheme = ""; }
-    const preferredTheme = window.matchMedia && window.matchMedia("(prefers-color-scheme: dark)").matches ? "dark" : "light";
-    const initialTheme = savedTheme || preferredTheme;
+    const initialTheme = savedTheme === "dark" || savedTheme === "light" ? savedTheme : "light";
 
     function setTheme(theme) {
       document.documentElement.dataset.theme = theme;

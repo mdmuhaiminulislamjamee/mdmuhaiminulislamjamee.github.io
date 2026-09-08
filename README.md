@@ -13,7 +13,7 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 - Gallery with captions.
 - Blog, including the long-form project note at `blog/autonomous-waste-robot.html`.
 - Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
-- Persistent light/dark mode from the moon or sun button in the header.
+- Light mode by default, with a persistent light/dark choice from the moon or sun button in the header.
 
 ## Update website information without editing HTML
 
