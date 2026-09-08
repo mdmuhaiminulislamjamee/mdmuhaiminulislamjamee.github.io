@@ -508,6 +508,11 @@ input {
   list-style: none;
 }
 
+.news-list {
+  padding-top: 0.7rem;
+  border-top: 2px solid #7b8589;
+}
+
 .plain-list li {
   position: relative;
   margin: 0 0 0.55rem;
@@ -566,19 +571,16 @@ input {
 }
 
 .home-references > h2 {
-  margin: 0;
-  padding-bottom: 0.35rem;
-  border-bottom: 2px solid #7b8589;
+  margin: 0 0 1.05rem;
   color: var(--heading);
-  font-size: 1.55rem;
-  font-weight: 400;
-  font-variant: small-caps;
+  font-size: 1.65rem;
+  font-weight: 700;
   line-height: 1.2;
 }
 
 .reference-grid {
   display: grid;
-  padding: 1.15rem 1.25rem 0;
+  padding: 0 1.25rem;
   grid-template-columns: repeat(auto-fit, minmax(min(100%, 285px), 1fr));
   gap: 1.4rem 2.2rem;
 }
