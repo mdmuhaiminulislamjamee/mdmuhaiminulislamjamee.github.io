@@ -1,58 +1,272 @@
 {
   "browserTitle": "Certifications | Md. Muhaiminul Islam (Jamee)",
-  "description": "Certificates and professional learning credentials of Md. Muhaiminul Islam (Jamee).",
+  "description": "Academic, research, professional, course, and workshop certificates of Md. Muhaiminul Islam (Jamee).",
   "heading": "Certifications",
   "intro": "",
-  "items": [
+  "sections": [
     {
-      "title": "Certificate Placeholder 01",
-      "provider": "Training Provider",
-      "year": "20XX",
-      "status": "Completed",
-      "certificateLabel": "Certificate",
-      "certificateUrl": "https://drive.google.com/drive/folders/1EB0kqnYBobm2zcF1ohi4z-gAOjz2RMj4?usp=drive_link",
-      "image": "images/certificates/certificate-01.jpg",
-      "imageAlt": "Placeholder for certificate 01"
+      "id": "academic-certificates",
+      "title": "Academic Certificates",
+      "items": [
+        {
+          "title": "Academic Certificate Placeholder 01",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-01.jpg",
+          "imageAlt": "Placeholder for academic certificate 01"
+        },
+        {
+          "title": "Academic Certificate Placeholder 02",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-02.jpg",
+          "imageAlt": "Placeholder for academic certificate 02"
+        },
+        {
+          "title": "Academic Certificate Placeholder 03",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-03.jpg",
+          "imageAlt": "Placeholder for academic certificate 03"
+        },
+        {
+          "title": "Academic Certificate Placeholder 04",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-04.jpg",
+          "imageAlt": "Placeholder for academic certificate 04"
+        },
+        {
+          "title": "Academic Certificate Placeholder 05",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-05.jpg",
+          "imageAlt": "Placeholder for academic certificate 05"
+        },
+        {
+          "title": "Academic Certificate Placeholder 06",
+          "provider": "Institution or Education Board",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/academic-06.jpg",
+          "imageAlt": "Placeholder for academic certificate 06"
+        }
+      ]
     },
     {
-      "title": "Certificate Placeholder 02",
-      "provider": "Training Provider",
-      "year": "20XX",
-      "status": "Completed",
-      "certificateLabel": "Certificate",
-      "certificateUrl": "https://drive.google.com/drive/folders/1EB0kqnYBobm2zcF1ohi4z-gAOjz2RMj4?usp=drive_link",
-      "image": "images/certificates/certificate-02.jpg",
-      "imageAlt": "Placeholder for certificate 02"
+      "id": "research-certificates",
+      "title": "Research Certificates",
+      "items": [
+        {
+          "title": "Research Certificate Placeholder 01",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-01.jpg",
+          "imageAlt": "Placeholder for research certificate 01"
+        },
+        {
+          "title": "Research Certificate Placeholder 02",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-02.jpg",
+          "imageAlt": "Placeholder for research certificate 02"
+        },
+        {
+          "title": "Research Certificate Placeholder 03",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-03.jpg",
+          "imageAlt": "Placeholder for research certificate 03"
+        },
+        {
+          "title": "Research Certificate Placeholder 04",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-04.jpg",
+          "imageAlt": "Placeholder for research certificate 04"
+        },
+        {
+          "title": "Research Certificate Placeholder 05",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-05.jpg",
+          "imageAlt": "Placeholder for research certificate 05"
+        },
+        {
+          "title": "Research Certificate Placeholder 06",
+          "provider": "Conference or Research Institution",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/research-06.jpg",
+          "imageAlt": "Placeholder for research certificate 06"
+        }
+      ]
     },
     {
-      "title": "Certificate Placeholder 03",
-      "provider": "Training Provider",
-      "year": "20XX",
-      "status": "Completed",
-      "certificateLabel": "Certificate",
-      "certificateUrl": "https://drive.google.com/drive/folders/1EB0kqnYBobm2zcF1ohi4z-gAOjz2RMj4?usp=drive_link",
-      "image": "images/certificates/certificate-03.jpg",
-      "imageAlt": "Placeholder for certificate 03"
+      "id": "professional-certificates",
+      "title": "Professional Certificates",
+      "items": [
+        {
+          "title": "Professional Certificate Placeholder 01",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-01.jpg",
+          "imageAlt": "Placeholder for professional certificate 01"
+        },
+        {
+          "title": "Professional Certificate Placeholder 02",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-02.jpg",
+          "imageAlt": "Placeholder for professional certificate 02"
+        },
+        {
+          "title": "Professional Certificate Placeholder 03",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-03.jpg",
+          "imageAlt": "Placeholder for professional certificate 03"
+        },
+        {
+          "title": "Professional Certificate Placeholder 04",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-04.jpg",
+          "imageAlt": "Placeholder for professional certificate 04"
+        },
+        {
+          "title": "Professional Certificate Placeholder 05",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-05.jpg",
+          "imageAlt": "Placeholder for professional certificate 05"
+        },
+        {
+          "title": "Professional Certificate Placeholder 06",
+          "provider": "Professional Organization",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/professional-06.jpg",
+          "imageAlt": "Placeholder for professional certificate 06"
+        }
+      ]
     },
     {
-      "title": "Certificate Placeholder 04",
-      "provider": "Training Provider",
-      "year": "20XX",
-      "status": "Completed",
-      "certificateLabel": "Certificate",
-      "certificateUrl": "https://drive.google.com/drive/folders/1EB0kqnYBobm2zcF1ohi4z-gAOjz2RMj4?usp=drive_link",
-      "image": "images/certificates/certificate-04.jpg",
-      "imageAlt": "Placeholder for certificate 04"
-    },
-    {
-      "title": "Certificate Placeholder 05",
-      "provider": "Training Provider",
-      "year": "20XX",
-      "status": "Completed",
-      "certificateLabel": "Certificate",
-      "certificateUrl": "https://drive.google.com/drive/folders/1EB0kqnYBobm2zcF1ohi4z-gAOjz2RMj4?usp=drive_link",
-      "image": "images/certificates/certificate-05.jpg",
-      "imageAlt": "Placeholder for certificate 05"
+      "id": "course-workshop-certificates",
+      "title": "Course & Workshop Certificates",
+      "items": [
+        {
+          "title": "Course or Workshop Certificate Placeholder 01",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-01.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 01"
+        },
+        {
+          "title": "Course or Workshop Certificate Placeholder 02",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-02.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 02"
+        },
+        {
+          "title": "Course or Workshop Certificate Placeholder 03",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-03.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 03"
+        },
+        {
+          "title": "Course or Workshop Certificate Placeholder 04",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-04.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 04"
+        },
+        {
+          "title": "Course or Workshop Certificate Placeholder 05",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-05.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 05"
+        },
+        {
+          "title": "Course or Workshop Certificate Placeholder 06",
+          "provider": "Course or Workshop Provider",
+          "year": "20XX",
+          "status": "Completed",
+          "certificateLabel": "Certificate",
+          "certificateUrl": "",
+          "image": "images/certificates/course-workshop-06.jpg",
+          "imageAlt": "Placeholder for course or workshop certificate 06"
+        }
+      ]
     }
   ]
 }

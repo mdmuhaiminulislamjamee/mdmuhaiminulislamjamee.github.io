@@ -23,7 +23,10 @@ Upload `profile.png` and `avatar.jpg` in this `images` folder.
 - `images/profile.png` — main portrait, ideally a 4:5 vertical image.
 - `images/avatar.jpg` — small square header portrait.
 - `images/projects/project-01.jpg` through `project-10.jpg` — featured project images.
-- `images/certificates/certificate-01.jpg` through `certificate-05.jpg` — certification images.
+- `images/certificates/academic-01.jpg` through `academic-06.jpg` — academic certificate images.
+- `images/certificates/research-01.jpg` through `research-06.jpg` — research certificate images.
+- `images/certificates/professional-01.jpg` through `professional-06.jpg` — professional certificate images.
+- `images/certificates/course-workshop-01.jpg` through `course-workshop-06.jpg` — course and workshop certificate images.
 - `images/gallery/gallery-01.jpg` through `gallery-09.jpg` — gallery images.
 - `images/experience/education-01.jpg` through `education-03.jpg` — education images.
 - `images/experience/research-01.jpg` — RUET research-experience image.

@@ -5,12 +5,12 @@ The files in this folder are the editable content source for the published websi
 | File | Information controlled |
 | --- | --- |
 | [`site.json`](site.json) | Name, email, phone, profile links, CV path, avatar, and navigation |
-| [`home.json`](home.json) | Research interests, biography, technical skills, coursework, languages, and news |
+| [`home.json`](home.json) | Professional tagline, research interests, biography, technical skills, coursework, languages, and news |
 | [`research.json`](research.json) | Publications, authors, venues, DOI links, years, and research record |
-| [`experience.json`](experience.json) | Education, research experience, work experience, freelancing, and volunteering |
+| [`experience.json`](experience.json) | Education, academic-document Drive links, research experience, work experience, freelancing, and volunteering |
 | [`awards.json`](awards.json) | Awards, years, organizations, and award-image paths |
-| [`projects.json`](projects.json) | Project titles, descriptions, skills, and project-image paths |
-| [`learning.json`](learning.json) | Certificates, providers, years, status, Drive links, and certificate-image paths |
+| [`projects.json`](projects.json) | Project titles, descriptions, skills, Drive links, and preview-image paths |
+| [`learning.json`](learning.json) | Four certificate categories, providers, years, status, Drive links, and certificate-image paths |
 | [`gallery.json`](gallery.json) | Gallery titles, captions, image paths, and alternative text |
 | [`blog.json`](blog.json) | Blog listing, article text, dates, cover image, and DOI link |
 
@@ -36,6 +36,9 @@ The files in this folder are the editable content source for the published websi
 - JSON does not support comments.
 - Keep image paths and filenames exactly matched to the files inside `images`.
 - Duplicate an existing entry when adding a publication, job, award, project, certificate, or gallery item; then edit its values.
+- In `experience.json`, paste each academic Google Drive URL into the corresponding `documentUrl` field.
+- In `projects.json`, paste each project Google Drive URL into its `projectUrl` field. Clicking an uploaded project image opens its full preview.
+- In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`.
 - The existing blog article and blog listing are fully editable in `blog.json`. Adding another local article page also requires a corresponding HTML article URL.
 
 If a JSON file contains a syntax error or cannot be loaded, the website keeps displaying its built-in HTML content instead of showing a blank page.

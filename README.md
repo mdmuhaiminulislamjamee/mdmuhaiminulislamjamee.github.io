@@ -29,7 +29,10 @@ The current placeholders disappear automatically when the matching files are upl
 - `images/profile.png` — main portrait, preferably 4:5.
 - `images/avatar.jpg` — square header portrait.
 - `images/projects/project-01.jpg` through `project-10.jpg`.
-- `images/certificates/certificate-01.jpg` through `certificate-05.jpg`.
+- `images/certificates/academic-01.jpg` through `academic-06.jpg`.
+- `images/certificates/research-01.jpg` through `research-06.jpg`.
+- `images/certificates/professional-01.jpg` through `professional-06.jpg`.
+- `images/certificates/course-workshop-01.jpg` through `course-workshop-06.jpg`.
 - `images/gallery/gallery-01.jpg` through `gallery-09.jpg`.
 - `images/experience/education-01.jpg` through `education-03.jpg`.
 - `images/experience/research-01.jpg`.

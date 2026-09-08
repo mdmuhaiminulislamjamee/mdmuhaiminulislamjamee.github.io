@@ -61,10 +61,25 @@
     return '<span class="profile-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24">' + (icons[type] || icons.cv) + '</svg></span>';
   }
 
+  function renderExternalLink(url, label, extraClass) {
+    const className = "external-link" + (extraClass ? " " + extraClass : "");
+    const icon = '<svg viewBox="0 0 24 24" aria-hidden="true"><path d="M14 4h6v6"></path><path d="m20 4-9 9"></path><path d="M18 13v6a1 1 0 0 1-1 1H5a1 1 0 0 1-1-1V7a1 1 0 0 1 1-1h6"></path></svg>';
+    if (url) {
+      return '<a class="' + escapeHtml(className) + '" href="' + escapeHtml(rootUrl(url)) + '" target="_blank" rel="noopener noreferrer" aria-label="' + escapeHtml(label) + '" title="' + escapeHtml(label) + '">' + icon + '</a>';
+    }
+    return '<span class="' + escapeHtml(className + " is-pending") + '" role="img" aria-label="' + escapeHtml(label + " link has not been added") + '" title="Add this Google Drive link in the JSON file">' + icon + '</span>';
+  }
+
   function renderMedia(image, alt, extraClass) {
     if (!image) return "";
     const className = extraClass ? "media-frame " + extraClass : "media-frame";
     return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
+  }
+
+  function renderProjectMedia(image, alt) {
+    if (!image) return "";
+    const safeAlt = alt || "Project image";
+    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function setMetadata(data, site, titleOverride, descriptionOverride) {
@@ -130,6 +145,9 @@
     const biography = (data.biography || []).map(function (paragraph) {
       return '<p>' + escapeHtml(paragraph) + '</p>';
     }).join("");
+    const professionalTagline = Array.isArray(data.professionalTagline) && data.professionalTagline.length
+      ? '<p class="professional-tagline">• ' + data.professionalTagline.map(escapeHtml).join(' <span aria-hidden="true">•</span> ') + '</p>'
+      : "";
 
     return '<div class="home-wrap">' +
       '<section class="home-intro" aria-labelledby="home-title">' +
@@ -141,7 +159,7 @@
           '</ul>' +
           '<div class="social-links" aria-label="Academic and professional profiles">' + renderProfileLinks(site) + '</div>' +
         '</div>' +
-        '<div class="bio-panel"><h1 id="home-title">' + escapeHtml(data.heading) + '</h1>' +
+        '<div class="bio-panel"><h1 id="home-title">' + escapeHtml(data.heading) + '</h1>' + professionalTagline +
           '<p class="research-line"><strong>Research Interest:</strong> ' + escapeHtml(data.researchInterest) + '</p>' + biography +
         '</div>' +
       '</section>' +
@@ -189,11 +207,16 @@
         const bullets = Array.isArray(entry.bullets) && entry.bullets.length
           ? '<ul class="compact-points">' + entry.bullets.map(function (bullet) { return '<li>' + escapeHtml(bullet) + '</li>'; }).join("") + '</ul>'
           : "";
+        const documentLink = section.id === "education"
+          ? renderExternalLink(entry.documentUrl, entry.documentLabel || "Open academic document", "education-document-link")
+          : "";
+        const role = entry.role
+          ? '<div class="timeline-role-row"><p class="timeline-role">' + escapeHtml(entry.role) + '</p>' + documentLink + '</div>'
+          : documentLink;
         return '<article class="timeline-item">' +
           renderMedia(entry.image, entry.title, "timeline-visual") +
           '<div class="timeline-meta"><strong>' + escapeHtml(entry.date) + '</strong><span>' + escapeHtml(entry.location) + '</span></div>' +
-          '<div class="timeline-content"><h3>' + escapeHtml(entry.title) + '</h3>' +
-            (entry.role ? '<p class="timeline-role">' + escapeHtml(entry.role) + '</p>' : "") + summary + bullets +
+          '<div class="timeline-content"><h3>' + escapeHtml(entry.title) + '</h3>' + role + summary + bullets +
           '</div></article>';
       }).join("");
       const titleId = section.id + "-title";
@@ -214,21 +237,30 @@
     const projects = (data.projects || []).map(function (project) {
       const itemId = project.id ? ' id="' + escapeHtml(project.id) + '"' : "";
       const skills = (project.skills || project.tags || []).map(function (skill) { return '<li>' + escapeHtml(skill) + '</li>'; }).join("");
-      return '<article class="project-card"' + itemId + '>' + renderMedia(project.image, project.imageAlt || project.title) +
-        '<div class="project-copy"><div class="project-number">' + escapeHtml(project.number) + '</div><h2>' + escapeHtml(project.title) + '</h2><p>' + escapeHtml(project.description) + '</p><strong class="project-skills-title">Skills:</strong><ul class="project-skill-list">' + skills + '</ul></div></article>';
+      const projectLink = renderExternalLink(project.projectUrl, "Open " + project.title + " project file", "project-external-link");
+      return '<article class="project-card"' + itemId + '>' + renderProjectMedia(project.image, project.imageAlt || project.title) +
+        '<div class="project-copy"><div class="project-number">' + escapeHtml(project.number) + '</div><div class="project-title-row"><h2>' + escapeHtml(project.title) + '</h2>' + projectLink + '</div><p>' + escapeHtml(project.description) + '</p><strong class="project-skills-title">Skills:</strong><ul class="project-skill-list">' + skills + '</ul></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="project-grid">' + projects + '</div>';
   }
 
   function renderLearning(data) {
-    const items = (data.items || []).map(function (item) {
-      const certificateLink = item.certificateUrl
-        ? '<a class="certificate-link" href="' + escapeHtml(rootUrl(item.certificateUrl)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.certificateLabel || "Certificate") + '</a>'
-        : "";
-      return '<article class="learning-card">' + renderMedia(item.image, item.imageAlt || item.title) +
-        '<div class="learning-copy"><h2>' + escapeHtml(item.title) + '</h2><p>' + escapeHtml(item.provider) + ' · ' + escapeHtml(item.year) + '</p><div class="learning-actions"><span class="learning-status">' + escapeHtml(item.status) + '</span>' + certificateLink + '</div></div></article>';
+    const sections = Array.isArray(data.sections) && data.sections.length
+      ? data.sections
+      : [{ id: "certificates", title: "Certificates", items: data.items || [] }];
+    const sectionMarkup = sections.map(function (section) {
+      const items = (section.items || []).map(function (item) {
+        const certificateLabel = escapeHtml(item.certificateLabel || "Certificate");
+        const certificateLink = item.certificateUrl
+          ? '<a class="certificate-link" href="' + escapeHtml(rootUrl(item.certificateUrl)) + '" target="_blank" rel="noopener noreferrer">' + certificateLabel + '</a>'
+          : '<span class="certificate-link is-pending" title="Add the Google Drive link in data/learning.json">' + certificateLabel + '</span>';
+        return '<article class="learning-card">' + renderMedia(item.image, item.imageAlt || item.title) +
+          '<div class="learning-copy"><h3>' + escapeHtml(item.title) + '</h3><p>' + escapeHtml(item.provider) + ' · ' + escapeHtml(item.year) + '</p><div class="learning-actions"><span class="learning-status">' + escapeHtml(item.status) + '</span>' + certificateLink + '</div></div></article>';
+      }).join("");
+      const titleId = (section.id || "certificates") + "-title";
+      return '<section class="certificate-section" id="' + escapeHtml(section.id || "certificates") + '" aria-labelledby="' + escapeHtml(titleId) + '"><h2 id="' + escapeHtml(titleId) + '" class="band-heading">' + escapeHtml(section.title) + '</h2><div class="learning-grid">' + items + '</div></section>';
     }).join("");
-    return renderHero(data.heading, data.intro) + '<div class="learning-grid">' + items + '</div>';
+    return renderHero(data.heading, data.intro) + sectionMarkup;
   }
 
   function renderGallery(data) {
@@ -318,8 +350,13 @@
     (projects.projects || []).forEach(function (project) {
       index.push({ title: project.title, url: "projects.html" + (project.id ? "#" + project.id : ""), detail: [project.description, (project.skills || project.tags || []).join(" ")].filter(Boolean).join(" ") });
     });
-    (learning.items || []).forEach(function (item) {
-      index.push({ title: item.title, url: "learning.html", detail: [item.provider, item.year, item.status].filter(Boolean).join(" ") });
+    const learningSections = Array.isArray(learning.sections) && learning.sections.length
+      ? learning.sections
+      : [{ id: "certificates", title: "Certificates", items: learning.items || [] }];
+    learningSections.forEach(function (section) {
+      (section.items || []).forEach(function (item) {
+        index.push({ title: item.title, url: "learning.html#" + (section.id || "certificates"), detail: [section.title, item.provider, item.year, item.status].filter(Boolean).join(" ") });
+      });
     });
     (gallery.items || []).forEach(function (item) {
       index.push({ title: item.title, url: "gallery.html", detail: item.caption || "" });

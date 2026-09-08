@@ -2,12 +2,20 @@
 
 On GitHub, select **Add file → Upload files**, upload the correctly renamed `.jpg` files, and commit to `master`.
 
-| Filename | Certification or course |
-| --- | --- |
-| `certificate-01.jpg` | Certificate Placeholder 01 |
-| `certificate-02.jpg` | Certificate Placeholder 02 |
-| `certificate-03.jpg` | Certificate Placeholder 03 |
-| `certificate-04.jpg` | Certificate Placeholder 04 |
-| `certificate-05.jpg` | Certificate Placeholder 05 |
+## Academic Certificates
 
-Use clear, uncropped certificate images. Landscape orientation is preferred.
+Use `academic-01.jpg` through `academic-06.jpg`.
+
+## Research Certificates
+
+Use `research-01.jpg` through `research-06.jpg`.
+
+## Professional Certificates
+
+Use `professional-01.jpg` through `professional-06.jpg`.
+
+## Course & Workshop Certificates
+
+Use `course-workshop-01.jpg` through `course-workshop-06.jpg`.
+
+The exact title, provider, year, status, Drive link, image path, and alternative text for every card are editable in [`data/learning.json`](../../data/learning.json). Use clear, uncropped certificate images; landscape orientation is preferred.

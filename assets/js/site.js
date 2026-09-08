@@ -21,13 +21,24 @@
     document.body.classList.remove("menu-open");
   }
 
+  function setImageState(image, available) {
+    const frame = image.closest(".media-frame");
+    image.hidden = !available;
+    if (!frame) return;
+    frame.classList.toggle("has-image", available);
+    if (frame.matches("[data-image-preview]")) {
+      frame.disabled = !available;
+      frame.setAttribute("aria-disabled", String(!available));
+    }
+  }
+
   function prepareImage(image) {
     if (image.complete) {
-      image.hidden = image.naturalWidth === 0;
+      setImageState(image, image.naturalWidth > 0);
     } else {
-      image.hidden = true;
-      image.addEventListener("load", function () { image.hidden = false; });
-      image.addEventListener("error", function () { image.hidden = true; });
+      setImageState(image, false);
+      image.addEventListener("load", function () { setImageState(image, true); });
+      image.addEventListener("error", function () { setImageState(image, false); });
     }
   }
 
@@ -65,6 +76,54 @@
     const title = item.querySelector("h2");
     addPlaceholderImage(item, "images/awards/award-" + number + ".jpg", "award-media", title ? title.textContent : "Award image");
   });
+
+  const previewTriggers = document.querySelectorAll("[data-image-preview]");
+  let imagePreview = null;
+  let lastPreviewTrigger = null;
+
+  function closeImagePreview() {
+    if (!imagePreview || !imagePreview.classList.contains("is-open")) return;
+    imagePreview.classList.remove("is-open");
+    imagePreview.setAttribute("aria-hidden", "true");
+    document.documentElement.classList.remove("preview-open");
+    document.body.classList.remove("preview-open");
+    if (lastPreviewTrigger) lastPreviewTrigger.focus();
+  }
+
+  if (previewTriggers.length) {
+    imagePreview = document.createElement("div");
+    imagePreview.className = "image-preview-dialog";
+    imagePreview.setAttribute("aria-hidden", "true");
+    imagePreview.setAttribute("role", "dialog");
+    imagePreview.setAttribute("aria-modal", "true");
+    imagePreview.setAttribute("aria-label", "Project image preview");
+    imagePreview.innerHTML = '<div class="image-preview-panel"><button class="image-preview-close" type="button" aria-label="Close image preview">×</button><img src="" alt=""><p></p></div>';
+    document.body.appendChild(imagePreview);
+
+    const previewImage = imagePreview.querySelector("img");
+    const previewCaption = imagePreview.querySelector("p");
+    const previewClose = imagePreview.querySelector(".image-preview-close");
+
+    previewTriggers.forEach(function (trigger) {
+      trigger.addEventListener("click", function () {
+        if (trigger.disabled) return;
+        lastPreviewTrigger = trigger;
+        previewImage.src = trigger.dataset.imagePreview;
+        previewImage.alt = trigger.dataset.previewAlt || "Project image";
+        previewCaption.textContent = trigger.dataset.previewAlt || "Project image";
+        imagePreview.classList.add("is-open");
+        imagePreview.setAttribute("aria-hidden", "false");
+        document.documentElement.classList.add("preview-open");
+        document.body.classList.add("preview-open");
+        previewClose.focus();
+      });
+    });
+
+    previewClose.addEventListener("click", closeImagePreview);
+    imagePreview.addEventListener("click", function (event) {
+      if (event.target === imagePreview) closeImagePreview();
+    });
+  }
 
   const navShell = document.querySelector(".nav-shell");
   const firstSearchButton = document.querySelector("[data-search-open]");
@@ -201,6 +260,7 @@
     if (event.key === "Escape") {
       closeSearch();
       closeNavigation();
+      closeImagePreview();
     }
     if (event.key === "/" && !document.body.classList.contains("search-open") && !/input|textarea/i.test(document.activeElement.tagName)) {
       event.preventDefault();
