@@ -1,6 +1,6 @@
 {
-  "browserTitle": "Blog | Md. Muhaiminul Islam Jamee",
-  "description": "Research notes and practical writing by Md. Muhaiminul Islam Jamee on embedded AI, robotics, computer vision, and autonomous systems.",
+  "browserTitle": "Blog | Md. Muhaiminul Islam (Jamee)",
+  "description": "Research notes and practical writing by Md. Muhaiminul Islam (Jamee) on embedded AI, robotics, computer vision, and autonomous systems.",
   "heading": "Blog",
   "intro": "Research practice, embedded intelligence, autonomous systems, and notes from what I am learning and building.",
   "posts": [
@@ -12,7 +12,7 @@
       "date": "2026-09-07",
       "displayDate": "7 September 2026",
       "summary": "A project note on connecting CNN-based perception, SLAM, path planning, sensing, and embedded actuation in a single autonomous collection system.",
-      "description": "A project note by Md. Muhaiminul Islam Jamee on an autonomous waste-management robot combining CNN detection, SLAM, path planning, sensing, and embedded control.",
+      "description": "A project note by Md. Muhaiminul Islam (Jamee) on an autonomous waste-management robot combining CNN detection, SLAM, path planning, sensing, and embedded control.",
       "image": "images/blog/autonomous-waste-robot.jpg",
       "imageAlt": "Autonomous waste-management robot platform",
       "blocks": [

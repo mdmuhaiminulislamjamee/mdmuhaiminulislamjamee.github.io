@@ -1,4 +1,4 @@
-# Md. Muhaiminul Islam Jamee — Academic Portfolio
+# Md. Muhaiminul Islam (Jamee) — Academic Portfolio
 
 A lightweight static academic website for PhD applications, built for GitHub Pages.
 
