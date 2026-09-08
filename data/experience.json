@@ -1,8 +1,8 @@
 {
-  "browserTitle": "Education & Experience | Md. Muhaiminul Islam",
-  "description": "Education, research experience, professional work, and volunteering by Md. Muhaiminul Islam.",
+  "browserTitle": "Education & Experience | Md. Muhaiminul Islam Jamee",
+  "description": "Education, research experience, professional work, freelancing, and volunteering by Md. Muhaiminul Islam Jamee.",
   "heading": "Education & Experience",
-  "intro": "Academic training, research practice, embedded engineering, AI work, teaching, mentoring, and service.",
+  "intro": "",
   "sections": [
     {
       "id": "education",
@@ -12,7 +12,7 @@
           "date": "2020–2025",
           "location": "Rajshahi, Bangladesh",
           "title": "Rajshahi University of Engineering & Technology (RUET)",
-          "role": "B.Sc. in Electronics and Telecommunication Engineering",
+          "role": "B.Sc. (Engg.) in Electronics and Telecommunication Engineering",
           "summary": "CGPA: 3.28/4.00 (First Class). Final-semester SGPA: 3.90, ranked third in the department.",
           "image": "images/experience/education-01.jpg"
         },
@@ -93,30 +93,6 @@
           "image": "images/experience/work-03.jpg"
         },
         {
-          "date": "2026–Present",
-          "location": "Remote",
-          "title": "Outlier AI",
-          "role": "AI Model Trainer",
-          "summary": "Design and evaluate multi-turn, tool-aware model interactions; diagnose reasoning gaps and hallucinations; and support text, image, and video training-data quality.",
-          "image": "images/experience/work-04.jpg"
-        },
-        {
-          "date": "2025–Present",
-          "location": "Remote",
-          "title": "Priyo",
-          "role": "AI Data Annotator & Mathematics Problem Setter",
-          "summary": "Create mathematical reasoning datasets, structured prompts, LaTeX and JSON responses, adversarial examples, and error analyses for large language models.",
-          "image": "images/experience/work-05.jpg"
-        },
-        {
-          "date": "2025–Present",
-          "location": "Remote",
-          "title": "Mindrift",
-          "role": "AI Quality Analyst",
-          "summary": "Curate multi-turn conversational datasets and evaluate multimodal AI outputs for accuracy, coherence, reasoning quality, hallucinations, and edge cases.",
-          "image": "images/experience/work-06.jpg"
-        },
-        {
           "date": "2022–2023",
           "location": "Remote",
           "title": "Tech Topia",
@@ -131,6 +107,36 @@
           "role": "Intern & Contributor, Robotics and Technical Team",
           "summary": "Supported robotic-system prototyping, circuit and PCB development, hardware-software integration, wireless communication, technical courses, and competitions.",
           "image": "images/experience/work-08.jpg"
+        }
+      ]
+    },
+    {
+      "id": "freelancing-experience",
+      "title": "Freelancing Experience",
+      "entries": [
+        {
+          "date": "2026–Present",
+          "location": "Remote",
+          "title": "Outlier AI",
+          "role": "AI Model Trainer",
+          "summary": "Design and evaluate multi-turn, tool-aware model interactions; diagnose reasoning gaps and hallucinations; and support text, image, and video training-data quality.",
+          "image": "images/experience/freelancing-01.jpg"
+        },
+        {
+          "date": "2025–Present",
+          "location": "Remote",
+          "title": "Priyo",
+          "role": "AI Data Annotator & Mathematics Problem Setter",
+          "summary": "Create mathematical reasoning datasets, structured prompts, LaTeX and JSON responses, adversarial examples, and error analyses for large language models.",
+          "image": "images/experience/freelancing-02.jpg"
+        },
+        {
+          "date": "2025–Present",
+          "location": "Remote",
+          "title": "Mindrift",
+          "role": "AI Quality Analyst",
+          "summary": "Curate multi-turn conversational datasets and evaluate multimodal AI outputs for accuracy, coherence, reasoning quality, hallucinations, and edge cases.",
+          "image": "images/experience/freelancing-03.jpg"
         }
       ]
     },
@@ -161,6 +167,30 @@
           "role": "Academic Team Member, R&D Team",
           "summary": "Created advanced problem sets for regional and national competitions and delivered training in algebra, number theory, geometry, and structured problem-solving.",
           "image": "images/experience/volunteering-03.jpg"
+        },
+        {
+          "date": "20XX–20XX",
+          "location": "Bangladesh",
+          "title": "Society for the Popularization of Science, Bangladesh",
+          "role": "Volunteer & Program Contributor",
+          "summary": "Placeholder details for science-outreach activities, event coordination, educational programs, and community engagement. Replace this text with the final role and contributions.",
+          "image": "images/experience/volunteering-04.jpg"
+        },
+        {
+          "date": "20XX–20XX",
+          "location": "Bangladesh",
+          "title": "Srinivasa Ramanujan Math Club",
+          "role": "Member & Event Volunteer",
+          "summary": "Placeholder details for mathematics programs, problem-solving sessions, competitions, mentoring, and organizational responsibilities. Replace this text with the final information.",
+          "image": "images/experience/volunteering-05.jpg"
+        },
+        {
+          "date": "20XX–20XX",
+          "location": "Bangladesh",
+          "title": "Jamal Nazrul Islam Physics Club",
+          "role": "Member & Program Volunteer",
+          "summary": "Placeholder details for physics outreach, academic events, workshops, competitions, and volunteer responsibilities. Replace this text with the final information.",
+          "image": "images/experience/volunteering-06.jpg"
         }
       ]
     }

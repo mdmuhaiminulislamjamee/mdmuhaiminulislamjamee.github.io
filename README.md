@@ -1,4 +1,4 @@
-# Md. Muhaiminul Islam — Academic Portfolio
+# Md. Muhaiminul Islam Jamee — Academic Portfolio
 
 A lightweight static academic website for PhD applications, built for GitHub Pages.
 
@@ -6,10 +6,10 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 
 - Home: research interests, academic biography, contact links, technical skills, coursework, languages, and news.
 - Research & Publications: chronological IEEE publication list with direct DOI links.
-- Education & Experience: education, RUET research experience, work experience, and volunteering.
+- Education & Experience: education, RUET research experience, work experience, freelancing, and volunteering.
 - Awards & Achievements.
 - Projects.
-- Learning & Certifications.
+- Certifications.
 - Gallery with captions.
 - Blog, including the long-form project note at `blog/autonomous-waste-robot.html`.
 - Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
@@ -28,13 +28,14 @@ The current placeholders disappear automatically when the matching files are upl
 
 - `images/profile.png` — main portrait, preferably 4:5.
 - `images/avatar.jpg` — square header portrait.
-- `images/projects/project-01.jpg` through `project-07.jpg`.
-- `images/certificates/certificate-01.jpg` through `certificate-12.jpg`.
+- `images/projects/project-01.jpg` through `project-10.jpg`.
+- `images/certificates/certificate-01.jpg` through `certificate-05.jpg`.
 - `images/gallery/gallery-01.jpg` through `gallery-09.jpg`.
 - `images/experience/education-01.jpg` through `education-03.jpg`.
 - `images/experience/research-01.jpg`.
 - `images/experience/work-01.jpg` through `work-08.jpg`.
-- `images/experience/volunteering-01.jpg` through `volunteering-03.jpg`.
+- `images/experience/freelancing-01.jpg` through `freelancing-03.jpg`.
+- `images/experience/volunteering-01.jpg` through `volunteering-06.jpg`.
 - `images/awards/award-01.jpg` through `award-22.jpg`.
 - `images/blog/autonomous-waste-robot.jpg`.
 

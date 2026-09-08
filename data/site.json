@@ -1,6 +1,6 @@
 {
-  "name": "Md. Muhaiminul Islam",
-  "shortName": "MI",
+  "name": "Md. Muhaiminul Islam Jamee",
+  "shortName": "MIJ",
   "email": "jamee.islam2018@gmail.com",
   "phoneDisplay": "+880 1318-551592",
   "phoneLink": "+8801318551592",
@@ -10,26 +10,31 @@
   "profiles": [
     {
       "label": "LinkedIn",
+      "icon": "linkedin",
       "url": "https://www.linkedin.com/in/md-muhaiminul-islam-jamee",
       "column": 1
     },
     {
       "label": "Google Scholar",
+      "icon": "scholar",
       "url": "https://scholar.google.com/citations?user=bYHFsFcAAAAJ&hl=en",
       "column": 1
     },
     {
       "label": "ORCID",
+      "icon": "orcid",
       "url": "https://orcid.org/0009-0001-9273-9712",
       "column": 1
     },
     {
       "label": "GitHub",
+      "icon": "github",
       "url": "https://github.com/MuhaiminulJamee",
       "column": 2
     },
     {
       "label": "Download CV",
+      "icon": "cv",
       "url": "files/Md-Muhaiminul-Islam-CV.pdf",
       "column": 2,
       "download": true
@@ -41,7 +46,7 @@
     { "label": "Education & Experience", "url": "experience.html" },
     { "label": "Awards", "url": "awards.html" },
     { "label": "Projects", "url": "projects.html" },
-    { "label": "Learning", "url": "learning.html" },
+    { "label": "Certifications", "url": "learning.html" },
     { "label": "Gallery", "url": "gallery.html" },
     { "label": "Blog", "url": "blog.html" }
   ]

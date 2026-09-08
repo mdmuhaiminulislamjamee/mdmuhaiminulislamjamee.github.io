@@ -123,7 +123,7 @@
     { title: "Education & Experience", url: "experience.html", detail: "Education, RUET research experience, professional work, and volunteering" },
     { title: "Awards & Achievements", url: "awards.html", detail: "National and international awards in robotics, programming, olympiads, science, and innovation" },
     { title: "Projects", url: "projects.html", detail: "Selected embedded systems, robotics, IoT, and AI projects" },
-    { title: "Learning", url: "learning.html", detail: "Specializations, bootcamps, courses, workshops, and certifications" },
+    { title: "Certifications", url: "learning.html", detail: "Completed certificates and credential links" },
     { title: "Gallery", url: "gallery.html", detail: "Research, competitions, projects, outreach, and academic moments" },
     { title: "Blog", url: "blog.html", detail: "Research notes on embedded AI, robotics, computer vision, and autonomous systems" },
     { title: "From Detection to Collection", url: "blog/autonomous-waste-robot.html", detail: "Project note on the autonomous waste-management robot, SLAM, CNN detection, navigation, and embedded control" },

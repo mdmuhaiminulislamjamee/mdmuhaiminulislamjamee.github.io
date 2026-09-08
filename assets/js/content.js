@@ -44,7 +44,21 @@
   }
 
   function renderHero(heading, intro) {
-    return '<header class="page-hero"><h1>' + escapeHtml(heading) + '</h1><p>' + escapeHtml(intro) + '</p></header>';
+    const introMarkup = intro ? '<p>' + escapeHtml(intro) + '</p>' : "";
+    return '<header class="page-hero"><h1>' + escapeHtml(heading) + '</h1>' + introMarkup + '</header>';
+  }
+
+  function renderLinkIcon(type) {
+    const icons = {
+      email: '<path d="M3.5 6.5h17v11h-17z"></path><path d="m4 7 8 6 8-6"></path>',
+      phone: '<path d="M7.2 3.5 10 8 7.8 9.8c1.4 2.8 3.6 5 6.4 6.4L16 14l4.5 2.8-.8 3c-.2.7-.9 1.2-1.7 1.2C9.7 20.5 3.5 14.3 3 6c0-.8.5-1.5 1.2-1.7l3-.8Z"></path>',
+      linkedin: '<rect x="3.5" y="3.5" width="17" height="17" rx="2"></rect><path d="M8 10v7M8 7.2v.1M12 17v-7M12 13a3 3 0 0 1 6 0v4"></path>',
+      scholar: '<path d="m2.5 9 9.5-5 9.5 5-9.5 5-9.5-5Z"></path><path d="M6 11.2V16c3.5 2.7 8.5 2.7 12 0v-4.8M21.5 9v6"></path>',
+      orcid: '<circle cx="12" cy="12" r="9"></circle><path d="M8.5 10.5v5M8.5 7.8v.1M12 10.5h2a2.5 2.5 0 0 1 0 5h-2v-5Z"></path>',
+      github: '<path d="M9 19c-4.2 1.3-4.2-2.1-5.9-2.6M14.9 21v-3.3c0-1 .1-1.7-.5-2.4 2.8-.3 5.7-1.4 5.7-6.3a5 5 0 0 0-1.3-3.4 4.6 4.6 0 0 0-.1-3.4s-1.1-.4-3.6 1.3a12.4 12.4 0 0 0-6.2 0C6.4 1.8 5.3 2.2 5.3 2.2a4.6 4.6 0 0 0-.1 3.4A5 5 0 0 0 3.9 9c0 4.9 2.9 6 5.7 6.3-.5.6-.6 1.3-.5 2.4V21"></path>',
+      cv: '<path d="M6 2.5h8l4 4V21H6z"></path><path d="M14 2.5v4h4M12 10v7M9.5 14.5 12 17l2.5-2.5"></path>'
+    };
+    return '<span class="profile-link-icon" aria-hidden="true"><svg viewBox="0 0 24 24">' + (icons[type] || icons.cv) + '</svg></span>';
   }
 
   function renderMedia(image, alt, extraClass) {
@@ -83,7 +97,7 @@
 
     const footer = document.querySelector(".site-footer");
     if (footer) {
-      footer.innerHTML = '<p>© <span data-current-year>' + new Date().getFullYear() + '</span> ' + escapeHtml(site.name) + ' · <a href="mailto:' + escapeHtml(site.email) + '">' + escapeHtml(site.email) + '</a></p>';
+      footer.innerHTML = '<p>© <span data-current-year>' + new Date().getFullYear() + '</span> ' + escapeHtml(site.name) + '</p>';
     }
   }
 
@@ -93,7 +107,8 @@
       const links = profiles.filter(function (profile) { return Number(profile.column) === column; }).map(function (profile) {
         const download = profile.download ? " download" : "";
         const profileUrl = profile.download && site.cvFile ? site.cvFile : profile.url;
-        return '<a href="' + escapeHtml(rootUrl(profileUrl)) + '" rel="me"' + download + '>[' + escapeHtml(profile.label) + ']</a>';
+        const iconType = profile.icon || profile.label.toLowerCase().replace(/\s+/g, "-");
+        return '<a href="' + escapeHtml(rootUrl(profileUrl)) + '" rel="me"' + download + '>' + renderLinkIcon(iconType) + '<span>' + escapeHtml(profile.label) + '</span></a>';
       }).join("");
       return '<div class="social-column">' + links + '</div>';
     }).join("");
@@ -121,8 +136,8 @@
         '<div class="profile-panel">' +
           renderMedia(site.profileImage, "Portrait of " + site.name, "profile-image") +
           '<ul class="profile-contact" aria-label="Contact details">' +
-            '<li><strong>Email</strong><a href="mailto:' + escapeHtml(site.email) + '">' + escapeHtml(site.email) + '</a></li>' +
-            '<li><strong>Phone</strong><a href="tel:' + escapeHtml(site.phoneLink) + '">' + escapeHtml(site.phoneDisplay) + '</a></li>' +
+            '<li><strong>' + renderLinkIcon("email") + '<span>Email</span></strong><a href="mailto:' + escapeHtml(site.email) + '">' + escapeHtml(site.email) + '</a></li>' +
+            '<li><strong>' + renderLinkIcon("phone") + '<span>Phone</span></strong><a href="tel:' + escapeHtml(site.phoneLink) + '">' + escapeHtml(site.phoneDisplay) + '</a></li>' +
           '</ul>' +
           '<div class="social-links" aria-label="Academic and professional profiles">' + renderProfileLinks(site) + '</div>' +
         '</div>' +
@@ -132,8 +147,8 @@
       '</section>' +
       '<section class="quick-grid" aria-label="Profile details">' +
         '<div class="home-section skills-section" id="technical-skills"><h2>Technical Skills</h2><ul class="skills-summary">' + skillItems + '</ul></div>' +
-        '<div class="home-section" id="coursework"><h2>Relevant Coursework</h2><ul class="plain-list">' + coursework + '</ul></div>' +
-        '<div class="home-section"><h2>Language Skills</h2><ul class="plain-list">' + languages + '</ul></div>' +
+        '<div class="home-section" id="coursework"><h2>Relevant Coursework</h2><ul class="plain-list home-detail-list">' + coursework + '</ul></div>' +
+        '<div class="home-section"><h2>Language Skills</h2><ul class="plain-list home-detail-list">' + languages + '</ul></div>' +
         '<div class="home-section full-grid-section"><h2>News</h2><ul class="news-list">' + news + '</ul></div>' +
       '</section>' +
     '</div>';
@@ -198,17 +213,20 @@
   function renderProjects(data) {
     const projects = (data.projects || []).map(function (project) {
       const itemId = project.id ? ' id="' + escapeHtml(project.id) + '"' : "";
-      const tags = (project.tags || []).map(function (tag) { return '<li>' + escapeHtml(tag) + '</li>'; }).join("");
+      const skills = (project.skills || project.tags || []).map(function (skill) { return '<li>' + escapeHtml(skill) + '</li>'; }).join("");
       return '<article class="project-card"' + itemId + '>' + renderMedia(project.image, project.imageAlt || project.title) +
-        '<div class="project-copy"><div class="project-number">' + escapeHtml(project.number) + '</div><h2>' + escapeHtml(project.title) + '</h2><p>' + escapeHtml(project.description) + '</p><ul class="tag-list">' + tags + '</ul></div></article>';
+        '<div class="project-copy"><div class="project-number">' + escapeHtml(project.number) + '</div><h2>' + escapeHtml(project.title) + '</h2><p>' + escapeHtml(project.description) + '</p><strong class="project-skills-title">Skills:</strong><ul class="project-skill-list">' + skills + '</ul></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="project-grid">' + projects + '</div>';
   }
 
   function renderLearning(data) {
     const items = (data.items || []).map(function (item) {
+      const certificateLink = item.certificateUrl
+        ? '<a class="certificate-link" href="' + escapeHtml(rootUrl(item.certificateUrl)) + '" target="_blank" rel="noopener noreferrer">' + escapeHtml(item.certificateLabel || "Certificate") + '</a>'
+        : "";
       return '<article class="learning-card">' + renderMedia(item.image, item.imageAlt || item.title) +
-        '<div class="learning-copy"><h2>' + escapeHtml(item.title) + '</h2><p>' + escapeHtml(item.provider) + ' · ' + escapeHtml(item.year) + '</p><span class="learning-status">' + escapeHtml(item.status) + '</span></div></article>';
+        '<div class="learning-copy"><h2>' + escapeHtml(item.title) + '</h2><p>' + escapeHtml(item.provider) + ' · ' + escapeHtml(item.year) + '</p><div class="learning-actions"><span class="learning-status">' + escapeHtml(item.status) + '</span>' + certificateLink + '</div></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="learning-grid">' + items + '</div>';
   }
@@ -274,7 +292,7 @@
       "experience.html": experience.intro || "Education and experience",
       "awards.html": awards.intro || "Awards and achievements",
       "projects.html": projects.intro || "Selected projects",
-      "learning.html": learning.intro || "Learning and certifications",
+      "learning.html": learning.intro || "Certifications",
       "gallery.html": gallery.intro || "Gallery",
       "blog.html": blog.intro || "Blog"
     };
@@ -298,7 +316,7 @@
       index.push({ title: award.title, url: "awards.html#" + (awards.sectionId || ""), detail: [award.year, award.organization].filter(Boolean).join(" ") });
     });
     (projects.projects || []).forEach(function (project) {
-      index.push({ title: project.title, url: "projects.html" + (project.id ? "#" + project.id : ""), detail: [project.description, (project.tags || []).join(" ")].filter(Boolean).join(" ") });
+      index.push({ title: project.title, url: "projects.html" + (project.id ? "#" + project.id : ""), detail: [project.description, (project.skills || project.tags || []).join(" ")].filter(Boolean).join(" ") });
     });
     (learning.items || []).forEach(function (item) {
       index.push({ title: item.title, url: "learning.html", detail: [item.provider, item.year, item.status].filter(Boolean).join(" ") });

@@ -7,10 +7,10 @@ The files in this folder are the editable content source for the published websi
 | [`site.json`](site.json) | Name, email, phone, profile links, CV path, avatar, and navigation |
 | [`home.json`](home.json) | Research interests, biography, technical skills, coursework, languages, and news |
 | [`research.json`](research.json) | Publications, authors, venues, DOI links, years, and research record |
-| [`experience.json`](experience.json) | Education, research experience, work experience, and volunteering |
+| [`experience.json`](experience.json) | Education, research experience, work experience, freelancing, and volunteering |
 | [`awards.json`](awards.json) | Awards, years, organizations, and award-image paths |
-| [`projects.json`](projects.json) | Project titles, descriptions, tags, and project-image paths |
-| [`learning.json`](learning.json) | Courses, providers, years, status, and certificate-image paths |
+| [`projects.json`](projects.json) | Project titles, descriptions, skills, and project-image paths |
+| [`learning.json`](learning.json) | Certificates, providers, years, status, Drive links, and certificate-image paths |
 | [`gallery.json`](gallery.json) | Gallery titles, captions, image paths, and alternative text |
 | [`blog.json`](blog.json) | Blog listing, article text, dates, cover image, and DOI link |
 

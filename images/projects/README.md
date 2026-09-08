@@ -11,5 +11,8 @@ On GitHub, select **Add file → Upload files**, upload the correctly renamed `.
 | `project-05.jpg` | PID-Controlled Fast Line-Following Robot |
 | `project-06.jpg` | Human-Rescue & Fire-Fighting Robot |
 | `project-07.jpg` | AI-Based Smart Notice Board |
+| `project-08.jpg` | Project Placeholder 08 |
+| `project-09.jpg` | Project Placeholder 09 |
+| `project-10.jpg` | Project Placeholder 10 |
 
 Landscape images work best. Keep the filenames lowercase and retain the two-digit numbering.

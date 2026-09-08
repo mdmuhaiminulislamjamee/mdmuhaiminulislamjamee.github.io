@@ -23,11 +23,16 @@ On GitHub, select **Add file → Upload files**, upload the correctly renamed `.
 | `work-01.jpg` | THT-Space Electrical Company Ltd. |
 | `work-02.jpg` | ZeroxaDT |
 | `work-03.jpg` | TanAinent Global UK Ltd. |
-| `work-04.jpg` | Outlier AI |
-| `work-05.jpg` | Priyo |
-| `work-06.jpg` | Mindrift |
 | `work-07.jpg` | Tech Topia |
 | `work-08.jpg` | Robo Adda |
+
+## Freelancing experience
+
+| Filename | Entry |
+| --- | --- |
+| `freelancing-01.jpg` | Outlier AI |
+| `freelancing-02.jpg` | Priyo |
+| `freelancing-03.jpg` | Mindrift |
 
 ## Volunteering experience
 
@@ -36,5 +41,8 @@ On GitHub, select **Add file → Upload files**, upload the correctly renamed `.
 | `volunteering-01.jpg` | Astronomy and Science Society of RUET |
 | `volunteering-02.jpg` | Bangladesh Robot Olympiad |
 | `volunteering-03.jpg` | Bangladesh Mathematical Olympiad |
+| `volunteering-04.jpg` | Society for the Popularization of Science, Bangladesh |
+| `volunteering-05.jpg` | Srinivasa Ramanujan Math Club |
+| `volunteering-06.jpg` | Jamal Nazrul Islam Physics Club |
 
 Landscape organization, team, event, or project photographs work best.
