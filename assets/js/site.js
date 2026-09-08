@@ -96,7 +96,7 @@
     imagePreview.setAttribute("aria-hidden", "true");
     imagePreview.setAttribute("role", "dialog");
     imagePreview.setAttribute("aria-modal", "true");
-    imagePreview.setAttribute("aria-label", "Project image preview");
+    imagePreview.setAttribute("aria-label", "Image preview");
     imagePreview.innerHTML = '<div class="image-preview-panel"><button class="image-preview-close" type="button" aria-label="Close image preview">×</button><img src="" alt=""><p></p></div>';
     document.body.appendChild(imagePreview);
 
@@ -109,8 +109,8 @@
         if (trigger.disabled) return;
         lastPreviewTrigger = trigger;
         previewImage.src = trigger.dataset.imagePreview;
-        previewImage.alt = trigger.dataset.previewAlt || "Project image";
-        previewCaption.textContent = trigger.dataset.previewAlt || "Project image";
+        previewImage.alt = trigger.dataset.previewAlt || "Preview image";
+        previewCaption.textContent = trigger.dataset.previewCaption || trigger.dataset.previewAlt || "Preview image";
         imagePreview.classList.add("is-open");
         imagePreview.setAttribute("aria-hidden", "false");
         document.documentElement.classList.add("preview-open");

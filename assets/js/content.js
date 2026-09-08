@@ -82,6 +82,13 @@
     return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
+  function renderGalleryMedia(image, alt, caption) {
+    if (!image) return "";
+    const safeAlt = alt || "Gallery image";
+    const safeCaption = caption || safeAlt;
+    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+  }
+
   function setMetadata(data, site, titleOverride, descriptionOverride) {
     const title = titleOverride || data.browserTitle;
     const description = descriptionOverride || data.description;
@@ -272,7 +279,8 @@
 
   function renderGallery(data) {
     const items = (data.items || []).map(function (item) {
-      return '<figure class="gallery-card">' + renderMedia(item.image, item.imageAlt || item.title) +
+      const previewCaption = [item.title, item.caption].filter(Boolean).join(" — ");
+      return '<figure class="gallery-card">' + renderGalleryMedia(item.image, item.imageAlt || item.title, previewCaption) +
         '<figcaption class="gallery-caption"><h2>' + escapeHtml(item.title) + '</h2><p>' + escapeHtml(item.caption) + '</p></figcaption></figure>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="gallery-grid">' + items + '</div>';

@@ -40,6 +40,7 @@ The files in this folder are the editable content source for the published websi
 - In `research.json`, replace the 2025 and 2026 placeholder publication data. Leaving `doi` empty hides the DOI link until a real DOI is available.
 - In `projects.json`, paste each project Google Drive URL into its `projectUrl` field. Clicking an uploaded project image opens its full preview.
 - In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`.
+- In `gallery.json`, clicking an uploaded gallery image opens a full-size preview; `title` and `caption` provide the preview caption.
 - The existing blog article and blog listing are fully editable in `blog.json`. Adding another local article page also requires a corresponding HTML article URL.
 
 If a JSON file contains a syntax error or cannot be loaded, the website keeps displaying its built-in HTML content instead of showing a blank page.
