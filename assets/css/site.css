@@ -18,6 +18,8 @@
   --shadow: 0 12px 34px rgba(28, 45, 52, 0.09);
   --radius: 4px;
   --content: 1160px;
+  --page-gutter: clamp(0.75rem, 2vw, 1.25rem);
+  --page-inset: clamp(1.5rem, 4vw, 2.5rem);
 }
 
 * {
@@ -26,9 +28,12 @@
 
 html {
   scroll-behavior: smooth;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 body {
+  min-width: 0;
   margin: 0;
   color: var(--ink);
   background: var(--surface);
@@ -36,6 +41,8 @@ body {
   font-size: 1rem;
   line-height: 1.58;
   -webkit-font-smoothing: antialiased;
+  overflow-x: hidden;
+  overflow-x: clip;
 }
 
 h1,
@@ -51,6 +58,8 @@ main p,
 main li {
   text-align: justify;
   text-justify: inter-word;
+  overflow-wrap: anywhere;
+  hyphens: auto;
 }
 
 body.menu-open,
@@ -62,6 +71,7 @@ a {
   color: var(--link);
   text-decoration-thickness: 1px;
   text-underline-offset: 3px;
+  overflow-wrap: anywhere;
 }
 
 a:hover {
@@ -71,6 +81,7 @@ a:hover {
 img {
   display: block;
   max-width: 100%;
+  height: auto;
 }
 
 button,
@@ -105,7 +116,7 @@ input {
 
 .header-inner {
   display: flex;
-  width: min(calc(100% - 2.5rem), 1220px);
+  width: min(calc(100% - var(--page-inset)), 1220px);
   min-height: 66px;
   margin: 0 auto;
   align-items: center;
@@ -154,6 +165,7 @@ input {
 
 .nav-shell {
   display: flex;
+  min-width: 0;
   align-items: center;
   gap: 0.25rem;
 }
@@ -237,16 +249,27 @@ input {
 
 .home-wrap,
 .content-wrap {
-  width: min(calc(100% - 2.5rem), var(--content));
+  width: min(calc(100% - var(--page-inset)), var(--content));
   margin: 0 auto;
 }
 
 .home-intro {
   display: grid;
   padding: 2rem 0 2.65rem;
-  grid-template-columns: minmax(310px, 0.82fr) minmax(0, 1.18fr);
-  gap: 2.2rem;
+  grid-template-columns: minmax(270px, 0.82fr) minmax(0, 1.18fr);
+  gap: clamp(1.5rem, 3.2vw, 2.2rem);
   align-items: start;
+}
+
+.home-intro > *,
+.quick-grid > *,
+.timeline-item > *,
+.award-item > *,
+.project-grid > *,
+.learning-grid > *,
+.gallery-grid > *,
+.blog-entry > * {
+  min-width: 0;
 }
 
 .profile-panel {
@@ -269,7 +292,7 @@ input {
 
 .media-frame::before {
   max-width: 22rem;
-  padding: 2rem;
+  padding: clamp(1rem, 4vw, 2rem);
   content: attr(data-placeholder);
   text-align: center;
   font-size: 0.92rem;
@@ -285,7 +308,8 @@ input {
 }
 
 .profile-image {
-  min-height: 570px;
+  min-height: 0;
+  aspect-ratio: 4 / 5;
 }
 
 .social-links {
@@ -516,7 +540,7 @@ input {
 .project-grid,
 .learning-grid,
 .gallery-grid {
-  width: min(calc(100% - 2.5rem), var(--content));
+  width: min(calc(100% - var(--page-inset)), var(--content));
   margin-right: auto;
   margin-left: auto;
 }
@@ -546,6 +570,7 @@ input {
 .publication-links {
   display: flex;
   margin-top: 0.5rem;
+  flex-wrap: wrap;
   gap: 0.9rem;
   font-size: 0.9rem;
 }
@@ -580,7 +605,8 @@ input {
 }
 
 .timeline-visual {
-  min-height: 145px;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
   grid-column: 1;
   grid-row: 1 / span 2;
 }
@@ -650,7 +676,8 @@ input {
 }
 
 .award-media {
-  min-height: 125px;
+  min-height: 0;
+  aspect-ratio: 4 / 3;
 }
 
 .award-year {
@@ -707,7 +734,8 @@ input {
 }
 
 .project-card .media-frame {
-  min-height: 280px;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
   border: 0;
   border-bottom: 1px solid #dfe5e7;
 }
@@ -750,7 +778,8 @@ input {
 }
 
 .learning-card .media-frame {
-  min-height: 290px;
+  min-height: 0;
+  aspect-ratio: 16 / 10;
   border: 0;
   border-bottom: 1px solid #dfe5e7;
 }
@@ -858,7 +887,7 @@ input {
 
 .blog-main,
 .article-main {
-  width: min(calc(100% - 2.5rem), 880px);
+  width: min(calc(100% - var(--page-inset)), 880px);
   margin: 0 auto;
   padding: 3.3rem 0 5rem;
 }
@@ -1006,7 +1035,7 @@ input {
 
 .article-hero {
   display: grid;
-  min-height: 310px;
+  min-height: clamp(190px, 35vw, 310px);
   margin: 1.8rem 0 2rem;
   border: 1px solid var(--blog-line);
   border-radius: 8px;
@@ -1040,6 +1069,7 @@ input {
 }
 
 .article-main pre {
+  max-width: 100%;
   overflow-x: auto;
   padding: 1.2rem;
   border: 1px solid var(--line);
@@ -1075,6 +1105,7 @@ input {
   z-index: 300;
   inset: 0;
   display: none;
+  overflow-y: auto;
   padding: clamp(1.5rem, 7vw, 5rem) 1.25rem;
   align-items: flex-start;
   justify-content: center;
@@ -1294,7 +1325,7 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
   }
 }
 
-@media (max-width: 900px) {
+@media (max-width: 1024px) {
   .menu-button {
     display: inline-grid;
   }
@@ -1305,10 +1336,11 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
     right: 0;
     bottom: 0;
     width: min(86vw, 340px);
+    overflow-y: auto;
     padding: 1.1rem 1.25rem 2rem;
     align-items: stretch;
     flex-direction: column;
-    background: #fff;
+    background: var(--surface-raised);
     box-shadow: -16px 20px 40px rgba(21, 35, 41, 0.13);
     transform: translateX(105%);
     transition: transform 180ms ease;
@@ -1342,61 +1374,29 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
     display: none;
   }
 
-  .home-intro {
-    grid-template-columns: minmax(250px, 0.7fr) minmax(0, 1.3fr);
-  }
-
-  .profile-image {
-    min-height: 470px;
+  .gallery-grid {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
   }
 }
 
-@media (max-width: 720px) {
-  .header-inner,
-  .home-wrap,
-  .content-wrap,
-  .publication-list,
-  .timeline,
-  .award-list,
-  .project-grid,
-  .learning-grid,
-  .gallery-grid {
-    width: min(calc(100% - 1.5rem), var(--content));
-  }
-
-  .brand {
-    font-size: 0.98rem;
-  }
-
-  .brand-photo {
-    width: 36px;
-    height: 36px;
-  }
-
+@media (max-width: 860px) {
   .home-intro {
-    padding-top: 1.2rem;
+    padding-top: 1.4rem;
     grid-template-columns: 1fr;
   }
 
   .profile-panel {
     position: static;
-  }
-
-  .profile-image {
-    min-height: 0;
-    aspect-ratio: 4 / 5;
+    width: min(100%, 430px);
+    margin: 0 auto;
   }
 
   .bio-panel h1 {
     margin-top: 0.4rem;
   }
+}
 
-  .quick-grid {
-    padding: 2.4rem 0;
-    grid-template-columns: 1fr;
-    gap: 2.2rem;
-  }
-
+@media (max-width: 800px) {
   .timeline-item,
   .award-item {
     grid-template-columns: 1fr;
@@ -1410,14 +1410,48 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
   }
 
   .timeline-visual {
+    width: min(100%, 420px);
     grid-row: auto;
     margin-bottom: 0.75rem;
+  }
+
+  .award-media {
+    width: min(100%, 320px);
   }
 
   .timeline-meta {
     align-items: flex-start;
     flex-direction: column;
     gap: 0.1rem;
+  }
+}
+
+@media (max-width: 720px) {
+  .header-inner,
+  .home-wrap,
+  .content-wrap,
+  .publication-list,
+  .timeline,
+  .award-list,
+  .project-grid,
+  .learning-grid,
+  .gallery-grid {
+    width: min(calc(100% - var(--page-inset)), var(--content));
+  }
+
+  .brand {
+    font-size: 0.98rem;
+  }
+
+  .brand-photo {
+    width: 36px;
+    height: 36px;
+  }
+
+  .quick-grid {
+    padding: 2.4rem 0;
+    grid-template-columns: 1fr;
+    gap: 2.2rem;
   }
 
   .project-grid,
@@ -1428,7 +1462,7 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
 
   .blog-main,
   .article-main {
-    width: min(calc(100% - 1.5rem), 880px);
+    width: min(calc(100% - var(--page-inset)), 880px);
     padding-top: 2.2rem;
   }
 
@@ -1453,6 +1487,85 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
   .band-heading {
     padding-right: 0.75rem;
     padding-left: 0.75rem;
+  }
+}
+
+@media (max-width: 520px) {
+  .header-inner {
+    gap: 0.35rem;
+  }
+
+  .brand {
+    min-width: 0;
+  }
+
+  .brand > span:last-child {
+    display: none;
+  }
+
+  .nav-shell {
+    gap: 0;
+  }
+
+  .icon-button,
+  .menu-button {
+    width: 38px;
+    height: 38px;
+  }
+
+  .site-nav {
+    width: min(92vw, 340px);
+  }
+
+  .social-links {
+    gap: 0.3rem 0.75rem;
+  }
+
+  .profile-contact li {
+    grid-template-columns: 4rem minmax(0, 1fr);
+    gap: 0.35rem;
+  }
+
+  .page-hero {
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+  }
+
+  .project-copy {
+    padding: 1.1rem;
+  }
+
+  .search-dialog {
+    padding-right: var(--page-gutter);
+    padding-left: var(--page-gutter);
+  }
+}
+
+@media (max-width: 440px) {
+  .blog-entry {
+    grid-template-columns: 1fr;
+    gap: 0.8rem;
+  }
+
+  .blog-icon,
+  .blog-thumb .media-frame {
+    width: 88px;
+  }
+
+  .news-list li {
+    grid-template-columns: 1fr;
+    gap: 0.15rem;
+  }
+
+  .year-heading,
+  .band-heading {
+    font-size: 1.3rem;
+  }
+}
+
+@media (max-height: 700px) and (min-width: 861px) {
+  .profile-panel {
+    position: static;
   }
 }
 

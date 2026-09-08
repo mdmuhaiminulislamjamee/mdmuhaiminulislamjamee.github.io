@@ -14,6 +14,12 @@
   const searchClose = document.querySelector("[data-search-close]");
   const basePath = document.body.dataset.base || "";
 
+  function closeNavigation() {
+    if (navigation) navigation.classList.remove("is-open");
+    if (menuButton) menuButton.setAttribute("aria-expanded", "false");
+    document.body.classList.remove("menu-open");
+  }
+
   function prepareImage(image) {
     if (image.complete) {
       image.hidden = image.naturalWidth === 0;
@@ -95,12 +101,18 @@
     });
 
     navigation.querySelectorAll("a").forEach(function (link) {
-      link.addEventListener("click", function () {
-        navigation.classList.remove("is-open");
-        menuButton.setAttribute("aria-expanded", "false");
-        document.body.classList.remove("menu-open");
-      });
+      link.addEventListener("click", closeNavigation);
     });
+
+    const desktopNavigation = window.matchMedia("(min-width: 1025px)");
+    const resetNavigationAtDesktop = function (event) {
+      if (event.matches) closeNavigation();
+    };
+    if (desktopNavigation.addEventListener) {
+      desktopNavigation.addEventListener("change", resetNavigationAtDesktop);
+    } else {
+      desktopNavigation.addListener(resetNavigationAtDesktop);
+    }
   }
 
   const fallbackSearchIndex = [
@@ -157,6 +169,7 @@
 
   function openSearch() {
     if (!searchDialog) return;
+    closeNavigation();
     searchDialog.classList.add("is-open");
     searchDialog.setAttribute("aria-hidden", "false");
     document.body.classList.add("search-open");
@@ -183,9 +196,7 @@
   document.addEventListener("keydown", function (event) {
     if (event.key === "Escape") {
       closeSearch();
-      if (navigation) navigation.classList.remove("is-open");
-      if (menuButton) menuButton.setAttribute("aria-expanded", "false");
-      document.body.classList.remove("menu-open");
+      closeNavigation();
     }
     if (event.key === "/" && !document.body.classList.contains("search-open") && !/input|textarea/i.test(document.activeElement.tagName)) {
       event.preventDefault();
