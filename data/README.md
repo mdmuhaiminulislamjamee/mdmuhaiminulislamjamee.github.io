@@ -36,7 +36,7 @@ The files in this folder are the editable content source for the published websi
 - JSON does not support comments.
 - Keep image paths and filenames exactly matched to the files inside `images`.
 - Duplicate an existing entry when adding a publication, job, award, project, certificate, or gallery item; then edit its values.
-- In `home.json`, edit or replace entries inside `references`; email and phone values automatically become clickable links.
+- In `home.json`, edit or replace entries inside `references`; email and phone values automatically become clickable links, and `scholarUrl` controls the external Google Scholar icon beside each name.
 - In `research.json`, replace the 2025 and 2026 placeholder publication data. Leaving `doi` empty hides the DOI link until a real DOI is available.
 - In `projects.json`, paste each project Google Drive URL into its `projectUrl` field. Clicking an uploaded project image opens its full preview.
 - In `learning.json`, keep certificates inside the appropriate `sections` entry and paste the credential URL into `certificateUrl`.

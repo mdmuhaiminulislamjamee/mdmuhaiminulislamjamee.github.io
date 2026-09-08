@@ -149,7 +149,8 @@
       ? '<p class="professional-tagline">• ' + data.professionalTagline.map(escapeHtml).join(' <span aria-hidden="true">•</span> ') + '</p>'
       : "";
     const references = (data.references || []).map(function (reference, index) {
-      return '<article class="reference-card"><h3><span>' + escapeHtml(index + 1) + '.</span> ' + escapeHtml(reference.name) + '</h3>' +
+      const scholarLink = renderExternalLink(reference.scholarUrl, "Open " + reference.name + " Google Scholar profile", "reference-scholar-link");
+      return '<article class="reference-card"><h3><span class="reference-index">' + escapeHtml(index + 1) + '.</span><span class="reference-name">' + escapeHtml(reference.name) + '</span>' + scholarLink + '</h3>' +
         '<p>' + escapeHtml(reference.role) + '</p><p>' + escapeHtml(reference.affiliation) + '</p>' +
         '<p><strong>Email:</strong> <a href="mailto:' + escapeHtml(reference.email) + '">' + escapeHtml(reference.email) + '</a></p>' +
         '<p><strong>Phone:</strong> <a href="tel:' + escapeHtml(reference.phoneLink || reference.phoneDisplay) + '">' + escapeHtml(reference.phoneDisplay) + '</a></p></article>';
