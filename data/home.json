@@ -4,15 +4,14 @@
   "heading": "Md. Muhaiminul Islam (Jamee)",
   "professionalTagline": [
     "Research Scholar",
-    "Embedded Systems & Robotic System Developer",
-    "Deep Learning, IoT & Python Specialist",
-    "Industrial Automation Expert"
+    "Embedded System Engineer",
+    "Deep Learning, IoT & Edge AI Specialist",
+    "Industrial Automation Expert",
+    "ROS Developer"
   ],
   "researchInterest": "Autonomous Vehicles, Artificial Intelligence, Computer Vision, Robotics, IoT, Control Systems, Embedded Systems, SLAM, Digital Image & Signal Processing, and Intelligent Systems.",
 "biography": [
-  "Md. Muhaiminul Islam is a highly motivated and dedicated researcher with a lifelong passion for Machine Learning & Deep Learning, specializing in Edge AI, Computer Vision, Robotics, and Cyber-Physical Systems. He pursued his B.Sc. (Engg.) in Electronics and Telecommunication Engineering from Rajshahi University of Engineering & Technology (RUET), one of Bangladesh’s top engineering universities, graduating in 2025. During his undergraduate years, he served as an undergraduate research assistant for 3 years in the ETE Lab of RUET. Beyond his research experience, he has also worked as an Embedded System Engineer at two multinational companies for 1.5 years. He began his extracurricular journey in STEM in 2009 by participating in the Bangladesh Mathematical Olympiad (BdMO) at the age of nine, while in class three. In 2013, at only 13 years old and studying in class seven, he achieved national recognition by winning the Bangladesh Physics Olympiad. Inspired by these achievements, he later developed a passion for coding, which led him to explore the fields of programming, robotics, and research.",
-
-  "Over the years, he has secured more than 30 awards in Robotics, Programming, Olympiads, and Hackathons at both national and international levels, including the Technical Award Medalist at the 22nd International Robot Olympiad 2020 and Champion at the CISCO IoT Hackathon 2018. He has also successfully completed over 25 innovative, real-world projects in the domains of IoT, Computer Vision, Robotics, and Machine Learning. Moreover, he has published six research papers in reputed IEEE conferences and is currently working on three additional journal manuscripts that are in preparation.",
+  "Md. Muhaiminul Islam is a highly motivated and dedicated researcher with a lifelong passion for Machine Learning & Deep Learning, specializing in Edge AI, Computer Vision, Robotics, and Cyber-Physical Systems. He pursued his B.Sc. (Engg.) in Electronics and Telecommunication Engineering from Rajshahi University of Engineering & Technology (RUET), one of Bangladesh’s top engineering universities, graduating in 2025. During his undergraduate years, he served as an undergraduate research assistant for 3 years in the ETE Lab of RUET. Beyond his research experience, he has also worked as an Embedded System Engineer at two multinational companies for 1.5 years. Over the years, he has secured more than 30 awards in Robotics, Programming, Olympiads, and Hackathons at both national and international levels, including the Technical Award Medalist at the 22nd International Robot Olympiad 2020 and Champion at the CISCO IoT Hackathon 2018. He has also successfully completed over 25 innovative, real-world projects in the domains of IoT, Computer Vision, Robotics, and Machine Learning. Moreover, he has published six research papers in reputed IEEE conferences and is currently working on three additional journal manuscripts that are in preparation.",
 
   "He is currently conducting research on a systematic benchmark of Edge AI inference frameworks for resource-constrained autonomous mobile robot platforms. Previously, he conducted research on a multimodal robotic framework for real-time waste detection and categorization, with a focus on developing robust perception and classification capabilities for autonomous waste management robots. He has also worked on simultaneous localization and mapping (SLAM) for robotic vision and path planning. His broader interests include vision-language models, autonomous intelligent systems, and natural language processing.",
 
@@ -21,11 +20,10 @@
   "technicalSkills": [
     { "label": "Programming", "value": "C, C++, Embedded C, Python, SQL." },
     { "label": "Libraries/Frameworks", "value": "NumPy, Pandas, Matplotlib, OpenCV, Scikit-Learn, TensorFlow, PyTorch, Django, Flask, REST API, FastAPI, ONNX." },
-    { "label": "Software", "value": "MATLAB, Proteus, PSpice, EasyEDA, KiCad, Altium Designer, LaTeX, Huawei eNSP, CST Studio, COMSOL, EMU8086, Fusion 360, Gazebo, CARLA, AutoCAD" },
+    { "label": "Software", "value": "MATLAB, LaTeX, EasyEDA, KiCad, Altium Designer, Gazebo, CARLA, Huawei eNSP, CST Studio, Proteus, PSpice, EMU8086, COMSOL, Fusion 360, STM32 Cube (IDE, MX)." },
     { "label": "Hardware", "value": "AVR MCU (ATmega328P, ATmega2560, ATmega32U4), ARM Cortex-M (STM32F103C8T6), NodeMCU (ESP8266), ESP32, JieLi (AC791, AC63), Rockchip RV1106, Raspberry Pi." },
-    { "label": "Communication Protocols", "value": "TCP/IP, I²C, SPI, UART, RS232, CAN, MQTT, HTTP." },
-    { "label": "Platforms & Tools", "value": "Windows, Linux, ROS/ROS2, FreeRTOS, Git, GitHub, Docker" },
-    { "label": "Soft Skills", "value": "Research & Development, Teaching, Problem Solving, Leadership, Documentation, Project Management, Public Speaking." }
+    { "label": "Communication Protocols", "value": "TCP/IP, I²C, SPI, UART, RS232, CAN, MQTT, HTTP, LoRa." },
+    { "label": "Platforms & Tools", "value": "Windows, Linux, ROS/ROS2, FreeRTOS, Zephyr RTOS, Git, GitHub, Docker" }
   ],
   "coursework": [
     "Digital Signal & Image Processing",
