@@ -10,11 +10,8 @@
       "year": "2026",
       "publications": [
         {
-          "title": "2026 Publication Placeholder",
-          "authors": "M. M. Islam, Co-author One, and Co-author Two",
-          "venue": "Journal or Conference Name",
-          "details": "Publication details to be updated.",
-          "doi": ""
+          "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms",
+          "details": "(In Preparation)."
         }
       ]
     },
@@ -22,11 +19,8 @@
       "year": "2025",
       "publications": [
         {
-          "title": "2025 Publication Placeholder",
-          "authors": "M. M. Islam, Co-author One, and Co-author Two",
-          "venue": "Journal or Conference Name",
-          "details": "Publication details to be updated.",
-          "doi": ""
+          "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks.",
+          "details": "(In Preparation)."
         }
       ]
     },
