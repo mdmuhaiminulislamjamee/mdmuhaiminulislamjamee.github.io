@@ -10,7 +10,11 @@
       "year": "2026",
       "publications": [
         {
-          "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms (In Preparation)."
+          {
+  "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks.",
+  "venue": "Under Review",
+  "details": "(In Preparation)."
+}"
           
         }
       ]
