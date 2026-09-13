@@ -10,8 +10,9 @@
       "year": "2026",
       "publications": [
         {
-          "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms",
-          "details": "(In Preparation)."
+          "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms"
+          "venue": "(In Preparation)."
+
         }
       ]
     },
@@ -19,8 +20,9 @@
       "year": "2025",
       "publications": [
         {
-          "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks.",
-          "details": "(In Preparation)."
+          "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks."
+          "venue": "(In Preparation)."
+
         }
       ]
     },
