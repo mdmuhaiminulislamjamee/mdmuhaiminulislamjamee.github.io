@@ -132,7 +132,7 @@
           "date": "Feb 2026 – Present",
           "location": "Remote",
           "title": "Upwork",
-          "role": "AI Model Trainer",
+          "role": "AI Agent Engineer",
           "bullets": [
             "Architected and deployed autonomous LLM agents using LangChain, LlamaIndex, and OpenAI/Anthropic APIs for multi-step reasoning, tool execution, and human-in-the-loop workflows.",
             "Engineered custom retrieval-augmented generation pipelines, semantic search architectures, structured data extractors, and optimized prompt layers tailored for production business applications.",
@@ -187,7 +187,7 @@
       "title": "Co-curricular Experience",
       "entries": [
         {
-          "date": "June 2023 – June 2024",
+          "date": "June 2022 – June 2024",
           "location": "Rajshahi, Bangladesh",
           "title": "Astronomy and Science Society of RUET",
           "role": "Research and Planning Secretary",
@@ -195,7 +195,7 @@
           "image": "images/experience/volunteering-01.jpg"
         },
         {
-          "date": "2021–2024",
+          "date": "Aug 2021 – Aug 2023",
           "location": "Dhaka, Bangladesh",
           "title": "Bangladesh Robot Olympiad",
           "role": "Academic Team Member, R&D Team",
@@ -203,35 +203,35 @@
           "image": "images/experience/volunteering-02.jpg"
         },
         {
-          "date": "2021–2024",
+          "date": "Dec 2020 – Dec 2022",
           "location": "Dhaka, Bangladesh",
           "title": "Bangladesh Mathematical Olympiad",
-          "role": "Academic Team Member, R&D Team",
+          "role": "Academic Team Member",
           "summary": "Created advanced problem sets for regional and national competitions and delivered training in algebra, number theory, geometry, and structured problem-solving.",
           "image": "images/experience/volunteering-03.jpg"
         },
         {
-          "date": "20XX–20XX",
-          "location": "Bangladesh",
+          "date": "Aug 2020 – Aug 2021",
+          "location": "Dhaka, Bangladesh",
           "title": "Society for the Popularization of Science, Bangladesh",
-          "role": "Volunteer & Program Contributor",
+          "role": "Volunteer",
           "summary": "Placeholder details for science-outreach activities, event coordination, educational programs, and community engagement. Replace this text with the final role and contributions.",
           "image": "images/experience/volunteering-04.jpg"
         },
         {
-          "date": "20XX–20XX",
-          "location": "Bangladesh",
+          "date": "Apr 2020 – Apr 2022",
+          "location": "Khulna, Bangladesh",
           "title": "Jamal Nazrul Islam Physics Club",
-          "role": "Member & Program Volunteer",
+          "role": "Mentor & Trainer",
           "summary": "Placeholder details for physics outreach, academic events, workshops, competitions, and volunteer responsibilities. Replace this text with the final information.",
           "image": "images/experience/volunteering-05.jpg"
         },
         
         {
-          "date": "20XX–20XX",
-          "location": "Bangladesh",
+          "date": "2019 – 2020",
+          "location": "Khulna, Bangladesh",
           "title": "Srinivasa Ramanujan Math Club",
-          "role": "Member & Event Volunteer",
+          "role": "Mentor",
           "summary": "Placeholder details for mathematics programs, problem-solving sessions, competitions, mentoring, and organizational responsibilities. Replace this text with the final information.",
           "image": "images/experience/volunteering-06.jpg"
         }
