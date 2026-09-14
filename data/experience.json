@@ -62,7 +62,7 @@
           "date": "July 2026–Present",
           "location": "Nilphamari, Bangladesh",
           "title": "THT-Space Electrical Company Ltd.",
-          "role": "Assistant Embedded System Engineer",
+          "role": "Assistant Embedded System Engineer (R&D Team)",
           "bullets": [
             "Engineered an 8-command hand gesture recognition system using a 76-dimensional landmark feature extractor and 128–64 MLP architecture, trained on 36,864 samples across 9 classes, and optimized with augmentation, runtime rejection, ONNX inference, and temporal gating to achieve 98.8% known-command acceptance, 99.0% macro-F1, and 0.4% unknown false-accept rate on 3,631 public-test observations.",
             "Designed and developed embedded firmware in C/C++ for microcontroller-based systems, including thermal and dot matrix printers, biometric IoT devices, and AI-powered embedded applications.",
@@ -77,9 +77,10 @@
           "title": "ZeroxaDT",
           "role": "Chief Operating Officer",
           "bullets": [
-            "Directed operations and cross-functional delivery for AI and embedded-systems projects.",
-            "Developed and debugged embedded prototypes, PCB designs, and RF circuit simulations.",
-            "Managed project planning, execution, quality, and stakeholder coordination."
+            "Directed company-wide operations and technical strategy, ensuring AI and embedded hardware roadmaps delivered on business milestones, budget targets, and market readiness.",
+            "Steered end-to-end embedded hardware engineering, overseeing PCB design, RF circuit simulations, firmware debugging, and quality assurance through full production deployment.",
+            "Guided diverse technical squads using balanced workload management and iterative development cycles, consistently meeting delivery deadlines and stringent quality standards.",
+            "Partnered with executive leadership, clients, and key stakeholders to turn strategic vision into robust, scalable hardware architectures and streamlined operational processes."
           ],
           "image": "images/experience/work-02.jpg"
         },
@@ -96,19 +97,29 @@
           "image": "images/experience/work-03.jpg"
         },
         {
-          "date": "2022–2023",
-          "location": "Sylhet, Bangladesh (Remote)",
+          "date": "Jan 2023 – June 2023",
+          "location": "Dhaka, Bangladesh (Remote)",
           "title": "Tech Topia",
-          "role": "Intern & Tech Envoy",
-          "summary": "Developed technical courses and video content in robotics, IoT, electronics, programming, and communication; also designed circuits and implemented I²C, MQTT, and LoRa systems.",
+          "role": "Intern & Tech Envoy (Robotics Team)",
+          "bullets": [
+            "Engineered the end-to-end hardware and software architecture for an autonomous Health Monitoring Robot, integrating a NodeMCU (ESP8266) microcontroller, L298N motor drivers, and biomedical sensors (MAX30102 pulse oximeter, MLX90614 infrared temperature sensor) for non-invasive patient vitals telemetry.",
+            "Designed a full-stack telemetry and analytics dashboard using PHP, MySQL, JavaScript, HTML5, and CSS to log, visualize, and query real-time physiological data over HTTP/REST APIs and WebSockets.",
+            "Implemented reliable embedded communication and telemetry pipelines across hardware nodes utilizing UART, I2C, SPI, MQTT, and long-range LoRa protocols for deterministic data transmission.",
+            "Designed, modeled, and benchmarked analog and digital circuits via SPICE simulation environments, resolving power distribution issues and optimizing motor driver load stability.",
+            "Authored comprehensive technical curricula and video training modules covering embedded systems, RTOS fundamentals, microcontroller interfacing, IoT architectures, and digital communication networks."
+          ],
           "image": "images/experience/work-07.jpg"
         },
         {
-          "date": "2020–2022",
-          "location": "Remote",
+          "date": "Dec 2020 – May 2021",
+          "location": "Sylhet, Bangladesh (Remote)",
           "title": "Robo Adda",
-          "role": "Intern & Contributor, Robotics and Technical Team",
-          "summary": "Supported robotic-system prototyping, circuit and PCB development, hardware-software integration, wireless communication, technical courses, and competitions.",
+          "role": "Intern & Contributor (Technical Team)",
+          "bullets": [
+            "Authored and produced technical educational curricula and instructional video series focused on Robotics, Microcontroller architectures, IoT ecosystems, Embedded C/C++, and Communication Systems.",
+            "Modeled, simulated, and validated mixed-signal circuits using SPICE tools while implementing and debugging bus and wireless protocols including I2C, SPI, UART, MQTT, and LoRa.",
+            "Prototyped embedded hardware architectures, designed power-management sub-circuits, and debugged low-level firmware using logic analyzers and bench testing to drive rapid R&D product development."
+          ],
           "image": "images/experience/work-08.jpg"
         }
       ]
