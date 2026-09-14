@@ -75,7 +75,7 @@
           "date": "Feb 2025 – Feb 2026",
           "location": "Dhaka, Bangladesh (Remote)",
           "title": "ZeroxaDT",
-          "role": "Chief Operating Officer",
+          "role": "Embedded System Engineer & Chief Operating Officer",
           "bullets": [
             "Directed company-wide operations and technical strategy, ensuring AI and embedded hardware roadmaps delivered on business milestones, budget targets, and market readiness.",
             "Steered end-to-end embedded hardware engineering, overseeing PCB design, RF circuit simulations, firmware debugging, and quality assurance through full production deployment.",
@@ -129,7 +129,20 @@
       "title": "Freelancing Experience",
       "entries": [
         {
-          "date": "2026–Present",
+          "date": "Feb 2026 – Present",
+          "location": "Remote",
+          "title": "Outlier AI",
+          "role": "AI Model Trainer",
+          "bullets": [
+            "Designed multi-turn interactions and structured prompts to teach models real-world assistant behavior, including tool usage and workflow-based reasoning.",
+            "Evaluated model outputs to identify reasoning gaps, hallucinations, and performance issues, and iteratively improved training data to enhance model accuracy.",
+            "Contributed to multimodal model training (text, image, video) by annotating and validating data aligned with model learning objectives.",
+            "Maintained high training standards through strict guideline adherence and QA, ensuring consistency and scalability of AI training pipelines."
+          ],
+            "image": "images/experience/freelancing-01.jpg"
+        },
+        {
+          "date": "Oct 2025 – June 2026",
           "location": "Remote",
           "title": "Outlier AI",
           "role": "AI Model Trainer",
@@ -137,20 +150,29 @@
           "image": "images/experience/freelancing-01.jpg"
         },
         {
-          "date": "2025–Present",
+          "date": "Sep 2025 – Feb 2026",
           "location": "Remote",
           "title": "Priyo",
           "role": "AI Data Annotator & Mathematics Problem Setter",
-          "summary": "Create mathematical reasoning datasets, structured prompts, LaTeX and JSON responses, adversarial examples, and error analyses for large language models.",
-          "image": "images/experience/freelancing-02.jpg"
+          "bullets": [
+            "Designed and curated high-quality mathematical reasoning datasets to train and evaluate Large Language Models (LLMs), focusing on multi-step logical problem solving and structured thinking.",
+            "Created standardized prompts and responses using LaTeX and JSON-based schemas to simulate real-world AI workflows, including function-calling and API-style interactions.",
+            "Generated adversarial examples and conducted detailed error analysis (logical, computational, conceptual) to identify weaknesses and improve model robustness.",
+            "Ensured dataset consistency and quality by following strict annotation guidelines, contributing to improved reasoning, instruction-following, and structured output capabilities of LLMs."
+          ],          
+            "image": "images/experience/freelancing-02.jpg"
         },
         {
-          "date": "2025–Present",
+          "date": "Apr 2025 – Present",
           "location": "Remote",
           "title": "Mindrift",
           "role": "AI Quality Analyst",
-          "summary": "Curate multi-turn conversational datasets and evaluate multimodal AI outputs for accuracy, coherence, reasoning quality, hallucinations, and edge cases.",
-          "image": "images/experience/freelancing-03.jpg"
+          "bullets": [
+            "Designed and curated multi-turn conversational datasets to train and evaluate LLMs, ensuring logical flow, natural dialogue, and real-world relevance.",
+            "Simulated assistant interactions with tool usage and API-like workflows, creating structured function-calling prompts using formats like JSON.",
+            "Evaluated text, image, audio, and video data, reviewing AI outputs for accuracy, coherence, and reasoning, and identifying issues such as hallucinations and edge cases."
+          ],          
+            "image": "images/experience/freelancing-03.jpg"
         }
       ]
     },
@@ -185,6 +207,14 @@
         {
           "date": "20XX–20XX",
           "location": "Bangladesh",
+          "title": "Jamal Nazrul Islam Physics Club",
+          "role": "Member & Program Volunteer",
+          "summary": "Placeholder details for physics outreach, academic events, workshops, competitions, and volunteer responsibilities. Replace this text with the final information.",
+          "image": "images/experience/volunteering-06.jpg"
+        },
+        {
+          "date": "20XX–20XX",
+          "location": "Bangladesh",
           "title": "Society for the Popularization of Science, Bangladesh",
           "role": "Volunteer & Program Contributor",
           "summary": "Placeholder details for science-outreach activities, event coordination, educational programs, and community engagement. Replace this text with the final role and contributions.",
@@ -197,14 +227,6 @@
           "role": "Member & Event Volunteer",
           "summary": "Placeholder details for mathematics programs, problem-solving sessions, competitions, mentoring, and organizational responsibilities. Replace this text with the final information.",
           "image": "images/experience/volunteering-05.jpg"
-        },
-        {
-          "date": "20XX–20XX",
-          "location": "Bangladesh",
-          "title": "Jamal Nazrul Islam Physics Club",
-          "role": "Member & Program Volunteer",
-          "summary": "Placeholder details for physics outreach, academic events, workshops, competitions, and volunteer responsibilities. Replace this text with the final information.",
-          "image": "images/experience/volunteering-06.jpg"
         }
       ]
     }
