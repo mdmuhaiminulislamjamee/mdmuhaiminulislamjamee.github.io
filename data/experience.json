@@ -9,15 +9,15 @@
       "title": "Education",
       "entries": [
         {
-          "date": "2020–2025",
+          "date": "Jan 2020 – June 2025",
           "location": "Rajshahi, Bangladesh",
           "title": "Rajshahi University of Engineering & Technology (RUET)",
           "role": "B.Sc. (Engg.) in Electronics and Telecommunication Engineering",
-          "summary": "CGPA: 3.28/4.00 (First Class). Final-semester SGPA: 3.90, ranked third in the department.",
+          "summary": "CGPA: 3.28/4.00 (First Class 11th). Final Semester GPA: 3.90/4.00 (Ranked 3rd)",
           "image": "images/experience/education-01.jpg"
         },
         {
-          "date": "2017–2019",
+          "date": "June 2017 – May 2019",
           "location": "Dhaka, Bangladesh",
           "title": "Dhaka Residential Model College",
           "role": "Higher Secondary Certificate",
@@ -25,7 +25,7 @@
           "image": "images/experience/education-02.jpg"
         },
         {
-          "date": "2015–2017",
+          "date": "Jan 2015 – Jan 2017",
           "location": "Khulna, Bangladesh",
           "title": "Khulna Zilla School",
           "role": "Secondary School Certificate",
@@ -39,14 +39,16 @@
       "title": "Research Experience",
       "entries": [
         {
-          "date": "2023–2025",
+          "date": "July 2023 – Dec 2025",
           "location": "Rajshahi, Bangladesh",
           "title": "Department of Electronics & Telecommunication Engineering, RUET",
           "role": "Undergraduate Research Assistant",
           "bullets": [
-            "Conducted experiments, simulations, and data analysis for real-world problems in electronics, embedded systems, communication, robotics, machine learning, and deep learning.",
-            "Prepared research papers, literature reviews, technical reports, and proposals for conference and journal submission.",
-            "Worked with research teams to develop prototypes and present findings in academic settings."
+            "Designed an autonomous garbage detection and collection robot using Raspberry Pi, YOLOv5/Faster R-CNN-based object detection, and SLAM-based navigation with LiDAR-GPS fusion and Kalman filtering/A* path planning, achieving 97% detection accuracy for trash and 96% for non-trash items, with 97% precision and 98% recall.",
+            "Engineered a GPS-GSM-based landmine and human-detection robot integrating Arduino, ESP32-CAM, and multi-sensor (PIR, gas, sonar, metal-detection) hardware, and an autonomous self-driving car using ROS and YOLO-based object recognition with real-time English–Bangla road-text translation, enabling remote hazard alerting and improved human–machine interaction across both platforms.",
+            "Architected an AI-based smart notice board with a three-tier full-stack system (Python, Node.js, MySQL) for real-time facial identification and personalized content delivery, achieving 97% accuracy, precision, recall, and F1-score in facial recognition evaluation.",
+            "Developed a real-time hand-gesture recognition system for human–machine interaction using deep learning-based classification models, achieving a 99.0% macro-F1 score.",
+            "Investigated an advanced Fresnel algorithm for computer-generated holography to improve image quality in secure communication systems, optimizing Fresnel distance and operating wavelength (350–700 nm) to minimize ringing and blurring, and achieved a muxed-hologram entropy of 7.99 (near the ideal 8-bit maximum), confirming high-fidelity, low correlation secure image reconstruction."
           ],
           "image": "images/experience/research-01.jpg"
         }
@@ -57,22 +59,23 @@
       "title": "Work Experience",
       "entries": [
         {
-          "date": "2026–Present",
+          "date": "July 2026–Present",
           "location": "Nilphamari, Bangladesh",
           "title": "THT-Space Electrical Company Ltd.",
           "role": "Assistant Embedded System Engineer",
           "bullets": [
-            "Develop embedded C/C++ firmware for printer systems, biometric IoT devices, and AI-enabled applications.",
-            "Design mixed-signal circuits, schematics, and multilayer PCBs in Altium Designer and KiCad.",
-            "Integrate sensors, actuators, wireless modules, peripherals, and TinyML/edge-AI workflows while supporting validation and manufacturing."
+            "Engineered an 8-command hand gesture recognition system using a 76-dimensional landmark feature extractor and 128–64 MLP architecture, trained on 36,864 samples across 9 classes, and optimized with augmentation, runtime rejection, ONNX inference, and temporal gating to achieve 98.8% known-command acceptance, 99.0% macro-F1, and 0.4% unknown false-accept rate on 3,631 public-test observations.",
+            "Designed and developed embedded firmware in C/C++ for microcontroller-based systems, including thermal and dot matrix printers, biometric IoT devices, and AI-powered embedded applications.",
+            "Designed embedded hardware, mixed-signal circuits, schematics, and multilayer PCBs using Altium Designer and KiCad, including component selection, BOM optimization, prototyping, and hardware validation.",
+            "Configured and optimized GPIO, Timers, PWM, ADC, UART, SPI, and I²C, while integrating sensors, actuators, wireless modules, and TinyML & Edge AI solutions for resource-constrained devices."
           ],
           "image": "images/experience/work-01.jpg"
         },
         {
-          "date": "2025–2026",
-          "location": "Remote",
+          "date": "Feb 2025 – Feb 2026",
+          "location": "Dhaka, Bangladesh (Remote)",
           "title": "ZeroxaDT",
-          "role": "Embedded System Engineer & Chief Operating Officer",
+          "role": "Chief Operating Officer",
           "bullets": [
             "Directed operations and cross-functional delivery for AI and embedded-systems projects.",
             "Developed and debugged embedded prototypes, PCB designs, and RF circuit simulations.",
@@ -81,20 +84,20 @@
           "image": "images/experience/work-02.jpg"
         },
         {
-          "date": "2025–2026",
-          "location": "Remote",
+          "date": "June 2025 – June 2026",
+          "location": "London, UK (Remote)",
           "title": "TanAinent Global UK Ltd.",
           "role": "Robotics Engineer & Chief Technical Officer",
           "bullets": [
-            "Built machine-learning and ROS workflows using TensorFlow, Scikit-learn, PyTorch, Gazebo, and MicroPython.",
-            "Developed robotic systems using NodeMCU, ESP32-CAM, Arduino, and Raspberry Pi.",
-            "Led a cross-functional technical team from project concept through delivery."
+            "Developed and deployed ML models and ROS using TensorFlow, Scikit-learn, PyTorch, and Gazebo, integrating them into scalable embedded-based applications with MicroPython; managed complete TinyML workflows including model training, data preprocessing, API deployment, and edge integration.",
+            "Built different types of robotics structures using NodeMCU, ESP32-CAM, Arduino, and Raspberry Pi.",
+            "Led and mentored a cross-functional development team; managed full project lifecycles and aligned technical solutions with business objectives through collaboration with executives and stakeholders."
           ],
           "image": "images/experience/work-03.jpg"
         },
         {
           "date": "2022–2023",
-          "location": "Remote",
+          "location": "Sylhet, Bangladesh (Remote)",
           "title": "Tech Topia",
           "role": "Intern & Tech Envoy",
           "summary": "Developed technical courses and video content in robotics, IoT, electronics, programming, and communication; also designed circuits and implemented I²C, MQTT, and LoRa systems.",
