@@ -10,10 +10,8 @@
       "year": "2026",
       "publications": [
         {
-          {
-  "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms.",
-  "details": "Journal Manuscript in Preparation"
-          }   
+          "title": "A Systematic Benchmark of Edge AI Inference Frameworks for Resource-Constrained Autonomous Mobile Robot Platforms.",
+          "details": "Journal Manuscript in Preparation"
         }
       ]
     },
@@ -21,7 +19,7 @@
       "year": "2025",
       "publications": [
         {
-          "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks."
+          "title": "A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks",
           "details": "Journal Manuscript in Preparation"
         }
       ]
@@ -81,5 +79,5 @@
     }
   ],
   "recordLabel": "Research record",
-  "recordText": "Six conference papers are published. Three journal manuscripts based on the undergraduate thesis, “A Multi-Modal Robotic Framework for Real-Time Waste Detection and Categorization Using SLAM, IoT, and Convolutional Neural Networks,” are currently under peer review."
+  "recordText": "Six conference papers have been published. Two journal manuscripts are currently in preparation."
 }

@@ -190,8 +190,8 @@
       '</section>' +
       '<section class="quick-grid" aria-label="Profile details">' +
         '<div class="home-section skills-section" id="technical-skills"><h2>Technical Skills</h2><ul class="skills-summary">' + skillItems + '</ul></div>' +
-        '<div class="home-section" id="coursework"><h2>Relevant Coursework</h2><ul class="plain-list home-detail-list">' + coursework + '</ul></div>' +
         '<div class="home-section"><h2>Language Skills</h2><ul class="plain-list home-detail-list">' + languages + '</ul></div>' +
+        '<div class="home-section" id="coursework"><h2>Relevant Coursework</h2><ul class="plain-list home-detail-list coursework-list">' + coursework + '</ul></div>' +
         '<div class="home-section full-grid-section"><h2>News</h2><ul class="news-list">' + news + '</ul></div>' +
       '</section>' + referencesMarkup +
     '</div>';
@@ -210,12 +210,19 @@
       const publications = (yearGroup.publications || []).map(function (publication) {
         const itemId = publication.id ? ' id="' + escapeHtml(publication.id) + '"' : "";
         const details = publication.details ? ", " + escapeHtml(publication.details) : "";
+        const authors = publication.authors
+          ? '<p>' + highlightAuthor(publication.authors, data.highlightAuthor) + '</p>'
+          : "";
+        const publicationDetails = publication.venue
+          ? '<p><em>' + escapeHtml(publication.venue) + '</em>' + details + '</p>'
+          : publication.details
+            ? '<p><em>(' + escapeHtml(publication.details) + ')</em></p>'
+            : "";
         const links = publication.doi
           ? '<div class="publication-links"><a href="https://doi.org/' + escapeHtml(publication.doi) + '">DOI: ' + escapeHtml(publication.doi) + '</a><a href="' + escapeHtml(data.scholarUrl) + '">Google Scholar</a></div>'
           : "";
         return '<article class="publication-item"' + itemId + '><h2>' + escapeHtml(publication.title) + '</h2>' +
-          '<p>' + highlightAuthor(publication.authors, data.highlightAuthor) + '</p>' +
-          '<p><em>' + escapeHtml(publication.venue) + '</em>' + details + '</p>' + links + '</article>';
+          authors + publicationDetails + links + '</article>';
       }).join("");
       return '<section class="year-block" aria-labelledby="' + yearId + '"><h2 id="' + yearId + '" class="year-heading">' + escapeHtml(yearGroup.year) + '</h2><div class="publication-list">' + publications + '</div></section>';
     }).join("");

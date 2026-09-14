@@ -529,6 +529,12 @@ input {
   line-height: 1.38;
 }
 
+.coursework-list {
+  display: grid;
+  grid-template-columns: repeat(2, minmax(0, 1fr));
+  column-gap: 1.5rem;
+}
+
 .plain-list li::before {
   position: absolute;
   top: 0.65em;
@@ -544,7 +550,7 @@ input {
   display: grid;
   padding: 0.78rem 0;
   border-bottom: 1px solid #e8ecee;
-  grid-template-columns: 4rem 1fr;
+  grid-template-columns: max-content minmax(0, 1fr);
   gap: 1rem;
   transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
@@ -564,6 +570,7 @@ input {
 .news-year {
   color: var(--accent);
   font-weight: 900;
+  white-space: nowrap;
 }
 
 .home-references {
@@ -1888,8 +1895,8 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
     width: 76px;
   }
 
-  .news-list li {
-    grid-template-columns: 3.5rem 1fr;
+  .coursework-list {
+    grid-template-columns: 1fr;
   }
 
   .year-heading,

@@ -26,13 +26,23 @@
     { "label": "Platforms & Tools", "value": "Windows, Linux, ROS/ROS2, FreeRTOS, Zephyr RTOS, Git, GitHub, Docker" }
   ],
   "coursework": [
-    "Digital Signal & Image Processing",
-    "Control Systems and Industrial Electronics",
-    "Data Structures & Algorithms",
-    "Microprocessors and Interfacing",
-    "Wireless, Mobile & Digital Communication",
-    "Computer Networks and Data Communication",
-    "VLSI Design, Antennas, Microwave & EM Fields"
+    "Analog Electronics I & II",
+    "Numerical Methods in Engineering",
+    "Computer Fundamentals & Programming",
+    "Digital Electronics",
+    "Microprocessor and Interfacing",
+    "Data Structure & Algorithm",
+    "Industrial Electronics",
+    "Data Communication and Computer Networks",
+    "Digital Signal Processing",
+    "Control System",
+    "Measurement, Instrumentation & Sensors",
+    "Digital Image Processing",
+    "Wireless and Mobile Communication",
+    "Digital Communication",
+    "Satellite Communication and Radar",
+    "VLSI Design",
+    "Telecommunication Engineering"
   ],
   "languages": [
     { "language": "Bangla", "level": "Native" },
