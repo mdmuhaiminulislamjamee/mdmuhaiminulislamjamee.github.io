@@ -2,26 +2,25 @@
   "browserTitle": "Awards & Achievements | Md. Muhaiminul Islam (Jamee)",
   "description": "Awards and achievements of Md. Muhaiminul Islam (Jamee) in robotics, programming, science, mathematics, innovation, and engineering.",
   "heading": "Awards & Achievements",
-  "intro": "Selected national and international recognition across engineering, robotics, programming, science, mathematics, and innovation.",
   "sectionTitle": "Honors",
   "sectionId": "awards-2025",
   "awards": [
     {
       "year": "2025",
-      "title": "Divisional Winner & Finalist, Microsoft Office Specialist Bangladesh Championship",
+      "title": "Divisional Winner & Finalist at Microsoft Office Specialist Bangladesh Championship",
       "organization": "Organized by Microsoft, VTutor, and the Ministry of Youth & Sports.",
       "image": "images/awards/award-01.jpg"
     },
     {
       "year": "2023",
-      "title": "Top 5, Smart Rajshahi Innovation Challenge",
-      "organization": "Startup Rajshahi and Rajshahi City Corporation.",
+      "title": "Top 5 at Smart Rajshahi Innovation Challenge",
+      "organization": "Organized by Startup Rajshahi and Rajshahi City Corporation.",
       "image": "images/awards/award-02.jpg"
     },
     {
       "year": "2021–2024",
-      "title": "Technical Scholarship, University Grants Commission of Bangladesh",
-      "organization": "Awarded through the Department of Electronics and Telecommunication Engineering, RUET.",
+      "title": "Technical Scholarship by University Grants Commission of Bangladesh",
+      "organization": "Awarded through the Dept. of Electronics & Telecommunication Engineering, Rajshahi University of Engineering & Technology, Rajshahi-6204, Bangladesh.",
       "image": "images/awards/award-03.jpg"
     },
     {
