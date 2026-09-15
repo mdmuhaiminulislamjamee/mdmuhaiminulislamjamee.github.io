@@ -5,7 +5,8 @@
   const requestVersion = Date.now().toString(36);
   const pathParts = window.location.pathname.split("/").filter(Boolean);
   const fileName = pathParts[pathParts.length - 1] || "index.html";
-  const isBlogArticle = fileName === "autonomous-waste-robot.html";
+  const isBlogArticle = pathParts[pathParts.length - 2] === "blog" && /\.html$/i.test(fileName);
+  const blogArticleSlug = isBlogArticle ? fileName.replace(/\.html$/i, "") : "";
   const pageMap = {
     "index.html": { key: "home", file: "home.json", activeUrl: "index.html" },
     "research.html": { key: "research", file: "research.json", activeUrl: "research.html" },
@@ -17,7 +18,7 @@
     "blog.html": { key: "blog", file: "blog.json", activeUrl: "blog.html" }
   };
   const pageConfig = isBlogArticle
-    ? { key: "blogArticle", file: "blog.json", activeUrl: "blog.html", slug: "autonomous-waste-robot" }
+    ? { key: "blogArticle", file: "blog.json", activeUrl: "blog.html", slug: blogArticleSlug }
     : pageMap[fileName];
   const allPageFiles = [
     "home.json",
@@ -312,9 +313,9 @@
 
   function renderGallery(data) {
     const items = (data.items || []).map(function (item) {
-      const previewCaption = [item.title, item.caption].filter(Boolean).join(" — ");
+      const previewCaption = item.caption || item.title || "Gallery image";
       return '<figure class="gallery-card">' + renderGalleryMedia(item.image, item.imageAlt || item.title, previewCaption) +
-        '<figcaption class="gallery-caption"><h2>' + escapeHtml(item.title) + '</h2><p>' + escapeHtml(item.caption) + '</p></figcaption></figure>';
+        '<figcaption class="gallery-caption"><p><strong>' + escapeHtml(item.caption) + '</strong></p></figcaption></figure>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="gallery-grid">' + items + '</div>';
   }
@@ -322,8 +323,11 @@
   function renderBlog(data) {
     const posts = (data.posts || []).map(function (post) {
       const postUrl = rootUrl(post.url);
-      return '<li class="blog-entry"><a class="blog-thumb" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(post.shortTitle || post.title) + '">' +
-        renderMedia(post.image, post.imageAlt || post.title) + '</a><div><h2><a href="' + escapeHtml(postUrl) + '">' + escapeHtml(post.title) + '</a></h2>' +
+      const postLabel = post.shortTitle || post.title;
+      const postMedia = post.image
+        ? '<a class="blog-thumb" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(postLabel) + '">' + renderMedia(post.image, post.imageAlt || post.title) + '</a>'
+        : '<a class="blog-icon" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(postLabel) + '">' + escapeHtml(post.icon || "Post") + '</a>';
+      return '<li class="blog-entry">' + postMedia + '<div><h2><a href="' + escapeHtml(postUrl) + '">' + escapeHtml(post.title) + '</a></h2>' +
         '<time datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.displayDate) + '</time><p>' + escapeHtml(post.summary) + '</p></div></li>';
     }).join("");
     return '<section class="blog-main" aria-labelledby="blog-title"><header class="blog-header"><h1 id="blog-title">' + escapeHtml(data.heading) + '</h1><p class="blog-lead">' + escapeHtml(data.intro) + '</p></header><ul class="blog-list">' + posts + '</ul></section>';
@@ -332,6 +336,12 @@
   function renderArticleBlock(block) {
     if (block.type === "heading2") return '<h2>' + escapeHtml(block.text) + '</h2>';
     if (block.type === "heading3") return '<h3>' + escapeHtml(block.text) + '</h3>';
+    if (block.type === "code") return '<pre><code class="language-' + escapeHtml(block.language || "text") + '">' + escapeHtml(block.text) + '</code></pre>';
+    if (block.type === "list") {
+      const tag = block.ordered ? "ol" : "ul";
+      const items = (block.items || []).map(function (item) { return '<li>' + escapeHtml(item) + '</li>'; }).join("");
+      return '<' + tag + '>' + items + '</' + tag + '>';
+    }
     return '<p>' + escapeHtml(block.text) + '</p>';
   }
 

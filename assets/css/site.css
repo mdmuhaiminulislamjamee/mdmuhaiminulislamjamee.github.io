@@ -1081,6 +1081,19 @@ a.external-link:hover {
   font-size: 0.9rem;
 }
 
+.gallery-caption p {
+  font-weight: 700;
+}
+
+.gallery-caption h2 {
+  display: none;
+}
+
+.gallery-caption strong {
+  color: inherit;
+  font-size: inherit;
+}
+
 .learning-status {
   display: inline-block;
   padding: 0.18rem 0.5rem;
@@ -1334,6 +1347,7 @@ a.external-link:hover {
   background: var(--blog-surface);
   font-family: var(--font-heading);
   font-size: 2rem;
+  text-decoration: none;
 }
 
 .blog-entry h2 {

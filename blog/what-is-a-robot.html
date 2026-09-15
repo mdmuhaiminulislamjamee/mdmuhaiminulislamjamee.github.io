@@ -1,0 +1,70 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>What Is a Robot? | Md. Muhaiminul Islam (Jamee)</title>
+  <meta name="description" content="A beginner-friendly introduction to robots, their essential components, how they sense and move, real-world examples, and simple Arduino experiments.">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260915-page-content">
+</head>
+<body class="blog-page" data-base="../">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html" aria-label="Md. Muhaiminul Islam (Jamee), home"><span class="brand-photo"><span>MIJ</span><img src="../images/avatar.jpg" alt=""></span><span>Md. Muhaiminul Islam (Jamee)</span></a><div class="nav-shell"><nav class="site-nav" data-navigation aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../research.html">Research &amp; Publications</a><a href="../experience.html">Education &amp; Experience</a><a href="../awards.html">Awards</a><a href="../projects.html">Projects</a><a href="../learning.html">Certifications</a><a href="../gallery.html">Gallery</a><a href="../blog.html" aria-current="page">Blog</a></nav><button class="icon-button" type="button" data-search-open aria-label="Search this site"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div></div></header>
+
+  <main id="main-content" class="page-shell">
+    <article class="article-main">
+      <header><h1>What Is a Robot? A Beginner’s Guide to Robotics</h1><time class="article-date" datetime="2026-09-15">15 September 2026</time></header>
+      <p>A robot is a programmable machine that can sense its surroundings, process information, and perform physical actions. Some robots work independently, while others follow commands from a person. What makes a machine a robot is the connection between sensing, decision-making, and movement.</p>
+      <h2>The basic parts of a robot</h2>
+      <ul>
+        <li>Sensors collect information about the environment. Cameras, ultrasonic sensors, touch switches, and temperature sensors are common examples.</li>
+        <li>A microcontroller or computer reads sensor data and decides what the robot should do. Arduino boards and Raspberry Pi computers are popular beginner platforms.</li>
+        <li>Actuators create movement. DC motors drive wheels, servo motors rotate to a precise angle, and robotic grippers open or close.</li>
+        <li>A power source, such as a battery pack, supplies energy to the controller, sensors, and motors.</li>
+        <li>The mechanical structure holds all components together and determines how the robot moves and interacts with objects.</li>
+      </ul>
+      <h2>How a robot works</h2>
+      <p>Most robots repeat a simple cycle: sense, decide, and act. A sensor first measures something in the environment. The controller compares that measurement with programmed rules. It then sends a command to a motor, light, buzzer, or another output. The cycle repeats many times every second.</p>
+      <ol><li>Sense: collect data from the environment.</li><li>Decide: process the data using programmed logic.</li><li>Act: control motors or another output.</li><li>Repeat: measure the result and respond again.</li></ol>
+      <h2>Robots you may already know</h2>
+      <ul><li>Robot vacuum cleaners map rooms, detect walls, and plan cleaning routes.</li><li>Delivery robots use cameras, GPS, and obstacle sensors to move packages safely.</li><li>Factory robots repeat precise movements for welding, assembly, and inspection.</li><li>Mars rovers use cameras, scientific instruments, wheels, and remote commands to explore another planet.</li></ul>
+      <h2>Your first Arduino output</h2>
+      <p>An LED is a simple actuator because the Arduino can turn it on or off. Upload this sketch to blink the built-in LED on most Arduino boards.</p>
+      <pre><code class="language-cpp">void setup() {
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(LED_BUILTIN, HIGH);
+  delay(1000);
+  digitalWrite(LED_BUILTIN, LOW);
+  delay(1000);
+}</code></pre>
+      <h3>Read a simple sensor</h3>
+      <p>This sketch reads a push button on pin 2 and turns on the built-in LED while the button is pressed. It demonstrates the sense-decide-act cycle in its simplest form.</p>
+      <pre><code class="language-cpp">const int buttonPin = 2;
+
+void setup() {
+  pinMode(buttonPin, INPUT_PULLUP);
+  pinMode(LED_BUILTIN, OUTPUT);
+}
+
+void loop() {
+  bool pressed = digitalRead(buttonPin) == LOW;
+  digitalWrite(LED_BUILTIN, pressed ? HIGH : LOW);
+}</code></pre>
+      <h2>Where to go next</h2>
+      <p>Once you understand inputs, decisions, and outputs, you can combine an ultrasonic sensor with motors to build an obstacle-avoiding robot. Start with one component at a time, test each connection, and expand the program only after the current step works reliably.</p>
+      <a class="back-link" href="../blog.html">← All posts</a>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>© <span data-current-year>2026</span> Md. Muhaiminul Islam (Jamee)</p></footer>
+  <div class="search-dialog" data-search-dialog aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title"><div class="search-panel"><div class="search-topline"><h2 id="search-title">Search this site</h2><button class="search-close" type="button" data-search-close aria-label="Close search">×</button></div><label for="site-search" class="skip-link">Search</label><input id="site-search" class="search-input" type="search" placeholder="Search research, projects, skills…" autocomplete="off" data-search-input><ul class="search-results" data-search-results aria-live="polite"><li class="search-hint">Start typing to search the portfolio.</li></ul></div></div>
+  <script src="../assets/js/content.js?v=20260915-page-content"></script>
+  <script src="../assets/js/site.js?v=20260915-page-content"></script>
+</body>
+</html>

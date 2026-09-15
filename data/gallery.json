@@ -2,7 +2,7 @@
   "browserTitle": "Gallery | Md. Muhaiminul Islam (Jamee)",
   "description": "Gallery of research, engineering projects, competitions, awards, and outreach activities by Md. Muhaiminul Islam (Jamee).",
   "heading": "Gallery",
-  "intro": "Research, engineering, competitions, outreach, and the communities that shaped my work.",
+  "intro": "A place to share the moments, memories, and little things I capture along the way.",
   "items": [
     { "title": "International Robot Olympiad", "caption": "Technical Award in the Creative Category, 2020.", "image": "images/gallery/gallery-01.jpg", "imageAlt": "International Robot Olympiad award moment" },
     { "title": "Bangladesh Robot Olympiad", "caption": "Bronze Medal in the Creative Category, 2020.", "image": "images/gallery/gallery-02.jpg", "imageAlt": "Bangladesh Robot Olympiad award moment" },

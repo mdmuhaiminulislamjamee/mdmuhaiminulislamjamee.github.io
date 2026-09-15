@@ -1,0 +1,97 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>First Obstacle-Avoiding Robot | Md. Muhaiminul Islam (Jamee)</title>
+  <meta name="description" content="A beginner-friendly obstacle-avoiding robot project with components, circuit connections, control logic, and Arduino code.">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260915-page-content">
+</head>
+<body class="blog-page" data-base="../">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html" aria-label="Md. Muhaiminul Islam (Jamee), home"><span class="brand-photo"><span>MIJ</span><img src="../images/avatar.jpg" alt=""></span><span>Md. Muhaiminul Islam (Jamee)</span></a><div class="nav-shell"><nav class="site-nav" data-navigation aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../research.html">Research &amp; Publications</a><a href="../experience.html">Education &amp; Experience</a><a href="../awards.html">Awards</a><a href="../projects.html">Projects</a><a href="../learning.html">Certifications</a><a href="../gallery.html">Gallery</a><a href="../blog.html" aria-current="page">Blog</a></nav><button class="icon-button" type="button" data-search-open aria-label="Search this site"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div></div></header>
+
+  <main id="main-content" class="page-shell">
+    <article class="article-main">
+      <header><h1>Run Your First Obstacle-Avoiding Robot</h1><time class="article-date" datetime="2026-09-15">15 September 2026</time></header>
+      <p>An obstacle-avoiding robot is an excellent first autonomous system. An ultrasonic sensor measures the distance ahead, the Arduino decides whether the path is clear, and a motor driver controls the two drive motors.</p>
+      <h2>Components</h2>
+      <ul><li>Arduino Uno or compatible board</li><li>HC-SR04 ultrasonic sensor</li><li>L298N motor-driver module</li><li>Two geared DC motors, wheels, and a caster wheel</li><li>Robot chassis</li><li>Battery pack suitable for the motors</li><li>Jumper wires and a common ground connection</li></ul>
+      <h2>Circuit connections</h2>
+      <ul><li>HC-SR04 VCC to Arduino 5V, GND to GND, Trig to pin 9, and Echo to pin 10.</li><li>L298N IN1, IN2, IN3, and IN4 to Arduino pins 2, 3, 4, and 5.</li><li>Connect the left and right motors to the L298N output terminals.</li><li>Connect the motor battery to the L298N power input according to the module and motor ratings.</li><li>Connect Arduino GND, sensor GND, and motor-driver GND together. Never power the motors directly from an Arduino I/O pin.</li></ul>
+      <h2>How the robot decides</h2>
+      <ol><li>Send a short ultrasonic pulse.</li><li>Measure how long the echo takes to return.</li><li>Convert the travel time into distance.</li><li>Drive forward when the distance is greater than the safety threshold.</li><li>Stop, reverse briefly, and turn when an obstacle is too close.</li></ol>
+      <h2>Arduino code</h2>
+      <pre><code class="language-cpp">const int trigPin = 9;
+const int echoPin = 10;
+const int in1 = 2;
+const int in2 = 3;
+const int in3 = 4;
+const int in4 = 5;
+
+long distanceCm() {
+  digitalWrite(trigPin, LOW);
+  delayMicroseconds(2);
+  digitalWrite(trigPin, HIGH);
+  delayMicroseconds(10);
+  digitalWrite(trigPin, LOW);
+  long duration = pulseIn(echoPin, HIGH, 30000);
+  if (duration == 0) return 400;
+  return duration * 0.034 / 2;
+}
+
+void forward() {
+  digitalWrite(in1, HIGH); digitalWrite(in2, LOW);
+  digitalWrite(in3, HIGH); digitalWrite(in4, LOW);
+}
+
+void reverseRobot() {
+  digitalWrite(in1, LOW); digitalWrite(in2, HIGH);
+  digitalWrite(in3, LOW); digitalWrite(in4, HIGH);
+}
+
+void turnRight() {
+  digitalWrite(in1, HIGH); digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW);  digitalWrite(in4, HIGH);
+}
+
+void stopRobot() {
+  digitalWrite(in1, LOW); digitalWrite(in2, LOW);
+  digitalWrite(in3, LOW); digitalWrite(in4, LOW);
+}
+
+void setup() {
+  pinMode(trigPin, OUTPUT);
+  pinMode(echoPin, INPUT);
+  pinMode(in1, OUTPUT); pinMode(in2, OUTPUT);
+  pinMode(in3, OUTPUT); pinMode(in4, OUTPUT);
+}
+
+void loop() {
+  if (distanceCm() &gt; 20) {
+    forward();
+  } else {
+    stopRobot();
+    delay(150);
+    reverseRobot();
+    delay(350);
+    turnRight();
+    delay(450);
+  }
+}</code></pre>
+      <h2>Test safely</h2>
+      <ul><li>Lift the wheels off the ground for the first motor-direction test.</li><li>If one wheel spins backward, swap that motor’s two output wires.</li><li>Place the robot on a clear floor and begin with a low motor voltage.</li><li>Adjust the 20 cm threshold and turning delay for the robot’s speed and chassis.</li><li>Keep wires away from wheels and disconnect the battery before changing connections.</li></ul>
+      <p>This program uses a simple fixed right turn. A later version can mount the sensor on a servo, compare open space on both sides, add speed control with PWM, or use additional sensors for smoother navigation.</p>
+      <a class="back-link" href="../blog.html">← All posts</a>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>© <span data-current-year>2026</span> Md. Muhaiminul Islam (Jamee)</p></footer>
+  <div class="search-dialog" data-search-dialog aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title"><div class="search-panel"><div class="search-topline"><h2 id="search-title">Search this site</h2><button class="search-close" type="button" data-search-close aria-label="Close search">×</button></div><label for="site-search" class="skip-link">Search</label><input id="site-search" class="search-input" type="search" placeholder="Search research, projects, skills…" autocomplete="off" data-search-input><ul class="search-results" data-search-results aria-live="polite"><li class="search-hint">Start typing to search the portfolio.</li></ul></div></div>
+  <script src="../assets/js/content.js?v=20260915-page-content"></script>
+  <script src="../assets/js/site.js?v=20260915-page-content"></script>
+</body>
+</html>

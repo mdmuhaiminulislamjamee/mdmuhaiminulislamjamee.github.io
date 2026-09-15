@@ -1,0 +1,59 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta http-equiv="Cache-Control" content="no-cache, no-store, must-revalidate">
+  <meta http-equiv="Pragma" content="no-cache">
+  <meta http-equiv="Expires" content="0">
+  <title>Simple LED Project with Arduino | Md. Muhaiminul Islam (Jamee)</title>
+  <meta name="description" content="Step-by-step instructions for wiring and programming a beginner Arduino LED project.">
+  <link rel="stylesheet" href="../assets/css/site.css?v=20260915-page-content">
+</head>
+<body class="blog-page" data-base="../">
+  <a class="skip-link" href="#main-content">Skip to main content</a>
+  <header class="site-header"><div class="header-inner"><a class="brand" href="../index.html" aria-label="Md. Muhaiminul Islam (Jamee), home"><span class="brand-photo"><span>MIJ</span><img src="../images/avatar.jpg" alt=""></span><span>Md. Muhaiminul Islam (Jamee)</span></a><div class="nav-shell"><nav class="site-nav" data-navigation aria-label="Primary navigation"><a href="../index.html">Home</a><a href="../research.html">Research &amp; Publications</a><a href="../experience.html">Education &amp; Experience</a><a href="../awards.html">Awards</a><a href="../projects.html">Projects</a><a href="../learning.html">Certifications</a><a href="../gallery.html">Gallery</a><a href="../blog.html" aria-current="page">Blog</a></nav><button class="icon-button" type="button" data-search-open aria-label="Search this site"><svg viewBox="0 0 24 24" aria-hidden="true"><circle cx="11" cy="11" r="7"></circle><path d="m20 20-4-4"></path></svg></button><button class="menu-button" type="button" data-menu-button aria-expanded="false" aria-label="Open navigation"><svg viewBox="0 0 24 24" aria-hidden="true"><path d="M4 7h16M4 12h16M4 17h16"></path></svg></button></div></div></header>
+
+  <main id="main-content" class="page-shell">
+    <article class="article-main">
+      <header><h1>How to Make a Simple LED Project with Arduino</h1><time class="article-date" datetime="2026-09-15">15 September 2026</time></header>
+      <p>Blinking an LED is a small project, but it teaches the complete workflow used in larger embedded and robotics systems: build a circuit, configure a pin, upload a program, observe the result, and improve the behavior.</p>
+      <h2>What you need</h2>
+      <ul><li>Arduino Uno or a compatible board</li><li>One LED</li><li>One 220 Ω or 330 Ω resistor</li><li>Breadboard and jumper wires</li><li>USB cable and the Arduino IDE</li></ul>
+      <h2>Connect the circuit</h2>
+      <ol><li>Disconnect USB power while building the circuit.</li><li>Connect Arduino digital pin 8 to one end of the resistor.</li><li>Connect the other end of the resistor to the LED’s longer leg, called the anode.</li><li>Connect the LED’s shorter leg, called the cathode, to an Arduino GND pin.</li><li>Check the LED direction and connections, then reconnect the USB cable.</li></ol>
+      <p>The resistor limits current and protects both the LED and the Arduino output pin. Do not connect an external LED directly between pin 8 and ground without a resistor.</p>
+      <h2>Upload your first program</h2>
+      <pre><code class="language-cpp">const int ledPin = 8;
+
+void setup() {
+  pinMode(ledPin, OUTPUT);
+}
+
+void loop() {
+  digitalWrite(ledPin, HIGH);
+  delay(1000);
+  digitalWrite(ledPin, LOW);
+  delay(1000);
+}</code></pre>
+      <h2>How the code works</h2>
+      <p>The setup function runs once and configures pin 8 as an output. The loop function runs repeatedly. HIGH applies voltage to the LED circuit, LOW removes it, and delay pauses the program for a number of milliseconds. A delay of 1000 means one second.</p>
+      <h3>Try a faster blink</h3>
+      <p>Change both delay values to 200 and upload the sketch again. The LED will blink five times faster.</p>
+      <pre><code class="language-cpp">digitalWrite(ledPin, HIGH);
+delay(200);
+digitalWrite(ledPin, LOW);
+delay(200);</code></pre>
+      <h2>Troubleshooting</h2>
+      <ul><li>If the LED does not light, rotate it because LEDs work in only one direction.</li><li>Confirm that the correct board and serial port are selected in the Arduino IDE.</li><li>Check that pin 8 in the circuit matches ledPin in the program.</li><li>Make sure the jumper connected to the short LED leg reaches GND.</li></ul>
+      <p>You have now controlled a physical component with software. The same idea scales to buzzers, relays, motors, displays, and complete robots.</p>
+      <a class="back-link" href="../blog.html">← All posts</a>
+    </article>
+  </main>
+
+  <footer class="site-footer"><p>© <span data-current-year>2026</span> Md. Muhaiminul Islam (Jamee)</p></footer>
+  <div class="search-dialog" data-search-dialog aria-hidden="true" role="dialog" aria-modal="true" aria-labelledby="search-title"><div class="search-panel"><div class="search-topline"><h2 id="search-title">Search this site</h2><button class="search-close" type="button" data-search-close aria-label="Close search">×</button></div><label for="site-search" class="skip-link">Search</label><input id="site-search" class="search-input" type="search" placeholder="Search research, projects, skills…" autocomplete="off" data-search-input><ul class="search-results" data-search-results aria-live="polite"><li class="search-hint">Start typing to search the portfolio.</li></ul></div></div>
+  <script src="../assets/js/content.js?v=20260915-page-content"></script>
+  <script src="../assets/js/site.js?v=20260915-page-content"></script>
+</body>
+</html>
