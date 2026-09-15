@@ -34,8 +34,8 @@ Upload `profile.png` and `avatar.jpg` in this `images` folder.
 - `images/experience/freelancing-01.jpg` through `freelancing-03.jpg` — freelancing images.
 - `images/experience/volunteering-01.jpg` through `volunteering-06.jpg` — volunteering images.
 - `images/awards/award-01.jpg` through `award-22.jpg` — awards and achievement images.
-- `images/blog/what-is-a-robot.jpg` — “What Is a Robot?” listing thumbnail and article image.
+- `images/blog/what-is-a-robot.avif` — “What Is a Robot?” listing thumbnail and article image.
 - `images/blog/simple-led-project-arduino.jpg` — Arduino LED listing thumbnail and article image.
-- `images/blog/obstacle-avoiding-robot.jpg` — obstacle-avoiding robot listing thumbnail and article image.
+- `images/blog/obstacle-avoiding-robot.avif` — obstacle-avoiding robot listing thumbnail and article image.
 
 JPG, PNG, and WebP all work, but if an extension changes, update the matching image path in the relevant JSON file inside [`data`](../data/).

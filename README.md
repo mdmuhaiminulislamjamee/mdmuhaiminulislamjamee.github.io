@@ -40,9 +40,9 @@ The current placeholders disappear automatically when the matching files are upl
 - `images/experience/freelancing-01.jpg` through `freelancing-03.jpg`.
 - `images/experience/volunteering-01.jpg` through `volunteering-06.jpg`.
 - `images/awards/award-01.jpg` through `award-22.jpg`.
-- `images/blog/what-is-a-robot.jpg`.
+- `images/blog/what-is-a-robot.avif`.
 - `images/blog/simple-led-project-arduino.jpg`.
-- `images/blog/obstacle-avoiding-robot.jpg`.
+- `images/blog/obstacle-avoiding-robot.avif`.
 
 See `images/README.md` for the same upload map.
 
