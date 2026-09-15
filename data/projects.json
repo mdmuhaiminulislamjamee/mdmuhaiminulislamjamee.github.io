@@ -6,7 +6,7 @@
     {
       "number": "Project 01",
       "title": "Four-Storey Elevator Control System",
-      "bullets": [
+      "description": [
             "Designed a four-floor smart elevator using dual microcontrollers with an I²C-based master–slave architecture, separating decision-making, hardware control, and safety monitoring.",
             "Implemented the SCAN elevator algorithm with DC/servo motors and synchronized door control to efficiently process floor requests while providing structured, direction-based operation.",
             "Integrated ultrasonic and force sensors, dual LCDs, a 7-segment display, manual overrides, and external call inputs to enable real-time feedback, obstacle detection, overload protection, and enhanced operational safety."
