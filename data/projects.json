@@ -6,28 +6,25 @@
     {
       "number": "Project 01",
       "title": "Four-Storey Elevator Control System",
-      "description": [
-            "Designed a four-floor smart elevator using dual microcontrollers with an I²C-based master–slave architecture, separating decision-making, hardware control, and safety monitoring.",
-            "Implemented the SCAN elevator algorithm with DC/servo motors and synchronized door control to efficiently process floor requests while providing structured, direction-based operation.",
-            "Integrated ultrasonic and force sensors, dual LCDs, a 7-segment display, manual overrides, and external call inputs to enable real-time feedback, obstacle detection, overload protection, and enhanced operational safety."
-          ],
+      "description": "This project is the design and implementation of a smart four-floor elevator system using dual Arduino Uno microcontrollers with an I²C-based master–slave architecture, where the master handles decision-making and user interaction while the slave manages hardware control and safety monitoring. The system operates using the SCAN (Elevator) algorithm to efficiently serve floor requests in a structured direction-based manner, minimizing travel time and ensuring fairness. It integrates multiple hardware components including DC and servo motors, dual LCD displays, ultrasonic and force sensors, and a 7-segment indicator to provide real-time feedback and smooth operation. Advanced features such as synchronized door control, obstacle detection, overload protection, manual override buttons, and external call inputs enhance both usability and safety. The design emphasizes reliability, modularity, and real-world applicability, with independent safety mechanisms ensuring immediate response to hazards. Overall, the project demonstrates a practical, scalable, and intelligent elevator control system that closely mimics real-world elevator behavior while addressing key engineering challenges.",
       "projectUrl": "https://github.com/mdmuhaiminulislamjamee/Four-Storey-Elevator-System-Design",
+      "skills": ["Arduino", "Embedded Systems", "I2C Communication", "SCAN Algorithm", "Motor Control", "Sensor Integration", "Hardware Prototyping"],
       "image": "images/projects/project-01.jpg",
       "imageAlt": "Four-storey elevator control system"
     },
     {
       "number": "Project 02",
-      "title": "Autonomous Garbage Detection & Collection Robot",
-      "description": "An autonomous robot that combines deep-learning detection with SLAM, LiDAR and sonar sensing, Kalman filtering, and A* path planning to locate, approach, collect, and store waste in real time.",
-      "projectUrl": "",
-      "skills": ["SLAM", "YOLO", "Fast R-CNN", "Raspberry Pi", "A*"],
+      "title": "Autonomous Self-Driving based Garbage Detection and Collection Robot using Deep Learning and Simultaneous Localization & Mapping",
+      "description": "This project presents an Autonomous Self-Driving Garbage Detection and Collection Robot that uses Deep Learning and Simultaneous Localization & Mapping (SLAM) for real-time trash detection and navigation. The system is powered by a Raspberry Pi with a Pi Camera for image capture, integrated with Fast R-CNN and YOLO models to identify waste objects. Different sensors like LiDAR sensor, Sonar Sensor are used for mapping and obstacle detection, while Kalman Filter and A* Algorithm guide smooth path planning and localization. The robot’s motion and trash collection mechanisms are controlled by Servo Motors and an Arduino Mega connected via the I2C protocol. In simple terms, the robot scans its surroundings, detects garbage, plans a safe shortest route, moves towards the trash, picks it up, and deposits it into its storage compartment—all autonomously.",      
+      "projectUrl": "https://drive.google.com/drive/folders/18_7urafBi_wzMs0gMbLH9bJV4DNmf9Ed",
+      "skills": ["Autonomous Navigation", "SLAM", "Deep Learning", "YOLO", "Fast R-CNN", "A* Algorithm", "Kalman Filter", "Raspberry Pi", "Arduino Mega", "LiDAR", "Computer Vision", "I2C Protocol", "Robotics Hardware Integration"],      
       "image": "images/projects/project-02.jpg",
       "imageAlt": "Autonomous garbage detection and collection robot"
     },
     {
       "number": "Project 03",
       "title": "Land Mine & Human Detection Robot",
-      "description": "An IoT-enabled safety robot combining GPS, GSM, environmental and metal sensors, image processing, and live video to detect hazards, identify human presence, and transmit alerts with coordinates.",
+      "description": "This project is an IoT and GPS-GSM Based Land Mine and Human Detection Robot designed for safety, rescue, and military applications. It integrates Arduino, ESP32, ESP32-CAM, GPS, GSM, PIR, Gas, Sonar, and Metal Detection sensors to monitor surroundings in real time. The robot can detect land mines, track human presence, sense toxic gases, measure temperature and humidity, and provide live video streaming through image processing. Using GSM and GPS modules, it automatically sends alerts with exact coordinates of detected hazards via SMS. Data is monitored through a web application and Android app, while Bluetooth and motor drivers enable manual or automated movement. In simple words, the robot moves into risky areas, scans for humans or explosives, gathers environmental data, and transmits live updates and locations to rescue teams, helping save lives without risking human intervention.",      
       "projectUrl": "",
       "skills": ["IoT", "GPS/GSM", "ESP32-CAM", "Image Processing", "Telemetry"],
       "image": "images/projects/project-03.jpg",
