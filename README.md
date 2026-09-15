@@ -11,7 +11,7 @@ A lightweight static academic website for PhD applications, built for GitHub Pag
 - Projects.
 - Certifications.
 - Gallery with captions.
-- Blog, including the long-form project note at `blog/autonomous-waste-robot.html`.
+- Blog with beginner guides to robotics, Arduino LEDs, and obstacle-avoiding robots.
 - Site-wide search from the magnifying-glass button or `/` keyboard shortcut.
 - Light mode by default, with a persistent light/dark choice from the moon or sun button in the header.
 - Fluid responsive layouts for desktop, tablet, mobile, narrow, and landscape screens.
@@ -40,7 +40,9 @@ The current placeholders disappear automatically when the matching files are upl
 - `images/experience/freelancing-01.jpg` through `freelancing-03.jpg`.
 - `images/experience/volunteering-01.jpg` through `volunteering-06.jpg`.
 - `images/awards/award-01.jpg` through `award-22.jpg`.
-- `images/blog/autonomous-waste-robot.jpg`.
+- `images/blog/what-is-a-robot.jpg`.
+- `images/blog/simple-led-project-arduino.jpg`.
+- `images/blog/obstacle-avoiding-robot.jpg`.
 
 See `images/README.md` for the same upload map.
 

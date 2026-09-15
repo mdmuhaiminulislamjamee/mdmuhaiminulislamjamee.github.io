@@ -4,9 +4,8 @@ On GitHub, select **Add file → Upload files**, upload the correctly renamed `.
 
 | Filename | Used on |
 | --- | --- |
-| `autonomous-waste-robot.jpg` | Blog listing and “From Detection to Collection” article cover |
-| `what-is-a-robot.jpg` | Optional cover for “What Is a Robot?” |
-| `simple-led-project-arduino.jpg` | Optional cover for the Arduino LED article |
-| `obstacle-avoiding-robot.jpg` | Optional cover for the obstacle-avoiding robot article |
+| `what-is-a-robot.jpg` | “What Is a Robot?” listing thumbnail and article image |
+| `simple-led-project-arduino.jpg` | Arduino LED listing thumbnail and article image |
+| `obstacle-avoiding-robot.jpg` | Obstacle-avoiding robot listing thumbnail and article image |
 
 A clear landscape project photograph works best. The same image appears as a square-cropped blog thumbnail and a wide article cover.
