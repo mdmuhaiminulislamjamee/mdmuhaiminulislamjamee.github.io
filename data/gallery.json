@@ -4,14 +4,61 @@
   "heading": "Gallery",
   "intro": "A place to share the moments, memories, and little things I capture along the way.",
   "items": [
-    { "title": "International Robot Olympiad", "caption": "Technical Award in the Creative Category, 2020.", "image": "images/gallery/gallery-01.jpg", "imageAlt": "International Robot Olympiad award moment" },
-    { "title": "Bangladesh Robot Olympiad", "caption": "Bronze Medal in the Creative Category, 2020.", "image": "images/gallery/gallery-02.jpg", "imageAlt": "Bangladesh Robot Olympiad award moment" },
-    { "title": "CISCO IoT Hackathon", "caption": "National Champion, 2018.", "image": "images/gallery/gallery-03.jpg", "imageAlt": "CISCO IoT Hackathon team" },
-    { "title": "Research at RUET", "caption": "Undergraduate research and prototype development.", "image": "images/gallery/gallery-04.jpg", "imageAlt": "Research and project work at RUET" },
-    { "title": "Science Outreach", "caption": "Astronomy and Science Society of RUET.", "image": "images/gallery/gallery-05.jpg", "imageAlt": "Astronomy and Science Society of RUET event" },
-    { "title": "MOS Bangladesh Championship", "caption": "Divisional Winner and Finalist, 2025.", "image": "images/gallery/gallery-06.jpg", "imageAlt": "Microsoft Office Specialist Bangladesh Championship" },
-    { "title": "Autonomous Waste Robot", "caption": "SLAM, deep learning, and embedded control in one platform.", "image": "images/gallery/gallery-07.jpg", "imageAlt": "Autonomous waste collection robot" },
-    { "title": "AI Smart Notice Board", "caption": "Personalized notices through face recognition and connected software.", "image": "images/gallery/gallery-08.jpg", "imageAlt": "AI smart notice board project" },
-    { "title": "Robotics Mentoring", "caption": "Workshops, academic support, and competition preparation.", "image": "images/gallery/gallery-09.jpg", "imageAlt": "Robotics workshop and mentoring" }
+    {
+      "title": "RAG Tour of Batch-19",
+      "caption": "During the RAG Tour of RUET-ETE-19 Batch.",
+      "image": "images/gallery/gallery-01.jpg",
+      "imageAlt": "RAG Tour of Batch-19"
+    },
+    {
+      "title": "27th International Conference on Computer and Information Technology (ICCIT 2024)",
+      "caption": "During the 27th International Conference on Computer and Information Technology (ICCIT 2024)",
+      "image": "images/gallery/gallery-02.jpg",
+      "imageAlt": "27th International Conference on Computer and Information Technology (ICCIT 2024)"
+    },
+    {
+      "title": "Microsoft Office Specialist Bangladesh Championship",
+      "caption": "Final Round of Microsoft Office Specialist Bangladesh Championship.",
+      "image": "images/gallery/gallery-03.jpg",
+      "imageAlt": "Microsoft Office Specialist Bangladesh Championship"
+    },
+    {
+      "title": "Research at RUET",
+      "caption": "Undergraduate research and prototype development.",
+      "image": "images/gallery/gallery-04.jpg",
+      "imageAlt": "Research and project work at RUET"
+    },
+    {
+      "title": "Science Outreach",
+      "caption": "Astronomy and Science Society of RUET.",
+      "image": "images/gallery/gallery-05.jpg",
+      "imageAlt": "Astronomy and Science Society of RUET event"
+    },
+    {
+      "title": "",
+      "caption": "",
+      "image": "images/gallery/gallery-06.jpg",
+      "imageAlt": ""
+    },
+
+    {
+      "title": "Exhibition of AI based Smart Notice Board",
+      "caption": "",
+      "image": "images/gallery/gallery-07.jpg",
+      "imageAlt": "Exhibition of AI based Smart Notice Board"
+    },
+    {
+      "title": "International Robot Olympiad",
+      "caption": "During the competition of International Robot Olympiad.",
+      "image": "images/gallery/gallery-08.jpg",
+      "imageAlt": "International Robot Olympiad"
+    },
+
+    {
+      "title": "Robotics Mentoring",
+      "caption": "Workshops, academic support, and competition preparation.",
+      "image": "images/gallery/gallery-09.jpg",
+      "imageAlt": "Robotics workshop and mentoring"
+    }
   ]
 }
