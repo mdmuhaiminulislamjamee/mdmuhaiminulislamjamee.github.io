@@ -2,6 +2,7 @@
   "use strict";
 
   const basePath = document.body.dataset.base || "";
+  const requestVersion = Date.now().toString(36);
   const pathParts = window.location.pathname.split("/").filter(Boolean);
   const fileName = pathParts[pathParts.length - 1] || "index.html";
   const isBlogArticle = fileName === "autonomous-waste-robot.html";
@@ -43,6 +44,16 @@
     return /^(?:[a-z][a-z0-9+.-]*:|#)/i.test(value) ? value : basePath + value;
   }
 
+  function freshAssetUrl(url) {
+    const value = String(url || "");
+    if (!value || /^(?:[a-z][a-z0-9+.-]*:|#)/i.test(value)) return value;
+    const resolved = rootUrl(value);
+    const hashIndex = resolved.indexOf("#");
+    const path = hashIndex === -1 ? resolved : resolved.slice(0, hashIndex);
+    const hash = hashIndex === -1 ? "" : resolved.slice(hashIndex);
+    return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + requestVersion + hash;
+  }
+
   function renderHero(heading, intro) {
     const introMarkup = intro ? '<p>' + escapeHtml(intro) + '</p>' : "";
     return '<header class="page-hero"><h1>' + escapeHtml(heading) + '</h1>' + introMarkup + '</header>';
@@ -73,20 +84,22 @@
   function renderMedia(image, alt, extraClass) {
     if (!image) return "";
     const className = extraClass ? "media-frame " + extraClass : "media-frame";
-    return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
+    return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img src="' + escapeHtml(freshAssetUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
   }
 
   function renderProjectMedia(image, alt) {
     if (!image) return "";
     const safeAlt = alt || "Project image";
-    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    const imageUrl = freshAssetUrl(image);
+    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function renderGalleryMedia(image, alt, caption) {
     if (!image) return "";
     const safeAlt = alt || "Gallery image";
     const safeCaption = caption || safeAlt;
-    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    const imageUrl = freshAssetUrl(image);
+    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function renderContentPreviewMedia(image, alt, caption, extraClass) {
@@ -94,7 +107,8 @@
     const safeAlt = alt || "Preview image";
     const safeCaption = caption || safeAlt;
     const className = "media-frame content-preview-trigger" + (extraClass ? " " + extraClass : "");
-    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(rootUrl(image)) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(rootUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    const imageUrl = freshAssetUrl(image);
+    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function setMetadata(data, site, titleOverride, descriptionOverride) {
@@ -114,7 +128,7 @@
       const initials = brand.querySelector(".brand-photo > span");
       const avatar = brand.querySelector(".brand-photo img");
       if (initials) initials.textContent = site.shortName || "";
-      if (avatar && site.avatarImage) avatar.src = rootUrl(site.avatarImage);
+      if (avatar && site.avatarImage) avatar.src = freshAssetUrl(site.avatarImage);
     });
 
     const navigation = document.querySelector("[data-navigation]");
@@ -138,7 +152,8 @@
         const download = profile.download ? " download" : "";
         const profileUrl = profile.download && site.cvFile ? site.cvFile : profile.url;
         const iconType = profile.icon || profile.label.toLowerCase().replace(/\s+/g, "-");
-        return '<a href="' + escapeHtml(rootUrl(profileUrl)) + '" rel="me"' + download + '>' + renderLinkIcon(iconType) + '<span>' + escapeHtml(profile.label) + '</span></a>';
+        const resolvedProfileUrl = profile.download ? freshAssetUrl(profileUrl) : rootUrl(profileUrl);
+        return '<a href="' + escapeHtml(resolvedProfileUrl) + '" rel="me"' + download + '>' + renderLinkIcon(iconType) + '<span>' + escapeHtml(profile.label) + '</span></a>';
       }).join("");
       return '<div class="social-column">' + links + '</div>';
     }).join("");
@@ -404,7 +419,7 @@
   }
 
   async function fetchJson(file) {
-    const response = await fetch(basePath + "data/" + file, { cache: "no-cache" });
+    const response = await fetch(basePath + "data/" + file + "?v=" + requestVersion, { cache: "no-store" });
     if (!response.ok) throw new Error("Unable to load " + file + " (" + response.status + ")");
     return response.json();
   }
