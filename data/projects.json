@@ -2,14 +2,16 @@
   "browserTitle": "Projects | Md. Muhaiminul Islam (Jamee)",
   "description": "Selected projects by Md. Muhaiminul Islam (Jamee) in embedded systems, autonomous robots, SLAM, IoT, computer vision, and AI.",
   "heading": "Projects",
-  "intro": "Ten project entries from a portfolio spanning embedded systems, robotics, IoT, computer vision, and artificial intelligence.",
   "projects": [
     {
       "number": "Project 01",
       "title": "Four-Storey Elevator Control System",
-      "description": "A dual-Arduino elevator controller using an I²C master–slave architecture and the SCAN scheduling algorithm. The system coordinates motors, displays, request handling, door control, obstacle detection, overload protection, and manual safety overrides.",
-      "projectUrl": "",
-      "skills": ["Arduino", "I²C", "Control", "Embedded C", "Safety Systems"],
+      "bullets": [
+            "Designed a four-floor smart elevator using dual microcontrollers with an I²C-based master–slave architecture, separating decision-making, hardware control, and safety monitoring.",
+            "Implemented the SCAN elevator algorithm with DC/servo motors and synchronized door control to efficiently process floor requests while providing structured, direction-based operation.",
+            "Integrated ultrasonic and force sensors, dual LCDs, a 7-segment display, manual overrides, and external call inputs to enable real-time feedback, obstacle detection, overload protection, and enhanced operational safety."
+          ],
+      "projectUrl": "https://github.com/mdmuhaiminulislamjamee/Four-Storey-Elevator-System-Design",
       "image": "images/projects/project-01.jpg",
       "imageAlt": "Four-storey elevator control system"
     },
