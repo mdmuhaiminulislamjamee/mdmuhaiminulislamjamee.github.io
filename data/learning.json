@@ -9,64 +9,54 @@
       "title": "Academic Certificates",
       "items": [
         {
-          "title": "Academic Certificate Placeholder 01",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
+          "title": "B.Sc. (Engg.) in Electronics & Telecommunication Engineering",
+          "provider": "Rajshahi University of Engineering & Technology, Rajshahi - 6204, Bangladesh ",
+          "year": "2025",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/14ENzsRd_SXXMzQyxCJYgt0AC-p883t9c/view?usp=drive_link",
           "image": "images/certificates/academic-01.jpg",
-          "imageAlt": "Placeholder for academic certificate 01"
+          "imageAlt": "B.Sc. (Engg.)"
         },
         {
-          "title": "Academic Certificate Placeholder 02",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
+          "title": "Higher Secondary Certificate",
+          "provider": "Dhaka Board",
+          "year": "2019",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1-HEIxZPwz-EfY-8nQWplpJ4RGiphcwJa/view?usp=drive_link",
           "image": "images/certificates/academic-02.jpg",
-          "imageAlt": "Placeholder for academic certificate 02"
+          "imageAlt": "HSC"
         },
         {
-          "title": "Academic Certificate Placeholder 03",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
+          "title": "Secondary School Certificate",
+          "provider": "Jessore Board",
+          "year": "2017",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1wCuyv6Ju5MLiukf9qEDpiKL0yLzsTqX0/view?usp=drive_link",
           "image": "images/certificates/academic-03.jpg",
-          "imageAlt": "Placeholder for academic certificate 03"
+          "imageAlt": "SSC"
         },
         {
-          "title": "Academic Certificate Placeholder 04",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
+          "title": "Junior School Certificate",
+          "provider": "Jessore Board",
+          "year": "2014",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1_u9m3fEhWYfuirDBY4BcRUgLY-FElNWo/view?usp=drive_link",
           "image": "images/certificates/academic-04.jpg",
-          "imageAlt": "Placeholder for academic certificate 04"
+          "imageAlt": "JSC"
         },
         {
-          "title": "Academic Certificate Placeholder 05",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
+          "title": "Primary Education Certificate",
+          "provider": "Jessore Board",
+          "year": "2011",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1WVHMsh1w2xJpKCI6waicbolLUnQoT8Ig/view?usp=drive_link",
           "image": "images/certificates/academic-05.jpg",
-          "imageAlt": "Placeholder for academic certificate 05"
-        },
-        {
-          "title": "Academic Certificate Placeholder 06",
-          "provider": "Institution or Education Board",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/academic-06.jpg",
-          "imageAlt": "Placeholder for academic certificate 06"
+          "imageAlt": "PEC"
         }
       ]
     },
@@ -75,64 +65,54 @@
       "title": "Research Certificates",
       "items": [
         {
-          "title": "Research Certificate Placeholder 01",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
+          "title": "Undergraduate Research Asistantship",
+          "provider": "Md. Rakib Hossain, Asst. Professor, Dept. of ETE, RUET",
+          "year": "2025",
           "status": "Completed",
           "certificateLabel": "Certificate",
           "certificateUrl": "",
           "image": "images/certificates/research-01.jpg",
-          "imageAlt": "Placeholder for research certificate 01"
+          "imageAlt": "URA"
         },
         {
-          "title": "Research Certificate Placeholder 02",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
+          "title": "Certificate of Appreciation",
+          "provider": "ICCIT 2024",
+          "year": "2024",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1SQWis4ZjMaVgNtKubJeyWHtdlNb_S-lU/view?usp=drive_link",
           "image": "images/certificates/research-02.jpg",
-          "imageAlt": "Placeholder for research certificate 02"
+          "imageAlt": "ICCIT"
         },
         {
-          "title": "Research Certificate Placeholder 03",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
+          "title": "Certificate of Appreciation",
+          "provider": "ICCECE 2024",
+          "year": "2024",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1wjLgUMdbrdWjzqgm9flpAhe6VId25rWk/view?usp=drive_link",
           "image": "images/certificates/research-03.jpg",
-          "imageAlt": "Placeholder for research certificate 03"
+          "imageAlt": "ICCECE"
         },
         {
-          "title": "Research Certificate Placeholder 04",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
+          "title": "Certificate of Appreciation",
+          "provider": "ICAEEE 2024",
+          "year": "2024",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1_UzIAqR0a0uYCyivM3ax6IxbeBcviUBg/view?usp=drive_link",
           "image": "images/certificates/research-04.jpg",
-          "imageAlt": "Placeholder for research certificate 04"
+          "imageAlt": "ICAEEE"
         },
         {
-          "title": "Research Certificate Placeholder 05",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
+          "title": "Certificate of Appreciation",
+          "provider": "WIECON-ECE 2023",
+          "year": "2023",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1BcDvTyYY7fvkJzWiMbjka-cTPLPNOuyt/view?usp=drive_link",
           "image": "images/certificates/research-05.jpg",
-          "imageAlt": "Placeholder for research certificate 05"
-        },
-        {
-          "title": "Research Certificate Placeholder 06",
-          "provider": "Conference or Research Institution",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/research-06.jpg",
-          "imageAlt": "Placeholder for research certificate 06"
+          "imageAlt": "WIECON-ECE"
         }
       ]
     },
@@ -141,64 +121,34 @@
       "title": "Professional Certificates",
       "items": [
         {
-          "title": "Professional Certificate Placeholder 01",
-          "provider": "Professional Organization",
-          "year": "20XX",
+          "title": "Machine Learning & Data Science Bootcamp (Starter Pack) by Code Studio Academy",
+          "provider": "Code Studio Academy",
+          "year": "2023",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1z2kzIKyqQDm1BzlZNpHyyOa5CfUjtRhe/view?usp=drive_link",
           "image": "images/certificates/professional-01.jpg",
-          "imageAlt": "Placeholder for professional certificate 01"
+          "imageAlt": "ML & DS Bootcamp"
         },
         {
-          "title": "Professional Certificate Placeholder 02",
-          "provider": "Professional Organization",
-          "year": "20XX",
+          "title": "Certificate of Completion on Internship",
+          "provider": "Tech Topia",
+          "year": "2023",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/179f4dBuC2fu8sj7XZu00HGc9L4TZT2vF/view?usp=drive_link",
           "image": "images/certificates/professional-02.jpg",
-          "imageAlt": "Placeholder for professional certificate 02"
+          "imageAlt": "Certificate of Completion on Internship"
         },
         {
-          "title": "Professional Certificate Placeholder 03",
-          "provider": "Professional Organization",
-          "year": "20XX",
+          "title": "Basic Arduino Programming Course",
+          "provider": "Robo-Adda",
+          "year": "2020",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1K-Hnk0LX94qqAvjYyed9A5m6gihIT8-t/view?usp=drive_link",
           "image": "images/certificates/professional-03.jpg",
-          "imageAlt": "Placeholder for professional certificate 03"
-        },
-        {
-          "title": "Professional Certificate Placeholder 04",
-          "provider": "Professional Organization",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/professional-04.jpg",
-          "imageAlt": "Placeholder for professional certificate 04"
-        },
-        {
-          "title": "Professional Certificate Placeholder 05",
-          "provider": "Professional Organization",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/professional-05.jpg",
-          "imageAlt": "Placeholder for professional certificate 05"
-        },
-        {
-          "title": "Professional Certificate Placeholder 06",
-          "provider": "Professional Organization",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/professional-06.jpg",
-          "imageAlt": "Placeholder for professional certificate 06"
+          "imageAlt": "Basic Arduino Programming Course"
         }
       ]
     },
@@ -206,66 +156,37 @@
       "id": "course-workshop-certificates",
       "title": "Course & Workshop Certificates",
       "items": [
-        {
-          "title": "Course or Workshop Certificate Placeholder 01",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
+       {
+          "title": "PCB Design & Fabrication Workshop",
+          "provider": "Dept. of ETE, RUET",
+          "year": "2022",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1bPSqMNgaWcW0Yir0eYVeJdFDVyKbJAfK/view?usp=drive_link",
           "image": "images/certificates/course-workshop-01.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 01"
+          "imageAlt": "PCB Design & Fabrication Workshop"
         },
         {
-          "title": "Course or Workshop Certificate Placeholder 02",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
+          "title": "Fundamentals of Internet of Things Workshop",
+          "provider": "RUET IoT Club",
+          "year": "2022",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/12XFJ_2aPq-89qhCgMPcNetXv1V-ytouA/view?usp=drive_link",
           "image": "images/certificates/course-workshop-02.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 02"
+          "imageAlt": "Fundamentals of Internet of Things Workshop"
         },
         {
-          "title": "Course or Workshop Certificate Placeholder 03",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
+          "title": "Workshop on Advanced Softwares for ICT",
+          "provider": "ICT, RUET",
+          "year": "2021",
           "status": "Completed",
           "certificateLabel": "Certificate",
-          "certificateUrl": "",
+          "certificateUrl": "https://drive.google.com/file/d/1taG5rylp-WLtXhDaA3KhYw-Q5FntQGdy/view?usp=drive_link",
           "image": "images/certificates/course-workshop-03.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 03"
-        },
-        {
-          "title": "Course or Workshop Certificate Placeholder 04",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/course-workshop-04.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 04"
-        },
-        {
-          "title": "Course or Workshop Certificate Placeholder 05",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/course-workshop-05.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 05"
-        },
-        {
-          "title": "Course or Workshop Certificate Placeholder 06",
-          "provider": "Course or Workshop Provider",
-          "year": "20XX",
-          "status": "Completed",
-          "certificateLabel": "Certificate",
-          "certificateUrl": "",
-          "image": "images/certificates/course-workshop-06.jpg",
-          "imageAlt": "Placeholder for course or workshop certificate 06"
+          "imageAlt": "Workshop on Advanced Softwares for ICT"
         }
+
       ]
     }
   ]
