@@ -9,8 +9,18 @@
       "title": "Four-Storey Elevator Control System",
       "description": "This project is the design and implementation of a smart four-floor elevator system using dual Arduino Uno microcontrollers with an I²C-based master–slave architecture, where the master handles decision-making and user interaction while the slave manages hardware control and safety monitoring. The system operates using the SCAN (Elevator) algorithm to efficiently serve floor requests in a structured direction-based manner, minimizing travel time and ensuring fairness. It integrates multiple hardware components including DC and servo motors, dual LCD displays, ultrasonic and force sensors, and a 7-segment indicator to provide real-time feedback and smooth operation. Advanced features such as synchronized door control, obstacle detection, overload protection, manual override buttons, and external call inputs enhance both usability and safety. The design emphasizes reliability, modularity, and real-world applicability, with independent safety mechanisms ensuring immediate response to hazards. Overall, the project demonstrates a practical, scalable, and intelligent elevator control system that closely mimics real-world elevator behavior while addressing key engineering challenges.",
       "projectUrl": "https://github.com/mdmuhaiminulislamjamee/Four-Storey-Elevator-System-Design",
-      "skills": ["Arduino", "Embedded Systems", "I2C Communication", "SCAN Algorithm", "Motor Control", "Sensor Integration", "Hardware Prototyping"],
-      "image": "images/projects/project-01.jpg",
+"skills": [
+    "Arduino",
+    "Embedded Systems",
+    "I2C Communication",
+    "SCAN Algorithm",
+    "Motor Control",
+    "Sensor Integration",
+    "Hardware Prototyping",
+    "Distributed Systems Architecture",
+    "Safety-Critical Systems Design"
+  ],
+        "image": "images/projects/project-01.jpg",
       "imageAlt": "Four-storey elevator control system"
     },
     {
@@ -18,8 +28,21 @@
       "title": "Autonomous Self-Driving based Garbage Detection and Collection Robot using Deep Learning and Simultaneous Localization & Mapping",
       "description": "This project presents an Autonomous Self-Driving Garbage Detection and Collection Robot that uses Deep Learning and Simultaneous Localization & Mapping (SLAM) for real-time trash detection and navigation. The system is powered by a Raspberry Pi with a Pi Camera for image capture, integrated with Fast R-CNN and YOLO models to identify waste objects. Different sensors like LiDAR sensor, Sonar Sensor are used for mapping and obstacle detection, while Kalman Filter and A* Algorithm guide smooth path planning and localization. The robot’s motion and trash collection mechanisms are controlled by Servo Motors and an Arduino Mega connected via the I2C protocol. In simple terms, the robot scans its surroundings, detects garbage, plans a safe shortest route, moves towards the trash, picks it up, and deposits it into its storage compartment—all autonomously.",      
       "projectUrl": "https://drive.google.com/drive/folders/18_7urafBi_wzMs0gMbLH9bJV4DNmf9Ed",
-      "skills": ["SLAM", "Kalman Filter", "A* Algorithm", "Fast R-CNN", "YOLO", "LiDAR", "Autonomous Navigation"],
-      "image": "images/projects/project-02.jpg",
+"skills": [
+        "SLAM",
+        "Kalman Filter",
+        "A* Algorithm",
+        "Fast R-CNN",
+        "YOLO",
+        "LiDAR",
+        "Autonomous Navigation",
+        "Computer Vision",
+        "Sensor Fusion",
+        "Path Planning",
+        "Raspberry Pi",
+        "Robotics Kinematics"
+      ],
+            "image": "images/projects/project-02.jpg",
       "imageAlt": "Autonomous garbage detection and collection robot"
     },
     {
@@ -27,8 +50,18 @@
       "title": "IoT and GPS-GSM Based Land Mine and Human Detection Robot with Automated Data Monitoring System and Image Processing",
       "description": "This project is an IoT and GPS-GSM Based Land Mine and Human Detection Robot designed for safety, rescue, and military applications. It integrates Arduino, ESP32, ESP32-CAM, GPS, GSM, PIR, Gas, Sonar, and Metal Detection sensors to monitor surroundings in real time. The robot can detect land mines, track human presence, sense toxic gases, measure temperature and humidity, and provide live video streaming through image processing. Using GSM and GPS modules, it automatically sends alerts with exact coordinates of detected hazards via SMS. Data is monitored through a web application and Android app, while Bluetooth and motor drivers enable manual or automated movement. In simple words, the robot moves into risky areas, scans for humans or explosives, gathers environmental data, and transmits live updates and locations to rescue teams, helping save lives without risking human intervention.",      
       "projectUrl": "https://drive.google.com/drive/folders/1Q5haU8XwNB_WF43qyxGDEpuF3mPOz8Og",
-      "skills": ["IoT", "GPS/GSM", "ESP32-CAM", "Image Processing", "Telemetry", "Sensor Integration", "Hardware Design"],
-      "image": "images/projects/project-03.jpg",
+      "skills": [
+    "IoT",
+    "GPS/GSM",
+    "ESP32-CAM",
+    "Image Processing",
+    "Telemetry",
+    "Sensor Integration",
+    "Hardware Design",
+    "Multi-Sensor Data Fusion",
+    "Autonomous Mobile Robotics"
+       ],
+        "image": "images/projects/project-03.jpg",
       "imageAlt": "Land mine and human detection robot"
     },
     {
@@ -36,8 +69,18 @@
       "title": "Autonomous Self-Driving Car with Text Translation",
       "description": "This project is an Autonomous Self-Driving Car with Text Translation that combines ROS and Computer Vision for intelligent navigation and language assistance. Powered by a Raspberry Pi and Pi Camera, the car performs real-time lane detection and object recognition using YOLO models. For localization and path planning, it applies the Kalman Filter and Dijkstra’s Algorithm to ensure smooth and safe driving decisions. A unique feature of this system is its ability to detect text on the road (e.g., signs, boards) and instantly translate it between English and Bangla. In simple words, the car can drive itself, follow lanes, avoid obstacles, and also read and translate texts it encounters on the road for better user interaction.",
       "projectUrl": "https://www.youtube.com/watch?v=dzGuSk8RfTM",
-      "skills": ["ROS", "Computer Vision", "YOLO", "Kalman Filter", "Dijkstra", "OCR", "Deep Learning"],
-      "image": "images/projects/project-04.jpg",
+"skills": [
+    "ROS",
+    "Computer Vision",
+    "YOLO",
+    "Kalman Filter",
+    "Dijkstra",
+    "OCR",
+    "Deep Learning",
+    "Natural Language Processing",
+    "Path Planning & Localization"
+  ],
+        "image": "images/projects/project-04.jpg",
       "imageAlt": "Autonomous self-driving car with text translation"
     },
     {
@@ -45,8 +88,18 @@
       "title": "Custom Real-Time Hand Gesture Recognition System for Edge AI Devices",
       "description": "This project features a real-time, 8-command hand gesture recognition system developed by training an augmented 128–64 MLP architecture on 36,864 samples across 9 classes utilizing a 76-dimensional landmark feature extractor. To maximize reliability, the pipeline incorporates runtime rejection, temporal gesture gating, and a geometry-based dorsal fallback, correctly recognizing 100% (331/331) of dorsal public-test samples. Evaluated on 3,631 public-test observations, the system substantially outperforms the 92.9% baseline by achieving a 98.8% known-command acceptance rate, a 99.0% runtime macro-F1 score, and a 0.4% unknown false-accept rate, fully optimized for low-latency live camera evaluation via ONNX inference.",
       "projectUrl": "https://github.com/mdmuhaiminulislamjamee/Custom-Hand-Gesture-Recognition",
-      "skills": ["ONNX Inference", "Multilayer Perceptron (MLP)", "Computer Vision", "Feature Extraction", "MediaPipe", "MobileNetV3", "Data Preprocessing"],      
-      "image": "images/projects/project-08.jpg",
+"skills": [
+    "ONNX Inference",
+    "Multilayer Perceptron (MLP)",
+    "Computer Vision",
+    "Feature Extraction",
+    "MediaPipe",
+    "MobileNetV3",
+    "Data Preprocessing",
+    "Out-of-Distribution (OOD) Detection",
+    "Model Optimization & Quantization"
+  ],
+        "image": "images/projects/project-08.jpg",
       "imageAlt": "Custom Hand Gesture Recognition"
       
     },
@@ -55,8 +108,19 @@
       "title": "Advanced PID-Controlled Fast Line-Following Robot using 6 IR Sensor Array",
       "description": "This project is an Advanced PID Controlled Fast Line Following Robot that uses a 6 IR sensor array for accurate path detection and tracking. It is powered by an Arduino Nano with a custom-made PCB and driven through an L298N motor driver for efficient motor control. A PID controller is applied to calculate errors from the sensor inputs and adjust motor speed dynamically, ensuring smooth turns and minimal deviation from the line. The robot can operate at high speed while maintaining stability, making it both efficient and reliable. In simple words, the robot senses the track, corrects its movement in real time, and follows the path quickly and accurately.",
       "projectUrl": "https://drive.google.com/drive/folders/1oH2imyH2mshuX66F3ABRkPpwSbP39CNJ",
-      "skills": ["PID", "Arduino Nano", "Custom PCB", "IR Sensors", "Motor Control", "Sensor Calibration"],
-      "image": "images/projects/project-05.jpg",
+"skills": [
+    "PID",
+    "Arduino Nano",
+    "Custom PCB",
+    "IR Sensors",
+    "Motor Control",
+    "Sensor Calibration",
+    "Closed-Loop Control Systems",
+    "PCB Design & Schematic Capture",
+    "Pulse-Width Modulation (PWM)",
+    "Real-Time Embedded Firmware"
+  ],
+        "image": "images/projects/project-05.jpg",
       "imageAlt": "PID-controlled fast line-following robot"
     },
 
@@ -65,8 +129,17 @@
       "title": "IoT and Image Processing Based Human Rescuable & Fire Fighting Robot",
       "description": " This project focuses on designing an intelligent robot capable of assisting in emergency situations, particularly in fire incidents and human rescue operations. The robot integrates IoT (Internet of Things) technology with advanced image processing techniques to navigate hazardous environments, detect fire sources, and identify trapped humans. Equipped with various sensors, such as temperature sensors, gas sensors, and infrared cameras, the robot can monitor its surroundings in real-time. The image processing module enables it to recognize human figures, obstacles, and flames, allowing for precise rescue operations and firefighting tasks. Through IoT connectivity, the robot can transmit live data and video feeds to a remote-control center, enabling operators to make informed decisions during emergencies. This system is designed to reduce human risk in dangerous scenarios, improve the efficiency of rescue missions, and ensure timely firefighting response. It can autonomously navigate through smoke-filled or cluttered environments, locate victims, and either alert emergency teams or assist directly in evacuation and fire suppression.",
       "projectUrl": "https://drive.google.com/drive/folders/1SggNlBJnsdUWIUynRW_5FN2R84DLMKpC",
-      "skills": ["Sensor Integration", "Thermal & Infrared Imaging", "Computer Vision", "Autonomous Navigation", "IoT Telemetry", "Hazard & Flame Detection"],      
-      "image": "images/projects/project-06.jpg",
+"skills": [
+    "Sensor Integration",
+    "Thermal & Infrared Imaging",
+    "Computer Vision",
+    "Autonomous Navigation",
+    "IoT Telemetry",
+    "Hazard & Flame Detection",
+    "Emergency Response Robotics",
+    "Real-Time Video Streaming"
+  ],
+        "image": "images/projects/project-06.jpg",
       "imageAlt": "Human-rescue and fire-fighting robot"
     },
     {
@@ -75,27 +148,54 @@
       "title": "AI-Based Smart Notice Board",
       "description": "This project is an AI-Based Smart Notice Board that uses Machine Learning, Image Processing, and Socket Technology to provide personalized and real-time information sharing. The system employs facial recognition to identify users through a webcam and then displays notices tailored to their profiles, reducing the need to manually search through cluttered boards. Its architecture integrates a frontend (HTML, CSS, JS), backend (Python, Node.js), and MySQL database, ensuring smooth data flow and storage. By combining AI-driven facial recognition and advanced image processing, the board guarantees accurate identification and relevant notice delivery. In simple words, when a person stands in front of the notice board, it recognizes them, fetches their related updates from the server, and instantly displays personalized information—making communication smarter, faster, and more interactive.",
       "projectUrl": "https://drive.google.com/drive/folders/1yiudtJR0XzLbHPhHQyuIwPmgOxrz6fjq",
-      "skills": ["Facial Recognition", "Python", "Node.js", "MySQL", "WebSockets", "Computer Vision", "Image Processing"],
-      "image": "images/projects/project-07.jpg",
+"skills": [
+    "Facial Recognition",
+    "Python",
+    "Node.js",
+    "MySQL",
+    "WebSockets",
+    "Computer Vision",
+    "Image Processing",
+    "Full-Stack Web Development",
+    "RESTful APIs",
+    "Personalization Algorithms",
+    "Real-Time Data Streaming",
+    "Biometric Authentication"
+  ],
+        "image": "images/projects/project-07.jpg",
       "imageAlt": "AI-based smart notice board"
     },
     {
       "number": "Project 09",
-      "title": "Project Placeholder 09",
-      "description": "This is editable placeholder content for a future project. Replace it with the project objective, technical approach, implementation details, and principal outcome.",
-      "projectUrl": "",
-      "skills": ["Skill One", "Skill Two", "Skill Three"],
-      "image": "images/projects/project-09.jpg",
+      "title": "Real-time CNN on Drones with IoT Integration for Smart Border Surveillance.",
+      "description": "TThis project presents the design and implementation of a drone-based smart border surveillance system that integrates Convolutional Neural Networks (CNN), computer vision, GPS, and IoT technologies for real-time monitoring and classification of individuals in restricted border areas. A custom dataset of 3,256 images, comprising 1,984 border-guard and 1,272 local-person samples, was developed using data augmentation techniques including rotation, scaling, and flipping. The CNN model processes 100×100-pixel grayscale images using two convolutional layers with 200 and 100 filters, 2×2 max-pooling, 50-neuron fully connected layers, 0.5 dropout, ReLU and softmax activations, and is trained with the Adam optimizer, categorical cross-entropy loss, a 0.0001 learning rate, 32 batch size, and 10 epochs with early stopping. The drone integrates an Arduino Mega, ESP32-CAM, NEO-6M GPS, SIM900 GSM, BME280, HMC5883L, MPU6050, nRF24L01+, and brushless motor with ESC, enabling aerial image acquisition, environmental sensing, location tracking, wireless communication, and real-time data transmission through ThingSpeak. Experimental evaluation achieved 98% overall accuracy, with 98% precision, 98% recall, and 98% F1-score for border-guard classification and 98% precision, 97% recall, and 97% F1-score for local-person classification. The system further supports timestamped location reporting and authority notification for detected individuals, demonstrating a practical IoT-enabled computer vision framework for automated border-area monitoring and surveillance.",
+      "projectUrl": "https://drive.google.com/drive/folders/1efkMcNgjnrvN6OWU-_wF4xByyfHzYnUe",
+"skills": [
+    "Convolutional Neural Networks (CNN)",
+    "Computer Vision",
+    "UAV & Drone Technologies",
+    "IoT & Cloud Telemetry",
+    "Embedded Systems Integration",
+    "Sensor Fusion & Navigation",
+    "Data Augmentation",
+    "Model Training & Evaluation"
+  ],
+  "image": "images/projects/project-09.jpg",
       "imageAlt": "Placeholder image for project 09"
     },
     {
       "number": "Project 10",
-      "title": "Project Placeholder 10",
-      "description": "This is editable placeholder content for a future project. Replace it with a concise summary of the system, your responsibilities, and the final achievement.",
-      "projectUrl": "",
-      "skills": ["Skill One", "Skill Two", "Skill Three"],
-      "image": "images/projects/project-10.jpg",
-      "imageAlt": "Three Step Supreme Security System"
+      "title": "mprovement of Image Quality of Received Holographic Image Using Advanced Fresnel Algorithm",
+      "description": "This project focuses on enhancing the quality and security of received holographic images using an advanced Fresnel Fourier algorithm for computer-generated holography (CGH). The system implements a complete holographic communication pipeline involving grayscale conversion, hologram generation, complex reference-wave integration, magnitude–phase separation, multiplexing, demultiplexing, and Fresnel-based image reconstruction using FT, DFT, and IDFT techniques. A 256×256-pixel, 8-bit image was employed for experimental evaluation, with the Fresnel diffraction method validated across propagation distances of 0.1–0.7 m and operating wavelengths ranging from 350–470 nm. The proposed approach incorporates a reference noise image and binary hologram encoding to improve communication security while mitigating image artifacts such as ringing, blurring, and improper diffraction. Experimental analysis demonstrated optimal reconstruction behavior at Fresnel distances of 7–12 cm, while distances of 1 cm and 0.1 cm produced progressively higher distortion and blurring. Wavelength analysis further showed improved sharpness at 350/470 nm and enhanced contrast and intensity transitions at 630/700 nm, whereas wavelengths around 1500 nm resulted in invisible reconstructions. Performance was quantitatively evaluated through RGB color-space, histogram, correlation-coefficient, and information-entropy analyses, with the main object image achieving an entropy of 6.5326, while the generated hologram reached 7.9530, the multiplexed hologram 7.9895, and the reconstructed image 6.4884. The system successfully reconstructed both grayscale and color images with improved contrast, brightness, and sharpness, demonstrating the practical potential of advanced Fresnel diffraction and FCGH techniques for secure, high-fidelity holographic communication.",
+      "projectUrl": "https://drive.google.com/drive/folders/1RjsfHm7WI_VIv1sH-NqXcnSmCpn1Pmm4",
+"skills": [
+    "Computer-Generated Holography (CGH)",
+    "Fourier Optics & Wave Diffraction",
+    "Digital Signal & Image Processing (DFT/IDFT)",
+    "Optical Cryptography & Steganography"
+  ],
+        "image": "images/projects/project-10.jpg",
+      "imageAlt": "Placeholder image for project 10"
     }
   ]
 }
