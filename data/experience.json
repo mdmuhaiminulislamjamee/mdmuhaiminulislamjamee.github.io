@@ -191,7 +191,13 @@
           "location": "Rajshahi, Bangladesh",
           "title": "Astronomy and Science Society of RUET",
           "role": "Research and Planning Secretary",
-          "summary": "Led research and planning activities; organized workshops and technical courses in astronomy, robotics, IoT, and STEM; and coordinated budgets, campaigns, competitions, science festivals, and olympiads.",
+          "bullets": [
+            "Researched and prototyped innovative solutions for organizational challenges, analyzing past initiatives to refine and optimize problem-solving frameworks.",
+            "Designed and delivered interactive STEM workshops on Robotics, IoT, Physics, and Mathematics, mentoring school and college students through practical builds.",
+            "Directed regional science fests, academic competitions, and astronomical observation camps to drive youth engagement and experiential learning.",
+            "Spearheaded pro-bono educational outreach in under-resourced rural schools, using accessible hardware demonstrations to build foundational scientific literacy.",
+            "Formulated comprehensive annual roadmaps and operational schedules via spreadsheet modeling to streamline execution and resolve day-to-day logistical challenges across the club."
+          ],          
           "image": "images/experience/volunteering-01.jpg"
         },
         {
@@ -199,7 +205,13 @@
           "location": "Dhaka, Bangladesh",
           "title": "Bangladesh Robot Olympiad",
           "role": "Academic Team Member, R&D Team",
-          "summary": "Mentored robotics participants, designed problems and competition tracks, supported live events, helped update the official website, and led robotics workshops and video content.",
+          "bullets": [
+            "Designed and led technical bootcamps and intensive mentoring tracks for national finalists to prepare them for competitive events at the Bangladesh Robot Olympiad (BDRO) and the International Robot Olympiad (IRO).",
+            "Formulated rigorous, high-standard evaluation frameworks and authored innovative question sets for the national robotics quiz competition.",
+            "Engineered custom web user interfaces for the BDRO home platform and digital quiz management system to streamline contest delivery.",
+            "Designed and built precision physical test arenas and tracks for the Line Following Robot (LFR) category while providing on-site hardware and firmware troubleshooting for competing teams.",
+            "Officiated and proctored main-stage national competition rounds, enforcing strict evaluation protocols and anti-cheating measures to maintain competitive integrity."
+          ],
           "image": "images/experience/volunteering-02.jpg"
         },
         {
@@ -207,7 +219,13 @@
           "location": "Dhaka, Bangladesh",
           "title": "Bangladesh Mathematical Olympiad",
           "role": "Academic Team Member",
-          "summary": "Created advanced problem sets for regional and national competitions and delivered training in algebra, number theory, geometry, and structured problem-solving.",
+          "bullets": [
+            "Conducted advanced mathematical problem-solving workshops and mentored national contenders to prepare them for regional, national, and International Mathematical Olympiad (IMO) competitions.",
+            "Formulated original, non-trivial problem sets and assessment criteria for both the regional and national stages of the Bangladesh Mathematical Olympiad (BdMO).",
+            "Evaluated competitive scripts as an official judge and proctored main examination halls to enforce strict academic and testing integrity.",
+            "Developed and optimized the web user interface for the official BdMO platform to ensure an intuitive experience for thousands of applicants.",
+            "Delivered real-time technical troubleshooting and operational support for participants and administrative systems during high-stakes contest rounds."
+          ],          
           "image": "images/experience/volunteering-03.jpg"
         },
         {
@@ -215,15 +233,25 @@
           "location": "Dhaka, Bangladesh",
           "title": "Society for the Popularization of Science, Bangladesh",
           "role": "Volunteer",
-          "summary": "Placeholder details for science-outreach activities, event coordination, educational programs, and community engagement. Replace this text with the final role and contributions.",
+          "bullets": [
+            "Designed and delivered preparatory workshops and intensive mentoring tracks for national contenders competing in the Bangladesh Junior Science Olympiad (BdJSO) and Bangladesh Astro Olympiad (BAO).",
+            "Curated and coordinated interactive knowledge-sharing sessions and technical masterclasses featuring professional scientists and technology industry leaders.",
+            "Organized experiential STEM camps, project-building bootcamps, and public astronomical events, including specialized lunar and deep-sky observation sessions.",
+            "Officiated competitive rounds, serving as a preliminary judge, examination proctor, and real-time operational troubleshooter to maintain strict event integrity."
+          ],          
           "image": "images/experience/volunteering-04.jpg"
         },
         {
           "date": "Apr 2020 – Apr 2022",
           "location": "Khulna, Bangladesh",
           "title": "Jamal Nazrul Islam Physics Club",
-          "role": "Advisor & Trainer",
-          "summary": "Placeholder details for physics outreach, academic events, workshops, competitions, and volunteer responsibilities. Replace this text with the final information.",
+          "role": "Advisor & Trainer",    
+          "bullets": [
+            "Co-founded and restructured the Physics Club, developing comprehensive curricula, advanced problem-solving tracks, and hands-on experimental demonstrations across Mechanics, Electromagnetism, and Modern Physics.",
+            "Mentored aspiring competitors through rigorous analytical training and organized low-stakes contests to demystify complex concepts and foster academic confidence.",
+            "Coordinated collaborative joint sessions with external science organizations and led field outreach camps to deliver engaging, experiential physics education across different regions.",
+            "Sourced, invited, and hosted professional scientists and researchers for specialized seminars, giving students direct access to real-time Q&A and modern scientific developments."
+          ],          
           "image": "images/experience/volunteering-05.jpg"
         },
         
@@ -232,7 +260,11 @@
           "location": "Khulna, Bangladesh",
           "title": "Srinivasa Ramanujan Math Club",
           "role": "Mentor",
-          "summary": "Placeholder details for mathematics programs, problem-solving sessions, competitions, mentoring, and organizational responsibilities. Replace this text with the final information.",
+          "bullets": [
+            "Designed rigorous curricula, problem sets, and advanced training sessions across Number Theory, Algebra, Geometry, Combinatorics, and Calculus to prepare contenders for national and international Olympiads.",
+            "Mentored students in high-level analytical problem-solving and organized competitive math contests designed to overcome math anxiety and foster conceptual confidence.",
+            "Traveled across diverse regions to lead immersive mathematics camps and interactive workshops, making advanced mathematical concepts accessible and engaging through experiential learning."
+          ],          
           "image": "images/experience/volunteering-06.jpg"
         }
       ]
