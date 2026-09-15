@@ -17,7 +17,7 @@
       "title": "Autonomous Self-Driving based Garbage Detection and Collection Robot using Deep Learning and Simultaneous Localization & Mapping",
       "description": "This project presents an Autonomous Self-Driving Garbage Detection and Collection Robot that uses Deep Learning and Simultaneous Localization & Mapping (SLAM) for real-time trash detection and navigation. The system is powered by a Raspberry Pi with a Pi Camera for image capture, integrated with Fast R-CNN and YOLO models to identify waste objects. Different sensors like LiDAR sensor, Sonar Sensor are used for mapping and obstacle detection, while Kalman Filter and A* Algorithm guide smooth path planning and localization. The robot’s motion and trash collection mechanisms are controlled by Servo Motors and an Arduino Mega connected via the I2C protocol. In simple terms, the robot scans its surroundings, detects garbage, plans a safe shortest route, moves towards the trash, picks it up, and deposits it into its storage compartment—all autonomously.",      
       "projectUrl": "https://drive.google.com/drive/folders/18_7urafBi_wzMs0gMbLH9bJV4DNmf9Ed",
-      "skills": ["Autonomous Navigation", "SLAM", "Deep Learning", "YOLO", "Fast R-CNN", "A* Algorithm", "Kalman Filter", "Raspberry Pi", "Arduino Mega", "LiDAR", "Computer Vision", "I2C Protocol", "Robotics Hardware Integration"],      
+      "skills": ["SLAM", "Kalman Filter", "A* Algorithm", "Fast R-CNN", "YOLO", "LiDAR", "Autonomous Navigation"],
       "image": "images/projects/project-02.jpg",
       "imageAlt": "Autonomous garbage detection and collection robot"
     },
