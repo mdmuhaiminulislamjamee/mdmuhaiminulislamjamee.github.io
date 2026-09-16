@@ -4,11 +4,12 @@
   "heading": "Gallery",
   "intro": "A place to share the moments, memories, and little things I capture along the way.",
   "items": [
+
     {
-      "title": "RAG Tour of Batch-19",
-      "caption": "During the RAG Tour of RUET-ETE-19 Batch.",
+      "title": "RAG Day of ETE-19 Batch",
+      "caption": "During the RAG Day of RUET-ETE-19 Batch.",
       "image": "images/gallery/gallery-01.jpg",
-      "imageAlt": "RAG Tour of Batch-19"
+      "imageAlt": "RAG Day of ETE-19 Batch"
     },
     {
       "title": "27th International Conference on Computer and Information Technology (ICCIT 2024)",
@@ -17,48 +18,47 @@
       "imageAlt": "27th International Conference on Computer and Information Technology (ICCIT 2024)"
     },
     {
-      "title": "Microsoft Office Specialist Bangladesh Championship",
-      "caption": "Final Round of Microsoft Office Specialist Bangladesh Championship.",
-      "image": "images/gallery/gallery-03.jpg",
-      "imageAlt": "Microsoft Office Specialist Bangladesh Championship"
-    },
-    {
-      "title": "Research at RUET",
-      "caption": "Undergraduate research and prototype development.",
+      "title": "Electronics & Robotics Project Exhibition",
+      "caption": "Project Exhibition on Electronics & Robotics",
       "image": "images/gallery/gallery-04.jpg",
-      "imageAlt": "Research and project work at RUET"
+      "imageAlt": "Electronics & Robotics Project Exhibition"
     },
     {
-      "title": "Science Outreach",
-      "caption": "Astronomy and Science Society of RUET.",
+      "title": "ETEchnovation 2022",
+      "caption": "ETEchnovation 2022",
       "image": "images/gallery/gallery-05.jpg",
-      "imageAlt": "Astronomy and Science Society of RUET event"
+      "imageAlt": "ETEchnovation 2022"
     },
     {
-      "title": "",
-      "caption": "",
+      "title": "Exhibition of AI Based Smart Notice Board",
+      "caption": "Exhibition of AI Based Smart Notice Board",
       "image": "images/gallery/gallery-06.jpg",
-      "imageAlt": ""
+      "imageAlt": "Exhibition of AI Based Smart Notice Board"
     },
-
     {
-      "title": "Exhibition of AI based Smart Notice Board",
-      "caption": "",
+      "title": "Buffet Party with Brothers",
+      "caption": "Buffet Party with Brothers",
       "image": "images/gallery/gallery-07.jpg",
-      "imageAlt": "Exhibition of AI based Smart Notice Board"
+      "imageAlt": "Buffet Party with Brothers"
+    },
+        {
+      "title": "Winning Moment of Bangladesh Robot Olympiad 2020",
+      "caption": "Winning Moment of Bangladesh Robot Olympiad 2020",
+      "image": "images/gallery/gallery-03.jpg",
+      "imageAlt": "Winning Moment of Bangladesh Robot Olympiad 2020"
     },
     {
-      "title": "International Robot Olympiad",
-      "caption": "During the competition of International Robot Olympiad.",
+      "title": "22nd International Robot Olympiad 2020",
+      "caption": "22nd International Robot Olympiad 2020",
       "image": "images/gallery/gallery-08.jpg",
-      "imageAlt": "International Robot Olympiad"
+      "imageAlt": "22nd International Robot Olympiad 2020"
     },
 
     {
-      "title": "Robotics Mentoring",
-      "caption": "Workshops, academic support, and competition preparation.",
+      "title": "CISCO IoT Hackathon 2018",
+      "caption": "CISCO IoT Hackathon 2018",
       "image": "images/gallery/gallery-09.jpg",
-      "imageAlt": "Robotics workshop and mentoring"
+      "imageAlt": "CISCO IoT Hackathon 2018"
     }
   ]
 }
