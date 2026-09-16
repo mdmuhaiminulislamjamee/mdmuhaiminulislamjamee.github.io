@@ -13,6 +13,7 @@
   const searchButtons = document.querySelectorAll("[data-search-open]");
   const searchClose = document.querySelector("[data-search-close]");
   const basePath = document.body.dataset.base || "";
+  const assetVersion = "20260916-image-performance";
 
   function closeNavigation() {
     if (navigation) navigation.classList.remove("is-open");
@@ -49,7 +50,9 @@
     const image = document.createElement("img");
     frame.className = "media-frame " + className;
     frame.dataset.placeholder = "Add " + path;
-    image.src = basePath + path;
+    image.loading = "lazy";
+    image.decoding = "async";
+    image.src = basePath + path + "?v=" + assetVersion;
     image.alt = alt;
     frame.appendChild(image);
     item.insertBefore(frame, item.firstChild);

@@ -3,6 +3,7 @@
 
   const basePath = document.body.dataset.base || "";
   const requestVersion = Date.now().toString(36);
+  const assetVersion = "20260916-image-performance";
   const pathParts = window.location.pathname.split("/").filter(Boolean);
   const fileName = pathParts[pathParts.length - 1] || "index.html";
   const isBlogArticle = pathParts[pathParts.length - 2] === "blog" && /\.html$/i.test(fileName);
@@ -52,7 +53,7 @@
     const hashIndex = resolved.indexOf("#");
     const path = hashIndex === -1 ? resolved : resolved.slice(0, hashIndex);
     const hash = hashIndex === -1 ? "" : resolved.slice(hashIndex);
-    return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + requestVersion + hash;
+    return path + (path.indexOf("?") === -1 ? "?" : "&") + "v=" + assetVersion + hash;
   }
 
   function renderHero(heading, intro) {
@@ -82,17 +83,18 @@
     return '<span class="' + escapeHtml(className + " is-pending") + '" role="img" aria-label="' + escapeHtml(label + " link has not been added") + '" title="Add this Google Drive link in the JSON file">' + icon + '</span>';
   }
 
-  function renderMedia(image, alt, extraClass) {
+  function renderMedia(image, alt, extraClass, priority) {
     if (!image) return "";
     const className = extraClass ? "media-frame " + extraClass : "media-frame";
-    return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img src="' + escapeHtml(freshAssetUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
+    const loading = priority === "high" ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+    return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img' + loading + ' decoding="async" src="' + escapeHtml(freshAssetUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
   }
 
   function renderProjectMedia(image, alt) {
     if (!image) return "";
     const safeAlt = alt || "Project image";
     const imageUrl = freshAssetUrl(image);
-    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function renderGalleryMedia(image, alt, caption) {
@@ -100,7 +102,7 @@
     const safeAlt = alt || "Gallery image";
     const safeCaption = caption || safeAlt;
     const imageUrl = freshAssetUrl(image);
-    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function renderContentPreviewMedia(image, alt, caption, extraClass) {
@@ -109,7 +111,7 @@
     const safeCaption = caption || safeAlt;
     const className = "media-frame content-preview-trigger" + (extraClass ? " " + extraClass : "");
     const imageUrl = freshAssetUrl(image);
-    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function setMetadata(data, site, titleOverride, descriptionOverride) {
@@ -193,7 +195,7 @@
     return '<div class="home-wrap">' +
       '<section class="home-intro" aria-labelledby="home-title">' +
         '<div class="profile-panel">' +
-          renderMedia(site.profileImage, "Portrait of " + site.name, "profile-image") +
+          renderMedia(site.profileImage, "Portrait of " + site.name, "profile-image", "high") +
           '<ul class="profile-contact" aria-label="Contact details">' +
             '<li><strong>' + renderLinkIcon("email") + '<span>Email</span></strong><a href="mailto:' + escapeHtml(site.email) + '">' + escapeHtml(site.email) + '</a></li>' +
             '<li><strong>' + renderLinkIcon("phone") + '<span>Phone</span></strong><a href="tel:' + escapeHtml(site.phoneLink) + '">' + escapeHtml(site.phoneDisplay) + '</a></li>' +
@@ -321,11 +323,11 @@
   }
 
   function renderBlog(data) {
-    const posts = (data.posts || []).map(function (post) {
+    const posts = (data.posts || []).map(function (post, index) {
       const postUrl = rootUrl(post.url);
       const postLabel = post.shortTitle || post.title;
       const postMedia = post.image
-        ? '<a class="blog-thumb" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(postLabel) + '">' + renderMedia(post.image, post.imageAlt || post.title) + '</a>'
+        ? '<a class="blog-thumb" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(postLabel) + '">' + renderMedia(post.image, post.imageAlt || post.title, "", index === 0 ? "high" : "") + '</a>'
         : '<a class="blog-icon" href="' + escapeHtml(postUrl) + '" aria-label="Read ' + escapeHtml(postLabel) + '">' + escapeHtml(post.icon || "Post") + '</a>';
       return '<li class="blog-entry">' + postMedia + '<div><h2><a href="' + escapeHtml(postUrl) + '">' + escapeHtml(post.title) + '</a></h2>' +
         '<time datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.displayDate) + '</time><p>' + escapeHtml(post.summary) + '</p></div></li>';
@@ -352,7 +354,7 @@
     const doi = post.doi ? '<p><a href="https://doi.org/' + escapeHtml(post.doi) + '">DOI: ' + escapeHtml(post.doi) + '</a></p>' : "";
     setMetadata(data, site, (post.shortTitle || post.title) + " | " + site.name, post.description);
     return '<article class="article-main"><header><h1>' + escapeHtml(post.title) + '</h1><time class="article-date" datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.displayDate) + '</time></header>' +
-      renderMedia(post.image, post.imageAlt || post.title, "article-hero") + blocks + doi + '<a class="back-link" href="' + escapeHtml(rootUrl("blog.html")) + '">← All posts</a></article>';
+      renderMedia(post.image, post.imageAlt || post.title, "article-hero", "high") + blocks + doi + '<a class="back-link" href="' + escapeHtml(rootUrl("blog.html")) + '">← All posts</a></article>';
   }
 
   const renderers = {
