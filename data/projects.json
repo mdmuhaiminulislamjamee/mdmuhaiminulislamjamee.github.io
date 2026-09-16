@@ -181,7 +181,7 @@
     "Model Training & Evaluation"
   ],
   "image": "images/projects/project-09.jpg",
-      "imageAlt": "Placeholder image for project 09"
+      "imageAlt": "Drone-based smart border surveillance system"
     },
     {
       "number": "Project 10",
@@ -195,7 +195,7 @@
     "Optical Cryptography & Steganography"
   ],
         "image": "images/projects/project-10.jpg",
-      "imageAlt": "Placeholder image for project 10"
+      "imageAlt": "Holographic image quality improvement using the Fresnel algorithm"
     }
   ]
 }

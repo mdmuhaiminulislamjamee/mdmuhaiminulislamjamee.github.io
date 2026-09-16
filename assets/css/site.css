@@ -307,6 +307,10 @@ input {
   letter-spacing: 0.03em;
 }
 
+.media-frame.has-image::before {
+  visibility: hidden;
+}
+
 .media-frame img {
   position: absolute;
   inset: 0;
@@ -849,13 +853,19 @@ a.external-link:hover {
   display: grid;
   padding: 1.05rem 0;
   border-bottom: 1px solid #e9edef;
-  grid-template-columns: 190px 100px minmax(0, 1fr);
+  grid-template-columns: 220px 100px minmax(0, 1fr);
   gap: 1.25rem;
 }
 
 .award-media {
   min-height: 0;
   aspect-ratio: 4 / 3;
+  background: #fff;
+}
+
+.award-media img {
+  object-fit: contain;
+  image-rendering: auto;
 }
 
 .award-year {

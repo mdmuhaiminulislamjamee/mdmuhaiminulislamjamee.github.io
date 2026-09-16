@@ -2,8 +2,8 @@
   "use strict";
 
   const basePath = document.body.dataset.base || "";
-  const requestVersion = Date.now().toString(36);
-  const assetVersion = "20260916-image-performance";
+  const requestVersion = "20260916-image-stability";
+  const assetVersion = "20260916-image-stability";
   const pathParts = window.location.pathname.split("/").filter(Boolean);
   const fileName = pathParts[pathParts.length - 1] || "index.html";
   const isBlogArticle = pathParts[pathParts.length - 2] === "blog" && /\.html$/i.test(fileName);
@@ -85,16 +85,18 @@
 
   function renderMedia(image, alt, extraClass, priority) {
     if (!image) return "";
+    const safeAlt = alt || "Image";
     const className = extraClass ? "media-frame " + extraClass : "media-frame";
     const loading = priority === "high" ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
-    return '<div class="' + escapeHtml(className) + '" data-placeholder="Add ' + escapeHtml(image) + '"><img' + loading + ' decoding="async" src="' + escapeHtml(freshAssetUrl(image)) + '" alt="' + escapeHtml(alt || "") + '"></div>';
+    return '<div class="' + escapeHtml(className) + '" data-placeholder="' + escapeHtml(safeAlt) + '"><img' + loading + ' decoding="async" src="' + escapeHtml(freshAssetUrl(image)) + '" alt="' + escapeHtml(safeAlt) + '"></div>';
   }
 
-  function renderProjectMedia(image, alt) {
+  function renderProjectMedia(image, alt, priority) {
     if (!image) return "";
     const safeAlt = alt || "Project image";
     const imageUrl = freshAssetUrl(image);
-    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    const loading = priority === "high" ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+    return '<button class="media-frame project-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-placeholder="' + escapeHtml(safeAlt) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img' + loading + ' decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function renderGalleryMedia(image, alt, caption) {
@@ -102,16 +104,18 @@
     const safeAlt = alt || "Gallery image";
     const safeCaption = caption || safeAlt;
     const imageUrl = freshAssetUrl(image);
-    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    return '<button class="media-frame gallery-preview-trigger" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="' + escapeHtml(safeCaption) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
-  function renderContentPreviewMedia(image, alt, caption, extraClass) {
+  function renderContentPreviewMedia(image, alt, caption, extraClass, previewImage, priority) {
     if (!image) return "";
     const safeAlt = alt || "Preview image";
     const safeCaption = caption || safeAlt;
     const className = "media-frame content-preview-trigger" + (extraClass ? " " + extraClass : "");
     const imageUrl = freshAssetUrl(image);
-    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(imageUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="Add ' + escapeHtml(image) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img loading="lazy" decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
+    const previewUrl = freshAssetUrl(previewImage || image);
+    const loading = priority === "high" ? ' loading="eager" fetchpriority="high"' : ' loading="lazy"';
+    return '<button class="' + escapeHtml(className) + '" type="button" data-image-preview="' + escapeHtml(previewUrl) + '" data-preview-alt="' + escapeHtml(safeAlt) + '" data-preview-caption="' + escapeHtml(safeCaption) + '" data-placeholder="' + escapeHtml(safeAlt) + '" aria-label="Preview ' + escapeHtml(safeAlt) + '"><img' + loading + ' decoding="async" src="' + escapeHtml(imageUrl) + '" alt="' + escapeHtml(safeAlt) + '"><span class="preview-hint">Preview image</span></button>';
   }
 
   function setMetadata(data, site, titleOverride, descriptionOverride) {
@@ -274,20 +278,21 @@
   }
 
   function renderAwards(data) {
-    const awards = (data.awards || []).map(function (award) {
+    const awards = (data.awards || []).map(function (award, index) {
       const previewCaption = [award.title, award.organization].filter(Boolean).join(" — ");
-      return '<article class="award-item">' + renderContentPreviewMedia(award.image, award.title, previewCaption, "award-media") +
+      const thumbnail = award.thumbnail || award.image.replace("images/awards/", "images/awards/thumbs/");
+      return '<article class="award-item">' + renderContentPreviewMedia(thumbnail, award.title, previewCaption, "award-media", award.image, index < 2 ? "high" : "") +
         '<div class="award-year">' + escapeHtml(award.year) + '</div><div><h2>' + escapeHtml(award.title) + '</h2><p>' + escapeHtml(award.organization) + '</p></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<h2 class="band-heading" id="' + escapeHtml(data.sectionId) + '">' + escapeHtml(data.sectionTitle) + '</h2><div class="award-list">' + awards + '</div>';
   }
 
   function renderProjects(data) {
-    const projects = (data.projects || []).map(function (project) {
+    const projects = (data.projects || []).map(function (project, index) {
       const itemId = project.id ? ' id="' + escapeHtml(project.id) + '"' : "";
       const skills = (project.skills || project.tags || []).map(function (skill) { return '<li>' + escapeHtml(skill) + '</li>'; }).join("");
       const projectLink = renderExternalLink(project.projectUrl, "Open " + project.title + " project file", "project-external-link");
-      return '<article class="project-card"' + itemId + '>' + renderProjectMedia(project.image, project.imageAlt || project.title) +
+      return '<article class="project-card"' + itemId + '>' + renderProjectMedia(project.image, project.imageAlt || project.title, index < 2 ? "high" : "") +
         '<div class="project-copy"><div class="project-number">' + escapeHtml(project.number) + '</div><div class="project-title-row"><h2>' + escapeHtml(project.title) + '</h2>' + projectLink + '</div><p>' + escapeHtml(project.description) + '</p><strong class="project-skills-title">Skills:</strong><ul class="project-skill-list">' + skills + '</ul></div></article>';
     }).join("");
     return renderHero(data.heading, data.intro) + '<div class="project-grid">' + projects + '</div>';
@@ -354,7 +359,7 @@
     const doi = post.doi ? '<p><a href="https://doi.org/' + escapeHtml(post.doi) + '">DOI: ' + escapeHtml(post.doi) + '</a></p>' : "";
     setMetadata(data, site, (post.shortTitle || post.title) + " | " + site.name, post.description);
     return '<article class="article-main"><header><h1>' + escapeHtml(post.title) + '</h1><time class="article-date" datetime="' + escapeHtml(post.date) + '">' + escapeHtml(post.displayDate) + '</time></header>' +
-      renderMedia(post.image, post.imageAlt || post.title, "article-hero", "high") + blocks + doi + '<a class="back-link" href="' + escapeHtml(rootUrl("blog.html")) + '">← All posts</a></article>';
+      renderContentPreviewMedia(post.image, post.imageAlt || post.title, post.title, "article-hero", post.image, "high") + blocks + doi + '<a class="back-link" href="' + escapeHtml(rootUrl("blog.html")) + '">← All posts</a></article>';
   }
 
   const renderers = {
@@ -431,34 +436,74 @@
   }
 
   async function fetchJson(file) {
-    const response = await fetch(basePath + "data/" + file + "?v=" + requestVersion, { cache: "no-store" });
+    const response = await fetch(basePath + "data/" + file + "?v=" + requestVersion);
     if (!response.ok) throw new Error("Unable to load " + file + " (" + response.status + ")");
     return response.json();
   }
 
-  async function loadContent() {
-    if (!pageConfig) return false;
-    const site = await fetchJson("site.json");
-    const data = await fetchJson(pageConfig.file);
-    const results = await Promise.all(allPageFiles.map(function (file) {
-      if (file === pageConfig.file) return Promise.resolve({ file: file, data: data });
+  function updateMainContent(main, markup) {
+    const template = document.createElement("template");
+    const reusableImages = new Map();
+    template.innerHTML = markup;
+
+    main.querySelectorAll("img[src]").forEach(function (image) {
+      const source = image.getAttribute("src");
+      if (!reusableImages.has(source)) reusableImages.set(source, []);
+      reusableImages.get(source).push(image);
+    });
+
+    template.content.querySelectorAll("img[src]").forEach(function (newImage) {
+      const source = newImage.getAttribute("src");
+      const matches = reusableImages.get(source);
+      if (!matches || !matches.length) return;
+      const existingImage = matches.shift();
+      ["alt", "loading", "decoding", "fetchpriority"].forEach(function (attribute) {
+        if (newImage.hasAttribute(attribute)) {
+          existingImage.setAttribute(attribute, newImage.getAttribute(attribute));
+        } else {
+          existingImage.removeAttribute(attribute);
+        }
+      });
+      newImage.replaceWith(existingImage);
+    });
+
+    main.replaceChildren(template.content);
+  }
+
+  function loadSearchData(site, currentData) {
+    const requests = allPageFiles.map(function (file) {
+      if (file === pageConfig.file) return Promise.resolve({ file: file, data: currentData });
       return fetchJson(file).then(function (data) {
         return { file: file, data: data };
       }).catch(function () {
         return { file: file, data: null };
       });
-    }));
-    const dataByFile = {};
-    results.forEach(function (result) { dataByFile[result.file] = result.data; });
+    });
+
+    Promise.all(requests).then(function (results) {
+      const dataByFile = {};
+      results.forEach(function (result) { dataByFile[result.file] = result.data; });
+      window.portfolioSearchIndex = buildSearchIndex(site, dataByFile);
+    });
+  }
+
+  async function loadContent() {
+    if (!pageConfig) return false;
+    const content = await Promise.all([fetchJson("site.json"), fetchJson(pageConfig.file)]);
+    const site = content[0];
+    const data = content[1];
     const main = document.querySelector("#main-content");
     if (!main || !renderers[pageConfig.key]) return false;
 
     applySiteData(site);
     const markup = renderers[pageConfig.key](data, site);
-    if (markup) main.innerHTML = markup;
+    if (markup) updateMainContent(main, markup);
     if (pageConfig.key !== "blogArticle") setMetadata(data, site);
-    window.portfolioSearchIndex = buildSearchIndex(site, dataByFile);
+    const initialData = {};
+    initialData[pageConfig.file] = data;
+    window.portfolioSearchIndex = buildSearchIndex(site, initialData);
     window.portfolioData = { site: site, page: data, pageKey: pageConfig.key };
+    loadSearchData(site, data);
     return true;
   }
 

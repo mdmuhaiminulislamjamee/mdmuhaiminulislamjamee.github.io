@@ -13,7 +13,7 @@
   const searchButtons = document.querySelectorAll("[data-search-open]");
   const searchClose = document.querySelector("[data-search-close]");
   const basePath = document.body.dataset.base || "";
-  const assetVersion = "20260916-image-performance";
+  const assetVersion = "20260916-image-stability";
 
   function closeNavigation() {
     if (navigation) navigation.classList.remove("is-open");
@@ -49,7 +49,7 @@
     const frame = document.createElement("div");
     const image = document.createElement("img");
     frame.className = "media-frame " + className;
-    frame.dataset.placeholder = "Add " + path;
+    frame.dataset.placeholder = alt || "Image";
     image.loading = "lazy";
     image.decoding = "async";
     image.src = basePath + path + "?v=" + assetVersion;
@@ -82,13 +82,14 @@
   });
 
   function previewCaptionForFrame(frame) {
-    const item = frame.closest(".timeline-item, .award-item, .learning-card");
+    const item = frame.closest(".timeline-item, .award-item, .learning-card, .article-main");
     if (!item) return "";
-    const title = item.querySelector("h2, h3");
+    const title = item.querySelector("h1, h2, h3");
     let detail = null;
     if (item.matches(".timeline-item")) detail = item.querySelector(".timeline-role");
     if (item.matches(".award-item")) detail = item.querySelector("p");
     if (item.matches(".learning-card")) detail = item.querySelector(".learning-copy > p");
+    if (item.matches(".article-main")) detail = item.querySelector(".article-date");
     return [title && title.textContent, detail && detail.textContent].filter(Boolean).join(" — ");
   }
 
@@ -113,11 +114,12 @@
     setImageState(image, image.complete && image.naturalWidth > 0);
   }
 
-  document.querySelectorAll(".timeline-visual, .award-media, .learning-card > .media-frame").forEach(makeFramePreviewable);
+  document.querySelectorAll(".timeline-visual, .award-media, .learning-card > .media-frame, .article-hero").forEach(makeFramePreviewable);
 
   const previewTriggers = document.querySelectorAll("[data-image-preview]");
   let imagePreview = null;
   let lastPreviewTrigger = null;
+  let previewRequestId = 0;
 
   function closeImagePreview() {
     if (!imagePreview || !imagePreview.classList.contains("is-open")) return;
@@ -145,8 +147,12 @@
     previewTriggers.forEach(function (trigger) {
       trigger.addEventListener("click", function () {
         if (trigger.disabled) return;
+        const requestId = ++previewRequestId;
+        const triggerImage = trigger.querySelector("img");
+        const previewSource = trigger.dataset.imagePreview;
+        const immediateSource = triggerImage && triggerImage.currentSrc ? triggerImage.currentSrc : previewSource;
         lastPreviewTrigger = trigger;
-        previewImage.src = trigger.dataset.imagePreview;
+        previewImage.src = immediateSource;
         previewImage.alt = trigger.dataset.previewAlt || "Preview image";
         previewCaption.textContent = trigger.dataset.previewCaption || trigger.dataset.previewAlt || "Preview image";
         imagePreview.classList.add("is-open");
@@ -154,6 +160,15 @@
         document.documentElement.classList.add("preview-open");
         document.body.classList.add("preview-open");
         previewClose.focus();
+
+        if (previewSource && new URL(previewSource, document.baseURI).href !== previewImage.src) {
+          const fullImage = new Image();
+          fullImage.decoding = "async";
+          fullImage.addEventListener("load", function () {
+            if (requestId === previewRequestId) previewImage.src = previewSource;
+          });
+          fullImage.src = previewSource;
+        }
       });
     });
 
