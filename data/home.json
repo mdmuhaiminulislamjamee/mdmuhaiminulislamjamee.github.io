@@ -16,7 +16,7 @@
   "I am currently conducting research on a systematic benchmark of Edge AI inference frameworks for resource-constrained autonomous mobile robot platforms. Previously, I conducted research on a multimodal robotic framework for real-time waste detection and categorization, with a focus on developing robust perception and classification capabilities for autonomous waste management robots. I have also worked on simultaneous localization and mapping (SLAM) for robotic vision and path planning. My broader interests include vision-language models, autonomous intelligent systems, and natural language processing.",
 
   "My vision is to develop innovative technologies and advance research in areas such as Smart Agriculture, Healthcare, Environmental Sustainability, and Disaster Management to create a global impact through research, teaching, and leadership. I am always open to discussions, whether it's about robotics, AI research collaboration, or just a good cup of coffee!"
-]
+],
   "technicalSkills": [
     { "label": "Programming", "value": "C, C++, Embedded C, Python, SQL." },
     { "label": "Libraries/Frameworks", "value": "NumPy, Pandas, Matplotlib, OpenCV, Scikit-Learn, TensorFlow, PyTorch, Django, Flask, REST API, FastAPI, ONNX." },
