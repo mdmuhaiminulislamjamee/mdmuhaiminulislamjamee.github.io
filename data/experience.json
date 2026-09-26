@@ -159,7 +159,7 @@
           "date": "Sep 2025 – Feb 2026",
           "location": "Remote",
           "title": "Priyo",
-          "role": "AI Data Annotator & Mathematics Problem Setter",
+          "role": "Math LLM Training Analyst",
           "bullets": [
             "Designed and curated high-quality mathematical reasoning datasets to train and evaluate Large Language Models (LLMs), focusing on multi-step logical problem solving and structured thinking.",
             "Created standardized prompts and responses using LaTeX and JSON-based schemas to simulate real-world AI workflows, including function-calling and API-style interactions.",
