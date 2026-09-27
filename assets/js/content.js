@@ -202,7 +202,6 @@
           renderMedia(site.profileImage, "Portrait of " + site.name, "profile-image", "high") +
           '<ul class="profile-contact" aria-label="Contact details">' +
             '<li><strong>' + renderLinkIcon("email") + '<span>Email</span></strong><a href="mailto:' + escapeHtml(site.email) + '">' + escapeHtml(site.email) + '</a></li>' +
-            '<li><strong>' + renderLinkIcon("phone") + '<span>Phone</span></strong><a href="tel:' + escapeHtml(site.phoneLink) + '">' + escapeHtml(site.phoneDisplay) + '</a></li>' +
           '</ul>' +
           '<div class="social-links" aria-label="Academic and professional profiles">' + renderProfileLinks(site) + '</div>' +
         '</div>' +
