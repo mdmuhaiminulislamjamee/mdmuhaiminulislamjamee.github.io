@@ -699,6 +699,17 @@ input {
 .publication-item {
   padding: 1.75rem 0;
   border-bottom: 1px solid #e8ecee;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.publication-item:hover,
+.timeline-item:hover,
+.award-item:hover {
+  border-color: transparent;
+  border-radius: var(--radius);
+  background: var(--band);
+  box-shadow: 0 7px 20px rgba(28, 45, 52, 0.07);
+  transform: translateX(4px);
 }
 
 .publication-item:last-child {
@@ -753,6 +764,7 @@ input {
   border-bottom: 1px solid #e7ebed;
   grid-template-columns: 210px minmax(0, 1fr);
   gap: 2rem;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
 .timeline-visual {
@@ -855,6 +867,7 @@ a.external-link:hover {
   border-bottom: 1px solid #e9edef;
   grid-template-columns: 220px 100px minmax(0, 1fr);
   gap: 1.25rem;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
 }
 
 .award-media {
@@ -1331,6 +1344,15 @@ a.external-link:hover {
   border-bottom: 1px solid var(--blog-line);
   grid-template-columns: 106px minmax(0, 1fr);
   gap: 1.4rem;
+  transition: background-color 150ms ease, box-shadow 150ms ease, transform 150ms ease;
+}
+
+.blog-entry:hover {
+  border-color: transparent;
+  border-radius: var(--radius);
+  background: var(--blog-surface);
+  box-shadow: 0 7px 20px rgba(28, 45, 52, 0.07);
+  transform: translateX(4px);
 }
 
 .blog-thumb {
