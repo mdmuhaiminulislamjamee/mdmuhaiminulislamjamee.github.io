@@ -391,6 +391,7 @@ input {
   gap: 0.4rem;
   color: var(--heading);
   font-family: var(--font-heading);
+  white-space: nowrap;
 }
 
 .profile-contact a {
@@ -2008,7 +2009,7 @@ html[data-theme="dark"] .theme-toggle .sun-icon {
   }
 
   .profile-contact li {
-    grid-template-columns: 4rem minmax(0, 1fr);
+    grid-template-columns: 5rem minmax(0, 1fr);
     gap: 0.35rem;
   }
 
