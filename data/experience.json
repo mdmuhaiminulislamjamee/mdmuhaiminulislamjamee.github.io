@@ -39,6 +39,19 @@
       "title": "Research Experience",
       "entries": [
         {
+          "date": "Sep 2025 – Present",
+          "location": "Queens, New York, United States (Remote)",
+          "title": "ELITE Research Lab LLC",
+          "role": "Student Researcher",
+          "bullets": [
+            "Conducting research and development on Human–Computer Interaction (HCI), focusing on usability, interaction efficiency, and user experience in AI-driven systems.",
+            "Developing Natural Language Processing (NLP) solutions for text understanding, semantic analysis, contextual interpretation, and language-based interaction.",
+            "Designing and evaluating intelligent human–AI & human-robot interaction workflows, integrating natural language understanding and user-centered design principles.",
+            "Performing data preprocessing, annotation, and AI model evaluation to assess language quality, contextual relevance, response accuracy, and system usability."
+          ],
+          "image": "images/experience/research-02.jpg"
+        },
+        {
           "date": "July 2023 – Dec 2025",
           "location": "Rajshahi, Bangladesh",
           "title": "Department of Electronics & Telecommunication Engineering, RUET",
@@ -59,7 +72,7 @@
       "title": "Work Experience",
       "entries": [
         {
-          "date": "July 2026–Present",
+          "date": "July 2026 – Present",
           "location": "Nilphamari, Bangladesh",
           "title": "THT-Space Electrical Company Ltd.",
           "role": "Assistant Embedded System Engineer (R&D Team)",
