@@ -48,8 +48,8 @@
   "languages": [
     { "language": "Bangla", "level": "Native" },
     { "language": "English", "level": "Fluent" },
-    { "language": "Hindi", "level": "Basic understanding" },
-    { "language": "Urdu", "level": "Basic understanding" }
+    { "language": "Hindi", "level": "Conversational" },
+    { "language": "Urdu", "level": "Conversational" }
   ],
   "news": [
     { "year": "July 2026", "text": "Joined THT-Space Electrical Company Ltd. as an Assistant Embedded System Engineer." },
