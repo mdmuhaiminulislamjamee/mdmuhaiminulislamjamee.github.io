@@ -52,6 +52,7 @@
     { "language": "Urdu", "level": "Conversational" }
   ],
   "news": [
+    { "year": "Sep 2026", "text": "Joined ELITE Research Lab LLC as a student researcher." },
     { "year": "July 2026", "text": "Joined THT-Space Electrical Company Ltd. as an Assistant Embedded System Engineer." },
     { "year": "June 2025", "text": "Joined TanAinent Global UK LTD. as a Robotics Engineer and CTO of the company." },
     { "year": "June 2025", "text": "Completed the B.Sc. (Engg.) in Electronics and Telecommunication Engineering at RUET, with a 1st Class." },
