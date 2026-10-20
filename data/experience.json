@@ -57,7 +57,7 @@
           "title": "Department of Electronics & Telecommunication Engineering, RUET",
           "role": "Undergraduate Research Assistant",
           "bullets": [
-            "Designed an autonomous garbage detection and collection robot using Raspberry Pi, YOLOv5/Faster R-CNN-based object detection, and SLAM-based navigation with LiDAR-GPS fusion and Kalman filtering/A* path planning, achieving 97% detection accuracy for trash and 96% for non-trash items, with 97% precision and 98% recall.",
+            "Designed an autonomous garbage detection and collection robot using Raspberry Pi, YOLOv5+Faster R-CNN-based object detection, and SLAM-based navigation with LiDAR-GPS fusion and Kalman filtering/A* path planning, achieving 97% detection accuracy for trash and 96% for non-trash items, with 97% precision and 98% recall.",
             "Engineered a GPS-GSM-based landmine and human-detection robot integrating Arduino, ESP32-CAM, and multi-sensor (PIR, gas, sonar, metal-detection) hardware, and an autonomous self-driving car using ROS and YOLO-based object recognition with real-time English–Bangla road-text translation, enabling remote hazard alerting and improved human–machine interaction across both platforms.",
             "Architected an AI-based smart notice board with a three-tier full-stack system (Python, Node.js, MySQL) for real-time facial identification and personalized content delivery, achieving 97% accuracy, precision, recall, and F1-score in facial recognition evaluation.",
             "Developed a real-time hand-gesture recognition system for human–machine interaction using deep learning-based classification models, achieving a 99.0% macro-F1 score.",
